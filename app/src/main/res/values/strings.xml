@@ -1,3 +1,162 @@
 <resources>
-    <string name="app_name">Seller</string>
+    <string name="app_name">فروشنده</string>
+    <string name="title">عنوان</string>
+    <string name="name">نام</string>
+    <string name="barcode">بارکد</string>
+    <string name="price_buy">قیمت خرید</string>
+    <string name="price_sela_on_product">قیمت روی کالا (مصرف کننده)</string>
+    <string name="price_sela">قیمت نهایی فروش</string>
+    <string name="price_discount">مبلغ تخفیف</string>
+    <string name="price_discount_order">تخفیف بر روی سفارش</string>
+    <string name="percent_tax">درصد مالیات</string>
+    <string name="tax">مالیات</string>
+    <string name="info">مشخصات</string>
+    <string name="finance_data">اطلاعات مالی</string>
+    <string name="detail">جزئیات</string>
+    <string name="stock">موجودی</string>
+    <string name="stock_toolbar">گزارش انبار</string>
+    <string name="increase_product">واحد کالا</string>
+    <string name="description">توضیحات</string>
+    <string name="permission_required">دسترسی الزامی</string>
+    <string name="permission_message">ما برای ارائه خدمات خود به دسترسی های ضروری درخواست شده نیاز داریم</string>
+    <string name="positive_button">باشه</string>
+    <string name="negative_button">بیحیال</string>
+    <string name="choose_from_camera">انتخاب از دوربین</string>
+    <string name="choose_from_gallery">انتخاب از گالری</string>
+    <string name="submit">ثبت</string>
+    <string name="not_valid">مقدار وارد شده صحیح نیست</string>
+    <string name="required">الزامی</string>
+    <string name="image_not_valid">عکسی برای این محصول انتخاب کنید</string>
+    <string name="category_is_enable">دسته‌بندی فعال باشد</string>
+    <string name="date_expire">تاریخ انقضا</string>
+    <string name="product_info">مشخصات محصول</string>
+    <string name="initial_balance">موجودی اولیه</string>
+    <string name="max_in_check_out">حداکثر مجاز در سبد خرید</string>
+    <string name="balance">انبار</string>
+    <string name="finance">مالی</string>
+    <string name="finance_toolbar">گزارش مالی</string>
+    <string name="text_item_one_line">نام آیتم مورد نظر</string>
+    <string name="add_category">افزودن دسته بندی</string>
+    <string name="choose_your_category">دسته‌بندی مورد نظر را انتخاب نمایید</string>
+    <string name="submit_category">افزودن دسته‌بندی</string>
+    <string name="category">دسته بندی</string>
+    <string name="this_product_has_n_category">افزودن دسته‌بندی<b> <font color="#333">(%1$d)</font></b></string>
+    <string name="expired_at">در تاریخ<b> <font color="#333">%1$s</font></b> منقضی خواهد شد</string>
+    <string name="add_date_expire">ثبت تاریخ انقضا</string>
+    <string name="product_name_by_stock"><b><font color="#333">%1$s</font></b>%2$s</string>
+    <string name="all_order">جمع‌سفارش<b> <font color="#333">(%1$d)</font></b></string>
+    <string name="all_order_one">جمع‌سفارش</string>
+    <string name="shipping_price">هزینه ارسال</string>
+    <string name="total_amount">جمع هزینه‌ها</string>
+    <string name="amount_pay">قابل پرداخت</string>
+    <string name="amount_pay_vlaue">قابل پرداخت <b><font color="#333">%1$s</font></b></string>
+    <string name="pay">پرداخت</string>
+    <string name="no_data_to_display">اطلاعاتی برای نمایش وجود ندارد!</string>
+    <string name="stock_count"><bold>%1$s</bold> قلم</string>
+    <string name="cancel">انصراف</string>
+    <string name="close">لغو</string>
+    <string name="exit">خروج</string>
+    <string name="new_order">سفارش جدید</string>
+    <string name="take_for_choose_customer">برای انتخاب مشتری لمس کنید</string>
+    <string name="pay_and_submit_order">پرداخت و تایید سفارش</string>
+    <string name="save_order_status_waiting">ثبت به عنوان سفارش در انتظار</string>
+    <string name="cancel_order">لغو سفارش</string>
+    <string name="draft_print">پیش‌فاکتور</string>
+    <string name="next">بعدی</string>
+    <string name="start">شروع</string>
+    <string name="name_business_owner">نام صاحب کسب‌وکار</string>
+    <string name="business_name">نام کسب‌وکار شما</string>
+    <string name="restore_backup">بازیابی اطلاعات فایل پشتیان</string>
+    <string name="crate_new_business">ساخت کسب‌وکار جدید</string>
+    <string name="description_1">اگر مایل هستید با انتخاب یکی از کسب و کار های زیر اطلاعات آن (شامل دسته‌بندی، محصولات و..) را به صورت پیش فرض دریافت کنید.</string>
+    <string name="connect_to_support">ارتباط با پشتیبانی</string>
+    <string name="privacy_policy"><font color="#333"><b><a href="https://google.com">قوانین، شرایط استفاده و حریم‌خصوصی</a></b></font> را مطالعه کرده و می‌پذیرم.</string>
+    <string name="orders_waiting">سفارشات درانتظار</string>
+
+    <string name="welcome_owner"><b><font color="#333">%1$s</font></b> عزیز</string>
+    <string name="welcome_to_business">به <b><font color="#333">%1$s</font></b> خوش‌آمدید</string>
+    <string name="add_business_successfully">کسب‌وکار با موفقیت اضافه شد</string>
+    <string name="add_successfully">با موفقیت اضافه شد</string>
+    <string name="new_business">افزودن کسب‌وکار جدید</string>
+    <string name="edit_business">ویرایش کسب‌وکار</string>
+    <string name="business_list_crated">لیست کسب‌وکار ثبت شده</string>
+    <string name="test_business_name">نام کسب‌وکار ایجاد</string>
+    <string name="edit">ویرایش</string>
+    <string name="test_product_name">دستمال کاغذی حوله ای 3 لا 2 رول سافتلن طلایی پنج سایز سه</string>
+    <string name="sood_zarar"><font color="#43A047">28%</font> - <font color="#FFF4511E">5% </font></string>
+    <string name="toolbar_title_product">محصولات</string>
+    <string name="search">جستجو..</string>
+    <string name="search_product_name">نام محصول..</string>
+    <string name="back_to_all_product">بازگشت به همه محصولات</string>
+    <string name="back">بازگشت</string>
+    <string name="categorys">دسته بندی ها</string>
+    <string name="under_category_by_value"><b><font color="#333">%1$s</font></b> زیر گروه</string>
+    <string name="dont_have">بدون</string>
+    <string name="customers">مشتریان</string>
+    <string name="family">نام‌خانوادگی</string>
+    <string name="number_phone">شماره تلفن</string>
+    <string name="customer_name">نام مشتری</string>
+    <string name="customer_status_save_on">وضعیت مشتری فعال باشد</string>
+    <string name="orders">سفارشات</string>
+    <string name="order">سفارش</string>
+    <string name="order_customer_name">سفارش <b><font color="#333">%1$s</font></b></string>
+    <string name="multi_pay">ترکیبی</string>
+    <string name="card_pay">کارتخوان</string>
+    <string name="cash_money_pay">پول‌نقد</string>
+    <string name="test_pay_000_by">پرداخت 120,390,000 تومان به صورت:</string>
+    <string name="debit">نسیه</string>
+    <string name="this_product_has_free">این کالا شامل <b><font color="#333">%1$s</font></b> تخفیف است</string>
+    <string name="this_product_has_profit">سود شما از این کالا <b><font color="#333">%1$s</font></b></string>
+    <string name="this_product_hast_free">ضرر شما از این کالا <b><font color="#333">%1$s</font></b></string>
+    <string name="choose_customer">انتخاب مشتری</string>
+    <string name="add">افزودن</string>
+    <string name="add_new_customer">افزودن مشتری جدید</string>
+    <string name="no_factor">شماره فاکتور</string>
+    <string name="order_detail">جزيیات سفارش</string>
+    <string name="delete">حذف</string>
+    <string name="profit">سود</string>
+    <string name="profit_order">سود این سفارش</string>
+    <string name="order_status_waiting">در انتظار</string>
+    <string name="chart">نمودار</string>
+    <string name="setting">تنظیمات</string>
+    <string name="text_check_box_tax">شامل مالیات باشد</string>
+    <string name="chart_sale_3_month">نمودار فروش ۳ ماهه اخیر</string>
+    <string name="customer_this_product">مشتریان این محصول</string>
+    <string name="strike_text_line"><strike>%1$s</strike></string>
+    <string name="your_device_hasnt_this_feathure">این قابلیت برای دستگاه فراهم نمی‌باشد</string>
+    <string name="chart_order_3_month">نمودار سفارشات ۳ ماهه اخیر</string>
+    <string name="last_order">آخرین سفارشات</string>
+    <string name="product_beloved">محصولات موردعلاقه</string>
+    <string name="conenct_us">راه های ارتباطی</string>
+    <string name="address">قم . بلوار پانزده خرداد کوچه ۳۹ ساختمان مدیران شرکت سیمین سرمایه پارس</string>
+    <string name="tel">02539876543(98)</string>
+    <string name="time">شنبه - چهارشنبه\n۹صبح - ۴عصر</string>
+    <string name="cash_by_money">پرداخت با پول نقد</string>
+    <string name="cash_by_card">پرداخت از طریق کارت اعتباری</string>
+    <string name="cash_by_debit">پرداخت به صورت نسیه</string>
+    <string name="tel_action">09123456789</string>
+    <string name="money_type">واحد پول</string>
+    <string name="price_shipping">هزینه ارسال</string>
+    <string name="free_shipping_in_order">ارسال رایگان در سفارشات بالای</string>
+    <string name="min_order_for_submit">حداقل سفارش برای ثبت</string>
+    <string name="helper_text_free_shipping">در صورتی که مقدار صفر (۰) وارد کنید این قابلیت غیرفعال خواهد شد</string>
+    <string name="helper_text_min_order">در صورتی که مقدار صفر (۰) وارد کنید سفارشات بدون محدودیت مبلغ ثبت خواهند شد</string>
+    <string name="helper_text_tax">درصد مالیات بر روی تمامی محصولاتی که شامل مالیات باشند و مالیات اختصاصی برای آنها ثبت نشده محاسبه خواهد شد</string>
+    <string name="helper_text_money_type">نوع ارز خود را مشخص کنید مثلا تومان، ریال و..</string>
+    <string name="helper_text_shipping">میتوانید هزینه ارسال سفارش را در صفحه ثبت سفارش ویرایش نمایید</string>
+    <string name="cash_discount">تخفیف اضافه تر بر روی سفارش</string>
+    <string name="discount">تخفیف</string>
+    <string name="price_discount_on_product">جمع تخفیف محصولات</string>
+    <string name="price">قیمت</string>
+    <string name="product_name">نام محصول</string>
+    <string name="helper_dialog_order_detail_view">برای نوشتن مقدار انتخابی بر روی نوشته لمس کنید و برای حذف تمامی مقادیر محصول آیکون منفی (-) را نگه دارید.</string>
+    <string name="play_sound_scanner">پخش صدای \'بیب\' اسکنر</string>
+    <string name="add_fast_order">ثبت سریع سفارش</string>
+    <string name="add_order">ثبت سفارش</string>
+    <string name="add_new_order">ثبت سفارش جدید</string>
+    <string name="error_connection_server">خطا در ارتباط با سرور</string>
+    <string name="try_again">تلاش مجدد</string>
+
+
+
 </resources>
