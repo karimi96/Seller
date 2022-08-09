@@ -9,7 +9,7 @@ class App : MultiDexApplication() {
 
     override fun onCreate() {
         super.onCreate()
-        context = applicationContext
+        context = this
         MultiDex.install(this)
     }
 
