@@ -64,13 +64,14 @@
     <string name="draft_print">پیش‌فاکتور</string>
     <string name="next">بعدی</string>
     <string name="start">شروع</string>
-    <string name="name_business_owner">نام صاحب کسب‌وکار</string>
-    <string name="business_name">نام کسب‌وکار شما</string>
+    <string name="name_business_owner">نام صاحب کسب ‌و کار</string>
+    <string name="business_name">نام کسب‌ و کار شما</string>
     <string name="restore_backup">بازیابی اطلاعات فایل پشتیان</string>
-    <string name="crate_new_business">ساخت کسب‌وکار جدید</string>
+    <string name="create_new_business">ساخت کسب‌ و کار جدید</string>
     <string name="description_1">اگر مایل هستید با انتخاب یکی از کسب و کار های زیر اطلاعات آن (شامل دسته‌بندی، محصولات و..) را به صورت پیش فرض دریافت کنید.</string>
     <string name="connect_to_support">ارتباط با پشتیبانی</string>
-    <string name="privacy_policy"><font color="#333"><b><a href="https://google.com">قوانین، شرایط استفاده و حریم‌خصوصی</a></b></font> را مطالعه کرده و می‌پذیرم.</string>
+    <string name="privacy_policy"><font color="#060B27"><b><a href="https://google.com">قوانین، شرایط استفاده و حریم‌خصوصی</a></b></font> را مطالعه کرده و می‌پذیرم.</string>
+    <string name="privacy_policy2"><font color="#BF1414"><b><a href="https://google.com">قوانین، شرایط استفاده و حریم‌خصوصی</a></b></font> <font color="#4E536F"> را مطالعه کرده و می‌پذیرم.</font></string>
     <string name="orders_waiting">سفارشات درانتظار</string>
 
     <string name="welcome_owner"><b><font color="#333">%1$s</font></b> عزیز</string>

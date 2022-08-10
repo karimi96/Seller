@@ -30,7 +30,7 @@
     <style name="CustomTextInputEditText">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:fontFamily">@font/iran_sans_fanum</item>
+        <item name="android:fontFamily">@font/iran_sans</item>
         <item name="android:backgroundTint">@color/text_hint</item>
         <item name="android:textFontWeight" tools:ignore="NewApi">500</item>
         <item name="android:textColor">@color/text_main</item>
@@ -40,6 +40,23 @@
 
     <style name="CustomHintSize" parent="TextAppearance.Design.Hint">
         <item name="android:textSize">11dp</item>
+    </style>
+
+
+
+    <style name="Text">
+        <item name="android:textColor">@color/text_main</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+
+    <style name="Text.Body2">
+        <item name="android:textSize">14dp</item>
+    </style>
+
+
+  <style name="test">
+        <item name="android:fontFamily">@font/iran_sans</item>
     </style>
 
 
