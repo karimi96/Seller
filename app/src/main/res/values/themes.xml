@@ -6,7 +6,7 @@
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondary">@color/purple</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
         
@@ -16,4 +16,33 @@
         <item name="android:direction">right_to_left</item>
         <item name="android:layoutDirection">rtl</item>
     </style>
+
+
+
+    <style name="CustomTextInputLayout" parent="Widget.Design.TextInputLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textFontWeight" tools:ignore="NewApi">500</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="hintTextAppearance">@style/CustomHintSize</item>
+    </style>
+
+    <style name="CustomTextInputEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/iran_sans_fanum</item>
+        <item name="android:backgroundTint">@color/text_hint</item>
+        <item name="android:textFontWeight" tools:ignore="NewApi">500</item>
+        <item name="android:textColor">@color/text_main</item>
+        <item name="android:textColorHint">@color/text_main</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="CustomHintSize" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">11dp</item>
+    </style>
+
+
+
+
 </resources>
