@@ -27,7 +27,7 @@ class SplashActivity : AppCompatActivity() {
 //        Log.e("qqqq", "onCreate: ${Session.getInstance().sessionKey}" )
     }
 
-   /* private fun start(){
+    private fun start(){
         if(checkPermission()){
             Handler().postDelayed({
                 val i = if (Session.getInstance().sessionKey.isNullOrEmpty()){
@@ -38,15 +38,14 @@ class SplashActivity : AppCompatActivity() {
             },1500)
         }
     }
-*/
 
 
-    private fun start(){
+   /* private fun start(){
             Handler().postDelayed({
                 startActivity(Intent(this, FirstOpenActivity::class.java))
                 finish()
             },1500)
-    }
+    }*/
 
 
 
