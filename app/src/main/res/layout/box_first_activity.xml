@@ -58,15 +58,13 @@
             android:id="@+id/description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/iran_sans"
             android:layout_gravity="center_vertical|end"
+            android:fontFamily="@font/iran_sans"
             android:gravity="end|start"
             android:text="@string/description_1"
             android:textColor="#BFBFBF"
             android:textFontWeight="500"
             android:textSize="12dp" />
-
-
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -103,22 +101,22 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-<!--        -->
-<!--        <com.google.android.material.textfield.TextInputLayout-->
-<!--            style="@style/Widget.Design.TextInputLayout"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="18dp"-->
-<!--            android:layout_marginBottom="30dp"-->
-<!--            android:hint="سلام"-->
-<!--            android:textColorHint="@color/text_hint"-->
-<!--            app:endIconTint="@color/text_hint">-->
-<!--            -->
-<!--            <Spinner-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"/>-->
+        <!--        -->
+        <!--        <com.google.android.material.textfield.TextInputLayout-->
+        <!--            style="@style/Widget.Design.TextInputLayout"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="18dp"-->
+        <!--            android:layout_marginBottom="30dp"-->
+        <!--            android:hint="سلام"-->
+        <!--            android:textColorHint="@color/text_hint"-->
+        <!--            app:endIconTint="@color/text_hint">-->
+        <!--            -->
+        <!--            <Spinner-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"/>-->
 
-<!--        </com.google.android.material.textfield.TextInputLayout>-->
+        <!--        </com.google.android.material.textfield.TextInputLayout>-->
 
 
     </LinearLayout>

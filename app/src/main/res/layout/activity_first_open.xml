@@ -38,9 +38,9 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <include android:id="@+id/ttt"
+            <include
+                android:id="@+id/ttt"
                 layout="@layout/box_first_activity" />
-
 
             <CheckBox
                 android:id="@+id/checkbox"
