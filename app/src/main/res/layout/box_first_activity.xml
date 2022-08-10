@@ -54,15 +54,18 @@
         </com.google.android.material.textfield.TextInputLayout>
 
 
-        <TextView
+        <com.codesgood.views.JustifiedTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/iran_sans"
-            android:gravity="fill_horizontal"
+            android:layout_gravity="center_vertical|end"
+            android:gravity="end|start"
             android:text="اگر مایل هستید با انتخاب یکی از کسب و کار های زیر اطلاعات آن (شامل دسته بندی ، محصولات و..) را به صورت پیش فرض دریافت کنید."
             android:textColor="@color/text_hint"
             android:textFontWeight="500"
             android:textSize="11dp" />
+
+
 
 
         <com.google.android.material.textfield.TextInputLayout
