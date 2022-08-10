@@ -21,18 +21,57 @@
             android:drawableStart="@drawable/ic_back"
             android:drawablePadding="10dp"
             android:fontFamily="@font/iran_sans"
-            android:gravity="center_vertical"
+            android:gravity="center|right"
             android:paddingStart="16dp"
             android:text="افزودن کسب و کار جدید"
             android:textColor="@color/text_main"
             android:textFontWeight="500"
             android:textSize="14dp" />
-
     </androidx.cardview.widget.CardView>
 
-    <include layout="@layout/box_first_activity"/>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include android:id="@+id/ttt"
+                layout="@layout/box_first_activity" />
 
 
+            <CheckBox
+                android:id="@+id/checkbox"
+                style="@style/Text.Body2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="16dp"
+                android:autoLink="all"
+                android:fontFamily="@font/iran_sans"
+                android:gravity="top"
+                android:linksClickable="true"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/privacy_policy2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="40dp"
+                android:background="@drawable/item_border_btn"
+                android:fontFamily="@font/iran_sans"
+                android:gravity="center"
+                android:text="@string/create_new_business"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
 
 
 </LinearLayout>

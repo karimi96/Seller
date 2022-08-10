@@ -26,11 +26,11 @@
         <com.google.android.material.textfield.TextInputLayout
             style="@style/CustomTextInputLayout"
             android:layout_marginTop="10dp"
-            android:hint="نام صاحب کسب و کار">
+            android:hint="@string/name_business_owner">
 
             <com.google.android.material.textfield.TextInputEditText
                 style="@style/CustomTextInputEditText"
-                android:fontFamily="@font/iran_sans_fanum"
+                android:fontFamily="@font/iran_sans"
                 android:gravity="right"
                 android:imeOptions="actionNext"
                 android:inputType="text"
@@ -41,11 +41,11 @@
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/CustomTextInputLayout"
-            android:hint="نام کسب و کار شما">
+            android:hint="@string/business_name">
 
             <com.google.android.material.textfield.TextInputEditText
                 style="@style/CustomTextInputEditText"
-                android:fontFamily="@font/iran_sans_fanum"
+                android:fontFamily="@font/iran_sans"
                 android:gravity="right"
                 android:imeOptions="actionNext"
                 android:inputType="text"
@@ -55,15 +55,16 @@
 
 
         <com.codesgood.views.JustifiedTextView
+            android:id="@+id/description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/iran_sans"
             android:layout_gravity="center_vertical|end"
             android:gravity="end|start"
-            android:text="اگر مایل هستید با انتخاب یکی از کسب و کار های زیر اطلاعات آن (شامل دسته بندی ، محصولات و..) را به صورت پیش فرض دریافت کنید."
-            android:textColor="@color/text_hint"
+            android:text="@string/description_1"
+            android:textColor="#BFBFBF"
             android:textFontWeight="500"
-            android:textSize="11dp" />
+            android:textSize="12dp" />
 
 
 
@@ -101,6 +102,23 @@
                 android:textSize="14dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
+
+<!--        -->
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            style="@style/Widget.Design.TextInputLayout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="18dp"-->
+<!--            android:layout_marginBottom="30dp"-->
+<!--            android:hint="سلام"-->
+<!--            android:textColorHint="@color/text_hint"-->
+<!--            app:endIconTint="@color/text_hint">-->
+<!--            -->
+<!--            <Spinner-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
 
 
     </LinearLayout>
