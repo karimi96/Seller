@@ -57,17 +57,20 @@
                 android:paddingTop="5dp"
                 android:text="@string/privacy_policy2" />
 
-            <TextView
+            <com.karimi.seller.widget.loader_button.LoaderButton
+                android:id="@+id/submit"
                 android:layout_width="match_parent"
                 android:layout_height="53dp"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginVertical="40dp"
                 android:background="@drawable/item_border_btn"
-                android:fontFamily="@font/iran_sans"
-                android:gravity="center"
-                android:text="@string/create_new_business"
-                android:textColor="@color/white"
-                android:textSize="14dp" />
+                android:clickable="true"
+                android:focusable="true"
+                app:btnText="سلام"
+                app:btnTextColor="@color/white"
+                app:btnTextSize="14dp"
+                app:loaderIndicator="BallPulseIndicator"
+                app:loaderIndicatorColor="@color/white" />
         </LinearLayout>
 
 
