@@ -1,4 +1,4 @@
-package com.karimi.seller.widget;
+package com.karimi.seller.widget.loader_button;
 
 import android.content.Context;
 import android.graphics.Typeface;
