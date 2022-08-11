@@ -20,5 +20,8 @@
     <color name="shadow">#CDCDCD</color>
     <color name="border">#D1D1D1</color>
 
+    <color name="primary">#ce2b52</color>
+
+
 
 </resources>
