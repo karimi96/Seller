@@ -6,5 +6,13 @@ object Config {
 
     const val BASE_URL = "http://192.168.1.108/saler"
 
+    const val BUSINESS_ID = "BUSINESS_ID"
+
+
+    const val MONEY_TYPE_DEFAULT = "تومان"
+
+
+    const val BUSINESS_OWNER_NAME = "BUSINESS_OWNER_NAME"
+    const val BUSINESS_NAME = "BUSINESS_NAME"
 
 }
