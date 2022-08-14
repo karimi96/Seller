@@ -3,18 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable-v24/ic_extension.xml" value="0.174" />
+        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable-v24/ic_import.xml" value="0.174" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable-v24/ic_more_up.xml" value="0.1915" />
+        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable-v24/ic_storefront.xml" value="0.174" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable-v24/item_select_more_spinner.xml" value="0.187" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable/ic_more_down.xml" value="0.2115" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable/ic_more_up.xml" value="0.1915" />
+        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable/ic_shopping.xml" value="0.174" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable/ic_store.xml" value="0.1915" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable/item_border_btn.xml" value="0.1915" />
+        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable/item_ripple.xml" value="0.1545" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable/uuuuuuuuu.xml" value="0.1915" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_first_open.xml" value="0.28321318228630277" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_main2.xml" value="0.20416666666666666" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_splash.xml" value="0.5" />
+        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/box_detail_main_activity.xml" value="0.5" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/box_first_activity.xml" value="0.3353658536585366" />
+        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/chart.xml" value="0.20416666666666666" />
+        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/item_main.xml" value="0.24682539682539684" />
+        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/list_item_main.xml" value="0.16666666666666666" />
+        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/save_new_order.xml" value="0.11687041564792176" />
+        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/toolbar_main_activity.xml" value="0.5" />
       </map>
     </option>
   </component>
