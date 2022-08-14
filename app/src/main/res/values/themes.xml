@@ -48,6 +48,11 @@
     </style>
 
 
+    <style name="Text.Body1">
+        <item name="android:textSize">14dp</item>
+    </style>
+
+
     <style name="Text.Body2">
         <item name="android:textSize">14dp</item>
     </style>
