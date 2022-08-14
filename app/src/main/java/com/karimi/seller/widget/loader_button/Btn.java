@@ -53,9 +53,9 @@ public class Btn extends AppCompatButton {
 
     @Override
     public void setTypeface(Typeface tf, int style) {
-        String fontPath = "fonts/iran_sans_mobile.ttf";
+        String fontPath = "font/iran_sans.ttf";
         if(style== Typeface.BOLD){
-            fontPath = "fonts/iran_sans_mobile.ttf";
+            fontPath = "font/iran_sans.ttf";
         }
         tf = Typeface.createFromAsset(getContext().getAssets(), fontPath);
         super.setTypeface(tf);
@@ -64,7 +64,7 @@ public class Btn extends AppCompatButton {
 
     @Override
     public void setTypeface(Typeface tf) {
-        String fontPath = "fonts/iran_sans_mobile.ttf";
+        String fontPath = "font/iran_sans.ttf";
         tf = Typeface.createFromAsset(getContext().getAssets(), fontPath);
         super.setTypeface(tf);
     }
