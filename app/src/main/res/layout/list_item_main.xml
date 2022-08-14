@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="3dp"
+    app:cardCornerRadius="8dp"
+    android:foreground="@drawable/item_ripple"
+    android:outlineSpotShadowColor="@color/shadow"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_bascket" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/Text.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/text_main"
+            android:fontFamily="@font/iran_sans"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            tools:text="محصولات" />
+
+        <TextView
+            android:id="@+id/desc"
+            style="@style/Text.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textColor="@color/text_hint"
+            android:textStyle="bold"
+            tools:text="همه محصولات ثبت شده" />
+
+        <TextView
+            android:id="@+id/content"
+            style="@style/Text.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textColor="@color/text_hint"
+            android:textStyle="bold"
+            tools:text="1,900 محصول" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
