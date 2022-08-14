@@ -25,7 +25,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/CustomTextInputLayout"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:hint="@string/name_business_owner">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -33,15 +33,17 @@
                 style="@style/CustomTextInputEditText"
                 android:fontFamily="@font/iran_sans"
                 android:gravity="right"
+                android:focusableInTouchMode="true"
                 android:imeOptions="actionNext"
                 android:inputType="text"
-                android:paddingTop="15dp" />
+                android:paddingTop="13dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/CustomTextInputLayout"
+            android:layout_marginTop="5dp"
             android:hint="@string/business_name">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -51,7 +53,7 @@
                 android:gravity="right"
                 android:imeOptions="actionNext"
                 android:inputType="text"
-                android:paddingTop="15dp" />
+                android:paddingTop="13dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -70,12 +72,13 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="25dp"
             android:layout_marginBottom="30dp"
             android:background="@color/white"
+            app:boxStrokeWidth="0dp"
             android:backgroundTint="@color/white"
             android:textColorHint="@color/text_hint"
             app:endIconDrawable="@drawable/item_select_more_spinner"
@@ -84,41 +87,31 @@
             app:hintEnabled="false">
 
             <AutoCompleteTextView
+                android:id="@+id/auto_complete_txt"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@color/white"
                 android:backgroundTint="@color/white"
                 android:drawableStart="@drawable/ic_store"
                 android:drawablePadding="10dp"
-                android:fontFamily="@font/iran_sans_fanum"
+                android:paddingTop="13dp"
+                android:fontFamily="@font/iran_sans"
                 android:gravity="right"
+                android:paddingBottom="2dp"
                 android:hint="فروشگاه آماده برای شما"
-                android:imeOptions="actionNext"
-                android:inputType="text"
-                android:paddingTop="15dp"
+                android:inputType="none"
+                android:paddingStart="0dp"
                 android:textColor="@color/text_main"
                 android:textColorHint="@color/text_hint"
                 android:textFontWeight="500"
                 android:textSize="14dp" />
 
+            <View
+                android:background="@color/text_hint"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
         </com.google.android.material.textfield.TextInputLayout>
-
-        <!--        -->
-        <!--        <com.google.android.material.textfield.TextInputLayout-->
-        <!--            style="@style/Widget.Design.TextInputLayout"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginTop="18dp"-->
-        <!--            android:layout_marginBottom="30dp"-->
-        <!--            android:hint="سلام"-->
-        <!--            android:textColorHint="@color/text_hint"-->
-        <!--            app:endIconTint="@color/text_hint">-->
-        <!--            -->
-        <!--            <Spinner-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="wrap_content"/>-->
-
-        <!--        </com.google.android.material.textfield.TextInputLayout>-->
 
 
     </LinearLayout>
