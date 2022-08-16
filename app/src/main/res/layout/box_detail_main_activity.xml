@@ -5,6 +5,7 @@
     android:id="@+id/recyclerView"
     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
     app:spanCount="2"
+    android:background="@color/background"
     tools:listitem="@layout/list_item_main"
     tools:itemCount="8"
     android:layout_width="match_parent"
