@@ -25,10 +25,10 @@ public class Session {
         extraEditor.putString(Config.SESSION_KEY, key);
         extraEditor.commit();
     }
-
     public String getSessionKey() {
         return ExtrasPref.getString(Config.SESSION_KEY, null);
     }
+
 
 
     public void setBranch(int branch) {
@@ -40,18 +40,31 @@ public class Session {
     }
 
 
+
     public void setBusiness(Business business) {
         extraEditor.putString(Config.BUSINESS_OWNER_NAME, business.getOwner_name());
         extraEditor.putString(Config.BUSINESS_NAME, business.getBusiness_name());
         extraEditor.putInt(Config.BUSINESS_ID, business.getId());
         extraEditor.commit();
     }
-
     public void setBusiness(String name, String businessName, int businessID) {
         extraEditor.putString(Config.BUSINESS_OWNER_NAME, name);
         extraEditor.putString(Config.BUSINESS_NAME, businessName);
         extraEditor.putInt(Config.BUSINESS_ID, businessID);
         extraEditor.commit();
+    }
+
+
+    public int getBusinessID() {
+        return ExtrasPref.getInt(Config.BUSINESS_ID, -1);
+    }
+
+
+    public String getBusinessOwnerName() {
+        return ExtrasPref.getString(Config.BUSINESS_OWNER_NAME, null);
+    }
+    public String getBusinessName() {
+        return ExtrasPref.getString(Config.BUSINESS_NAME, null);
     }
 
 }
