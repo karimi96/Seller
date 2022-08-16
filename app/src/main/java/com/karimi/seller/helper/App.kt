@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.multidex.MultiDex
 import androidx.multidex.MultiDexApplication
 import com.karimi.seller.database.AppDatabase
+import java.text.DecimalFormat
 
 class App : MultiDexApplication() {
 
@@ -36,6 +37,13 @@ class App : MultiDexApplication() {
         fun getString(editText: EditText): String {
             return editText.text.toString().trim()
         }
+
+
+        fun priceFormat(double: Double):String{
+            val decimalFormat = DecimalFormat("###,###,###")
+            return decimalFormat.format(double)
+        }
+
 
 
     }
