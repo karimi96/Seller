@@ -15,4 +15,7 @@ object Config {
     const val BUSINESS_OWNER_NAME = "BUSINESS_OWNER_NAME"
     const val BUSINESS_NAME = "BUSINESS_NAME"
 
+    const val ORDER_STATUS_WAITING = 0
+    const val ORDER_STATUS_SUCCESS = 1
+
 }
