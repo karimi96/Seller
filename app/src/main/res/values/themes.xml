@@ -42,20 +42,23 @@
     </style>
 
 
-    <style name="Text">
+<!--    <style name="Text">-->
+<!--        <item name="android:textColor">@color/text_main</item>-->
+<!--        <item name="android:textSize">14dp</item>-->
+<!--        <item name="android:fontFamily">@font/iran_sans</item>-->
+<!--        <item name="android:textFontWeight" tools:ignore="NewApi">500</item>-->
+<!--    </style>-->
+
+
+    <style name="TextMain">
         <item name="android:textColor">@color/text_main</item>
-        <item name="android:textSize">14dp</item>
         <item name="android:fontFamily">@font/iran_sans</item>
         <item name="android:textFontWeight" tools:ignore="NewApi">500</item>
-    </style>
-
-
-    <style name="Text.TextMain">
         <item name="android:textSize">14dp</item>
     </style>
 
 
-    <style name="Text.TextSecondary">
+    <style name="TextSecondary">
         <item name="android:textColor">@color/text_hint</item>
         <item name="android:textSize">12dp</item>
         <item name="android:fontFamily">@font/iran_sans</item>
