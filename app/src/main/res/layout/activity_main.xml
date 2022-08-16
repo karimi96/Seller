@@ -12,11 +12,13 @@
         android:orientation="vertical"
         tools:context=".activity.main.MainActivity">
 
-        <include layout="@layout/toolbar_main_activity" />
+        <include android:id="@+id/toolbar" layout="@layout/toolbar_main_activity" />
 
         <include layout="@layout/chart" />
 
         <include layout="@layout/save_new_order" />
+
+        <include layout="@layout/box_order_waiting_" />
 
         <include layout="@layout/box_detail_main_activity" />
 
