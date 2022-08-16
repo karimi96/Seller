@@ -4,7 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     android:orientation="vertical"
     tools:context=".activity.product.ProductDetailActivity">
+
+    <include layout="@layout/include_toolbar_product_detail" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:overScrollMode="never"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/include_recycler_product" />
+
+            <include layout="@layout/include_chart_product" />
+
+            <View style="@style/CustomLine" android:layout_marginVertical="10dp" />
+
+            <include layout="@layout/include_customer_product" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="42dp"
+                android:paddingHorizontal="16dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tv_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="53dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/item_border_btn"
+                    android:fontFamily="@font/iran_sans"
+                    android:gravity="center"
+                    android:text="ویرایش"
+                    android:textColor="@color/white"
+                    android:textFontWeight="700"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_delete"
+                    android:layout_width="0dp"
+                    android:layout_height="53dp"
+                    android:layout_marginStart="17dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/item_border_delete"
+                    android:fontFamily="@font/iran_sans"
+                    android:gravity="center"
+                    android:text="حذف"
+                    android:textColor="@color/purple"
+                    android:textFontWeight="700"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>
