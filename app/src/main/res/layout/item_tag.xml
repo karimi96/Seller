@@ -12,7 +12,8 @@
     app:cardElevation="0dp">
 
     <TextView
-        style="@style/Text.TextMain"
+        android:id="@+id/text_title"
+        style="@style/TextMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
