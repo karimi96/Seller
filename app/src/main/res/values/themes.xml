@@ -50,14 +50,16 @@
     </style>
 
 
-    <style name="Text.Body1">
+    <style name="Text.TextMain">
         <item name="android:textSize">14dp</item>
     </style>
 
 
-    <style name="Text.Body2">
-        <item name="android:textSize">14dp</item>
-    </style>
+    <style name="Text.TextSecondary">
+        <item name="android:textColor">@color/text_hint</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:fontFamily">@font/iran_sans</item>
+        <item name="android:textFontWeight" tools:ignore="NewApi">500</item>    </style>
 
 
     <style name="test">
