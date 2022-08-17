@@ -10,13 +10,12 @@ import android.view.inputmethod.EditorInfo
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.karimi.seller.R
+import com.karimi.seller.dialog.ProductViewDialog
 import com.karimi.seller.helper.App
 import com.karimi.seller.model.TagList
 import kotlinx.android.synthetic.main.activity_list_product.*
 import kotlinx.android.synthetic.main.activity_list_product.recyclerView_category
-import kotlinx.android.synthetic.main.activity_list_product.toolbar
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.item_product.view.title
 import kotlinx.android.synthetic.main.item_toolbar.view.*
 import kotlinx.android.synthetic.main.item_toolbar.view.ic_back
 import kotlinx.android.synthetic.main.toolbar_main_activity.view.*
@@ -181,5 +180,6 @@ class ListProductActivity : AppCompatActivity(), ProductViewDialog.Listener {
         i.putExtra("product_position", position)
         resultUpdate.launch(i)
         dialog.dismiss()
+
     }
 }
