@@ -7,7 +7,10 @@ import android.widget.Toast
 import androidx.multidex.MultiDex
 import androidx.multidex.MultiDexApplication
 import com.karimi.seller.database.AppDatabase
+import saman.zamani.persiandate.PersianDate
+import saman.zamani.persiandate.PersianDateFormat
 import java.text.DecimalFormat
+import java.util.*
 
 class App : MultiDexApplication() {
 
@@ -44,6 +47,10 @@ class App : MultiDexApplication() {
             return decimalFormat.format(double)
         }
 
+
+        fun getFormattedDate(date: Date?): String? {
+            return PersianDateFormat("Y/m/d").format(PersianDate(date))
+        }
 
 
     }
