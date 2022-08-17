@@ -22,7 +22,7 @@
         android:clipToPadding="false"
         android:paddingHorizontal="12dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/list_item_customer_product"
+        tools:listitem="@layout/list_item_customer_product_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
