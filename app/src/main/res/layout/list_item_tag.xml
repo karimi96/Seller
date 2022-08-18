@@ -12,7 +12,7 @@
     app:cardElevation="0dp">
 
     <TextView
-        android:id="@+id/text_title"
+        android:id="@+id/title_category_p_view"
         style="@style/TextMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
