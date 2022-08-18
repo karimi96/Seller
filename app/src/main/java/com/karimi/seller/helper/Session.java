@@ -67,4 +67,11 @@ public class Session {
         return ExtrasPref.getString(Config.BUSINESS_NAME, null);
     }
 
+
+
+    public String getMoneyType() {
+        return ExtrasPref.getString(Config.MONEY_TYPE, MONEY_TYPE_DEFAULT);
+    }
+
+
 }
