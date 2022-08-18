@@ -46,6 +46,10 @@ class App : MultiDexApplication() {
             val decimalFormat = DecimalFormat("###,###,###")
             return decimalFormat.format(double)
         }
+        fun priceFormat(double: Double, showMoneyType: Boolean):String{
+            return if (showMoneyType) "${priceFormat(double)} ${Session.getInstance().moneyType}"
+            else priceFormat(double)
+        }
 
 
         fun getFormattedDate(date: Date?): String? {
