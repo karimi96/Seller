@@ -36,7 +36,7 @@ interface AppDao {
     @Query("SELECT id,image_defult,name,price_sale FROM product " +
             "INNER JOIN categoryproduct on product.id = categoryproduct.id_product " +
             "WHERE product.branch=:branch and categoryproduct.id_category = :id_category ")
-    fun selectSmallSizeProductByCategory(branch: Int, id_category: Int): List<Product>
+    fun  selectSmallSizeProductByCategory(branch: Int, id_category: Int): List<Product>
 
     @Query("select * from product where branch=:branch and id = :id_product")
     fun selectProduct(branch: Int, id_product: Int): Product

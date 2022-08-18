@@ -10,6 +10,7 @@ object Config {
 
 
     const val MONEY_TYPE_DEFAULT = "تومان"
+    const val MONEY_TYPE = "MONEY_TYPE"
 
 
     const val BUSINESS_OWNER_NAME = "BUSINESS_OWNER_NAME"
