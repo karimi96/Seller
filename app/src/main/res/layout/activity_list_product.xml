@@ -1,28 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:background="@color/background"
     android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
     tools:context=".activity.product.ListProductActivity">
 
-    <include layout="@layout/include_toolbar_product"/>
+    <include android:id="@+id/tlb" layout="@layout/include_toolbar_product" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_product"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
         android:orientation="vertical"
         android:overScrollMode="never"
-        app:spanCount="3"
-        android:paddingVertical="8dp"
         android:paddingHorizontal="8dp"
+        android:paddingVertical="8dp"
+        android:layout_below="@id/tlb"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="3"
         tools:itemCount="12"
         tools:listitem="@layout/list_item_product" />
 
-    
+    <com.karimi.seller.widget.StatUser
+        android:id="@+id/statuser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tlb" />
 
-</LinearLayout>
+
+</RelativeLayout>

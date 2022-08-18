@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/box_empty"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/ic_empty_data"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:tint="@color/black" />
+        <TextView
+            android:translationY="-15dp"
+            style="@style/TextSecondary"
+            android:text="@string/no_data_to_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/box_error"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/TextMain"
+            android:text="@string/error_connection_server"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_try"
+            android:text="@string/try_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_centerInParent="true"
+        android:layout_width="35dp"
+        android:layout_height="35dp"/>
+
+</RelativeLayout>
