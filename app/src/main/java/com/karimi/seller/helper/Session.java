@@ -70,7 +70,7 @@ public class Session {
 
 
     public String getMoneyType() {
-        return ExtrasPref.getString(Config.MONEY_TYPE, MONEY_TYPE_DEFAULT);
+        return ExtrasPref.getString(Config.MONEY_TYPE, Config.MONEY_TYPE_DEFAULT);
     }
 
 
