@@ -49,8 +49,10 @@ interface AppDao {
             "WHERE product.branch=:branch and categoryproduct.id_category = :id_category ")
     fun selectProductByCategory(branch: Int, id_category: Int): List<Product>
 
-    @Query("select stock,price_buy from product where branch=:branch")
+    @Query("select * from product where branch=:branch")
     fun productCount(branch: Int): List<Product>
+//  @Query("select stock,price_buy from product where branch=:branch")
+//    fun productCount(branch: Int): List<Product>
 
     @Query("select count(id) from product where branch=:branch")
     fun getAllProductCount(branch: Int): Int
