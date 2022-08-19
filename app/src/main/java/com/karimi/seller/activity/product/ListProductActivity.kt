@@ -17,7 +17,7 @@ import com.karimi.seller.model.TagList
 import kotlinx.android.synthetic.main.activity_list_product.*
 import kotlinx.android.synthetic.main.include_toolbar_product.*
 
-class ListProductActivity : AppCompatActivity() {
+class ListProductActivity : AppCompatActivity() , ProductViewActivity.Listener{
 
     private var listCategoryForBack = ArrayList<TagList>()
     private var adapterProduct : ProductListManagerAdapter? = null
@@ -36,7 +36,7 @@ class ListProductActivity : AppCompatActivity() {
             }
         }
 
-    private val resultUpdate =
+     val resultUpdate =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == RESULT_OK) {
                 if (result.data!= null){
@@ -173,15 +173,18 @@ class ListProductActivity : AppCompatActivity() {
         recyclerView_product.adapter = adapterProduct
     }
 
+//    override fun onEditProduct(product: Product?, position: Int) {
+//        TODO("Not yet implemented")
+//    }
+
     /**
      * Listener
      * */
-//    override fun onEditProduct(dialog: ProductViewDialog, product: Product?, position: Int) {
+    override fun onEditProduct( product: Product?, position: Int) {
 //        val i = Intent(this@ListProductActivity,ProductActivity::class.java)
 //        i.putExtra("product_id", product!!.id)
 //        i.putExtra("product_position", position)
 //        resultUpdate.launch(i)
-//        dialog.dismiss()
-//
-//    }
+        App.toast("hello")
+    }
 }
