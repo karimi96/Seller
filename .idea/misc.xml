@@ -16,6 +16,7 @@
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable/ic_jacket.xml" value="0.185" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable/ic_more_down.xml" value="0.2115" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable/ic_more_up.xml" value="0.1915" />
+        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable/ic_phone.xml" value="0.2115" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable/ic_plus.xml" value="0.2115" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable/ic_shopping.xml" value="0.174" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable/ic_store.xml" value="0.1915" />
@@ -39,7 +40,8 @@
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/box_order_waiting_.xml" value="0.67" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/box_waiting_order.xml" value="0.18342391304347827" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/chart.xml" value="0.20416666666666666" />
-        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/dialog_add_category.xml" value="1.0" />
+        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/dialog_add_category.xml" value="0.26834170854271355" />
+        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/dialog_add_customer.xml" value="0.33" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/dialog_view_product.xml" value="0.22" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/include_chart_product.xml" value="0.1675213675213675" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/include_chart_product_view.xml" value="0.20416666666666666" />
