@@ -23,6 +23,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textFontWeight" tools:ignore="NewApi">500</item>
         <item name="android:textColorHint">@color/text_hint</item>
+        <item name="startIconTint">@color/text_hint</item>
         <item name="hintTextAppearance">@style/CustomHintSize</item>
     </style>
 
