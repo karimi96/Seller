@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    android:outlineSpotShadowColor="@color/shadow"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="0.11"
+            android:src="@drawable/ic_cart" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.53"
+            android:gravity="center|right"
+            android:orientation="vertical"
+            android:paddingVertical="15dp">
+
+            <TextView
+                style="@style/TextMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="سفارش امین گلی" />
+
+            <TextView
+                style="@style/TextSecondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="1401/04/04" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextMain"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:layout_weight="0.35"
+            android:gravity="end"
+            android:text="تومان 457,000,00"
+            android:textColor="@color/purple" />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
