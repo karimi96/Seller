@@ -67,7 +67,7 @@
             android:paddingTop="9dp"
             android:text="دسته بندی فعال باشد"
             android:textColor="@color/text_main"
-            android:textFontWeight="500"
+            android:textFontWeight="700"
             android:textSize="12dp" />
 
 
