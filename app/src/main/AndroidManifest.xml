@@ -20,6 +20,15 @@
         android:theme="@style/Theme.Seller"
         tools:targetApi="31">
         <activity
+            android:name=".activity.customer.CustomerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.category.CategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.order.OrdersActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.product.ListProductActivity"
             android:exported="false" />
         <activity
