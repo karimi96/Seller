@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tnl"
+            android:paddingStart="-14dp"
+            style="@style/CustomTextInputLayout"
+            android:hint="@string/customer_name"
+            app:startIconDrawable="@drawable/ic_account">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_name"
+                style="@style/CustomTextInputEditText"
+                android:focusableInTouchMode="true"
+                android:fontFamily="@font/iran_sans"
+                android:gravity="right"
+                android:paddingStart="10dp"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:paddingTop="13dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/CustomTextInputLayout"
+            android:hint="@string/number_phone"
+            android:layout_marginTop="10dp"
+            android:paddingStart="-15dp"
+            app:startIconDrawable="@drawable/ic_phone_gray"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/CustomTextInputEditText"
+                android:focusableInTouchMode="true"
+                android:fontFamily="@font/iran_sans"
+                android:gravity="right"
+                android:paddingStart="10dp"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:paddingTop="13dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-5dp"
+            android:checked="true"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/iran_sans"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingTop="9dp"
+            android:text="دسته بندی فعال باشد"
+            android:textColor="@color/text_main"
+            android:textFontWeight="500"
+            android:textSize="12dp" />
+
+
+
+        <TextView
+            android:layout_below="@id/cb"
+            android:text="ثبت"
+            android:gravity="center"
+            android:fontFamily="@font/iran_sans"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:paddingVertical="10dp"
+            android:background="@drawable/item_border_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
