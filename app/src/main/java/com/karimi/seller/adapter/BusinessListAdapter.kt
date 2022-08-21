@@ -39,7 +39,7 @@ class BusinessListAdapter(val context: Context,
         val item = holder.itemView
         val model = list[position]
 
-        item.text.text = model.business_name
+        item.texttttt.text = model.business_name
         if (listener != null){
             item.setOnClickListener {
                 listener.onItemClicked(position,model)
