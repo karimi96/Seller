@@ -20,6 +20,9 @@
         android:theme="@style/Theme.Seller"
         tools:targetApi="31">
         <activity
+            android:name=".activity.setting.SettingActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.financialReport.FinancialReportActivity"
             android:exported="false" />
         <activity
