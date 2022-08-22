@@ -78,6 +78,13 @@
         <item name="android:layout_marginHorizontal" tools:ignore="NewApi">16dp</item>
     </style>
 
+    <style name="TextHelper">
+        <item name="android:textColor">@color/text_helper</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:fontFamily">@font/iran_sans</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+
 
 
 </resources>
