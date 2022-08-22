@@ -37,6 +37,7 @@
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_orders.xml" value="0.33" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_product_detail.xml" value="0.22" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_product_view.xml" value="0.15736040609137056" />
+        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_setting.xml" value="0.19010416666666666" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_splash.xml" value="0.5" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/box_detail_main_activity.xml" value="0.75" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/box_first_activity.xml" value="0.3353658536585366" />
@@ -46,6 +47,7 @@
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/dialog_add_category.xml" value="0.26834170854271355" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/dialog_add_customer.xml" value="0.33" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/dialog_view_product.xml" value="0.22" />
+        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/include_box_setting1.xml" value="0.203125" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/include_chart_product.xml" value="0.1675213675213675" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/include_chart_product_view.xml" value="0.20416666666666666" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/include_customer_product.xml" value="0.18902439024390244" />
@@ -66,6 +68,7 @@
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/include_toolbar_product.xml" value="0.2949438202247191" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/include_toolbar_product_detail.xml" value="0.45555555555555555" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/include_toolbar_product_view.xml" value="0.20416666666666666" />
+        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/include_toolbar_setting.xml" value="0.33" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/item_main.xml" value="0.24682539682539684" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/item_menu_dialog_business_edit.xml" value="0.18206521739130435" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/item_menu_dialog_business_main.xml" value="0.22" />
