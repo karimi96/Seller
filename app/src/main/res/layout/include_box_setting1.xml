@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="10dp"
+    android:outlineSpotShadowColor="@color/shadow"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/CustomTextInputLayout"
+            android:layout_marginTop="15dp"
+            android:hint="@string/min_order_for_submit"
+            android:paddingStart="-14dp"
+            app:startIconDrawable="@drawable/ic_store">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/CustomTextInputEditText"
+                android:fontFamily="@font/iran_sans"
+                android:gravity="right"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingTop="13dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.codesgood.views.JustifiedTextView
+            style="@style/TextHelper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/helper_text_min_order" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/CustomTextInputLayout"
+            android:layout_marginTop="30dp"
+            android:hint="@string/percent_tax"
+            android:paddingStart="-14dp"
+            app:startIconDrawable="@drawable/ic_percent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/CustomTextInputEditText"
+                android:fontFamily="@font/iran_sans"
+                android:gravity="right"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingTop="13dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.codesgood.views.JustifiedTextView
+            style="@style/TextHelper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/helper_text_tax" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/CustomTextInputLayout"
+            android:layout_marginTop="30dp"
+            android:hint="@string/money_type"
+            android:paddingStart="-14dp"
+            app:startIconDrawable="@drawable/ic_currency">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/CustomTextInputEditText"
+                android:fontFamily="@font/iran_sans"
+                android:gravity="right"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingTop="13dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.codesgood.views.JustifiedTextView
+            style="@style/TextHelper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/helper_text_money_type" />
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/CustomTextInputLayout"
+            android:layout_marginTop="30dp"
+            android:hint="@string/price_shipping"
+            android:paddingStart="-13dp"
+            app:startIconDrawable="@drawable/ic_truck_fast">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/CustomTextInputEditText"
+                android:fontFamily="@font/iran_sans"
+                android:gravity="right"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingTop="13dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.codesgood.views.JustifiedTextView
+            style="@style/TextHelper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/helper_text_shipping" />
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/CustomTextInputLayout"
+            android:layout_marginTop="30dp"
+            android:hint="@string/free_shipping_in_order"
+            android:paddingStart="-12dp"
+            app:startIconDrawable="@drawable/ic_cart">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/CustomTextInputEditText"
+                android:fontFamily="@font/iran_sans"
+                android:gravity="right"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingTop="13dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.codesgood.views.JustifiedTextView
+            style="@style/TextHelper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/helper_text_free_shipping" />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
