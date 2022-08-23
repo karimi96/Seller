@@ -20,6 +20,9 @@
         android:theme="@style/Theme.Seller"
         tools:targetApi="31">
         <activity
+            android:name=".activity.product.AddNewProductActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.support.SupportActivity"
             android:exported="false" />
         <activity
