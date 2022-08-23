@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="16dp"
-    android:layout_marginVertical="10dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="10dp"
     android:outlineSpotShadowColor="@color/shadow"
     app:cardCornerRadius="8dp"
     app:cardElevation="4dp">
@@ -90,8 +91,6 @@
             android:text="@string/helper_text_money_type" />
 
 
-
-
         <com.google.android.material.textfield.TextInputLayout
             style="@style/CustomTextInputLayout"
             android:layout_marginTop="30dp"
@@ -115,8 +114,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/helper_text_shipping" />
-
-
 
 
         <com.google.android.material.textfield.TextInputLayout
