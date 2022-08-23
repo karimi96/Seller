@@ -130,8 +130,8 @@
     <string name="product_beloved">محصولات موردعلاقه</string>
     <string name="conenct_us">راه های ارتباطی</string>
     <string name="address">قم . بلوار پانزده خرداد کوچه ۳۹ ساختمان مدیران شرکت سیمین سرمایه پارس</string>
-    <string name="tel">02539876543(98)</string>
-    <string name="time">شنبه - چهارشنبه\n۹صبح - ۴عصر</string>
+    <string name="tel">02539876543 (98)</string>
+    <string name="time">شنبه تا چهارشنبه\n از ساعت 9:00 الی 16:00</string>
     <string name="cash_by_money">پرداخت با پول نقد</string>
     <string name="cash_by_card">پرداخت از طریق کارت اعتباری</string>
     <string name="cash_by_debit">پرداخت به صورت نسیه</string>
