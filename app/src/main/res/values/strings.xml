@@ -5,7 +5,7 @@
     <string name="barcode">بارکد</string>
     <string name="price_buy">قیمت خرید</string>
     <string name="price_sela_on_product">قیمت روی کالا (مصرف کننده)</string>
-    <string name="price_sela">قیمت نهایی فروش</string>
+    <string name="price_sale">قیمت نهایی فروش</string>
     <string name="price_discount">مبلغ تخفیف</string>
     <string name="price_discount_order">تخفیف بر روی سفارش</string>
     <string name="percent_tax">درصد مالیات</string>
@@ -15,7 +15,7 @@
     <string name="detail">جزئیات</string>
     <string name="stock">موجودی</string>
     <string name="stock_toolbar">گزارش انبار</string>
-    <string name="increase_product">واحد کالا</string>
+    <string name="increase_product">واحد</string>
     <string name="description">توضیحات</string>
     <string name="permission_required">دسترسی الزامی</string>
     <string name="permission_message">ما برای ارائه خدمات خود به دسترسی های ضروری درخواست شده نیاز داریم</string>
@@ -30,7 +30,8 @@
     <string name="category_is_enable">دسته‌بندی فعال باشد</string>
     <string name="date_expire">تاریخ انقضا</string>
     <string name="product_info">مشخصات محصول</string>
-    <string name="initial_balance">موجودی اولیه</string>
+    <string name="add_new_product">ثبت محصول جدید</string>
+    <string name="initial_balance">موجودی انبار</string>
     <string name="max_in_check_out">حداکثر مجاز در سبد خرید</string>
     <string name="balance">انبار</string>
     <string name="finance">مالی</string>
