@@ -1,6 +1,5 @@
 package com.karimi.seller.activity.business_add.mvp
 
-import amingoli.com.selar.activity.business_add.mvp.FirstOpenPresenter
 import com.karimi.seller.api.ApiClient
 import com.karimi.seller.model.ResponseBusinessSample
 import com.karimi.seller.model.ResponseData
