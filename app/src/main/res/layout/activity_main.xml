@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:background="@color/background"
     android:layout_height="match_parent">
 
     <include
@@ -29,5 +30,5 @@
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
-    
+
 </LinearLayout>
