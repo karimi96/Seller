@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="16dp"
     android:layout_marginVertical="8dp"
+    android:id="@+id/background_order2"
     android:outlineSpotShadowColor="@color/shadow"
     app:cardCornerRadius="8dp"
     app:cardElevation="3dp">
@@ -33,12 +34,14 @@
             android:paddingVertical="15dp">
 
             <TextView
+                android:id="@+id/title_order_name"
                 style="@style/TextMain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="سفارش امین گلی" />
 
             <TextView
+                android:id="@+id/date_order"
                 style="@style/TextSecondary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -48,6 +51,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/amount_order"
             style="@style/TextMain"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

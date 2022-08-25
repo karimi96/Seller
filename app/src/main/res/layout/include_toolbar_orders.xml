@@ -58,7 +58,7 @@
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView_category"
+            android:id="@+id/recyclerView_order1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"

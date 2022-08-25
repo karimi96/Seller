@@ -10,6 +10,7 @@
     <include layout="@layout/include_toolbar_orders"/>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_order2"
         tools:listitem="@layout/list_item_order"
         android:clipToPadding="false"
         android:paddingVertical="12dp"
