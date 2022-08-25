@@ -2,6 +2,8 @@ package com.karimi.seller.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.graphics.Color
+import android.graphics.drawable.Drawable
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -86,19 +88,13 @@ class TagInfoAdapter(
 
     private fun setItemSelected(is_selected: Boolean, background: CardView, textView: TextView) {
         if (is_selected) {
-//            imageView.setBackgroundColor(ContextCompat.getColor(context,R.color.blue))
-//            imageView.setColorFilter(ContextCompat.getColor(context, R.color.white), android.graphics.PorterDuff.Mode.SRC_IN)
-//            background.setBackgroundResource(R.color.purple)
-            val colorId: Int = R.color.purple
-            val color: Int = background.context.resources.getColor(colorId)
-           background.setCardBackgroundColor(color)
+            background.radius = 10F
+            background.backgroundTintList = context.resources.getColorStateList(R.color.purple)
             textView.setTextColor(ContextCompat.getColor(context, R.color.white))
 
         } else {
-//            imageView.setBackgroundColor(ContextCompat.getColor(context,R.color.white))
-//            imageView.setColorFilter(ContextCompat.getColor(context, R.color.black), android.graphics.PorterDuff.Mode.SRC_IN)
             textView.setTextColor(ContextCompat.getColor(context, R.color.text_main))
-            background.setBackgroundResource(R.color.back_hint)
+            background.backgroundTintList = context.resources.getColorStateList(R.color.back_hint)
 
         }
     }
