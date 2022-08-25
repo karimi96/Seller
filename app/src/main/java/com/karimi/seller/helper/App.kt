@@ -52,6 +52,10 @@ class App : MultiDexApplication() {
         }
 
 
+        fun getFormattedDate(dateTime: Long?): String? {
+            return PersianDateFormat("Y/m/d").format(PersianDate(dateTime))
+        }
+
         fun getFormattedDate(date: Date?): String? {
             return PersianDateFormat("Y/m/d").format(PersianDate(date))
         }
