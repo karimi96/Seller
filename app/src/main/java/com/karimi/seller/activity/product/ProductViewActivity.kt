@@ -11,7 +11,6 @@ import com.karimi.seller.helper.App
 import com.karimi.seller.model.Product
 import com.karimi.seller.model.TagList
 import kotlinx.android.synthetic.main.activity_product_view.*
-import kotlinx.android.synthetic.main.include_chart_product_view.*
 import kotlinx.android.synthetic.main.include_customer_product_view.*
 import kotlinx.android.synthetic.main.include_recycler_product_view.*
 import kotlinx.android.synthetic.main.include_toolbar_product_view.*
@@ -25,6 +24,8 @@ class ProductViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product_view)
+
+
 
         if (intent.extras != null){
             product_id = intent.getIntExtra("product_id",-1)
@@ -96,6 +97,7 @@ class ProductViewActivity : AppCompatActivity() {
         recyclerView_customer.adapter = CustomerListHorizontalAdapter(this,arrayList,
             object : CustomerListHorizontalAdapter.Listener{
                 override fun onItemClicked(position: Int, item: TagList) {
+                    App.toast("clicked  " + item.title)
                 }
 
             })
