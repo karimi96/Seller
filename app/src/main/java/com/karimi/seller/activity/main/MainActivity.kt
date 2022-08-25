@@ -26,8 +26,6 @@ class MainActivity : AppCompatActivity() ,ItemMainAdapter.Listener{
     private var adapterMain : ItemMainAdapter? = null
 
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -36,6 +34,13 @@ class MainActivity : AppCompatActivity() ,ItemMainAdapter.Listener{
         initRecyclerView()
 
     }
+
+
+    override fun onResume() {
+        super.onResume()
+        initData()
+    }
+
 
     private fun initToolbar(){
         toolbar.content.setOnClickListener {
@@ -120,7 +125,7 @@ class MainActivity : AppCompatActivity() ,ItemMainAdapter.Listener{
 //        })
 //        recyclerView_order_waiting.adapter = adapterWaiting
 
-        adapterMain = ItemMainAdapter(this,ArrayList(),this)
+        adapterMain = ItemMainAdapter(this , ArrayList(),this)
         recyclerView_main.adapter = adapterMain
     }
 
@@ -128,5 +133,9 @@ class MainActivity : AppCompatActivity() ,ItemMainAdapter.Listener{
         startActivity(Intent(this, item.action))
     }
 
+
+//    updateItemMainModel()
+//    barChartAdapter()
+//    initOnClick()
 
 }
