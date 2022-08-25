@@ -1,10 +1,13 @@
 package com.karimi.seller.activity.main
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.karimi.seller.R
+import com.karimi.seller.activity.order.OrdersActivity
 import com.karimi.seller.activity.product.ListProductActivity
+import com.karimi.seller.adapter.ItemMainAdapter
 import com.karimi.seller.adapter.OrderWaitingAdapter
 import com.karimi.seller.dialog.BusinessMenuDialog
 import com.karimi.seller.helper.App
@@ -13,12 +16,15 @@ import com.karimi.seller.helper.Session
 import com.karimi.seller.model.Business
 import com.karimi.seller.model.MainModel
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.box_detail_main_activity.*
 import kotlinx.android.synthetic.main.box_order_waiting_.*
 import kotlinx.android.synthetic.main.toolbar_main_activity.*
 import kotlinx.android.synthetic.main.toolbar_main_activity.view.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() ,ItemMainAdapter.Listener{
     private var adapterWaiting : OrderWaitingAdapter? = null
+    private var adapterMain : ItemMainAdapter? = null
+
 
 
 
@@ -27,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         initToolbar()
+        initRecyclerView()
 
     }
 
@@ -77,13 +84,14 @@ class MainActivity : AppCompatActivity() {
         }
         val product_count = array_product.size
 
-//        val arrayList = ArrayList<MainModel>()
-//        arrayList.add(MainModel(R.drawable.ic_extension,"محصولات","محصولات ثبت شده",
-//            "$product_count محصول",
-//            ListProductActivity::class.java))
-//        arrayList.add(MainModel(R.drawable.ic_shopping,"سفارشات","سفارشات انجام شده",
-//            "${App.database.getAppDao().orderCount(branch)} سفارش",
-//            OrderActivity::class.java))
+        val arrayList = ArrayList<MainModel>()
+        arrayList.add(MainModel(R.drawable.ic_extension,"محصولات","محصولات ثبت شده",
+            "$product_count محصول",
+            ListProductActivity::class.java))
+
+        arrayList.add(MainModel(R.drawable.ic_shopping,"سفارشات","سفارشات انجام شده",
+            "${App.database.getAppDao().orderCount(branch)} سفارش",
+            OrdersActivity::class.java))
 //        arrayList.add(MainModel(R.drawable.ic_category,"دسته‌بندی","دسته‌بندی های ثبت شده",
 //            "${App.database.getAppDao().categoryCount(branch)} دسته‌بندی",
 //            CategoryActivity::class.java))
@@ -98,11 +106,27 @@ class MainActivity : AppCompatActivity() {
 //            FinanceActivity::class.java))
 //        arrayList.add(MainModel(R.drawable.ic_setting,"تنظیمات", "مالیات، واحدپول و..", "", SettingActivity::class.java))
 //        arrayList.add(MainModel(R.drawable.ic_import,"پشتیبانی","راه های ارتباطی","", SupportActivity::class.java))
-//
-//        adapterMain?.updateList(arrayList)
+
+        adapterMain?.updateList(arrayList)
     }
 
 
+    private fun initRecyclerView(){
+//        adapterWaiting = OrderWaitingAdapter(this, ArrayList(),object : OrderWaitingAdapter.Listener{
+//            override fun onItemClicked(position: Int, item: Orders) {
+//                OrderViewDialog(this@MainActivity,item.id!!,null, null)
+//                    .show(supportFragmentManager,"order_view")
+//            }
+//        })
+//        recyclerView_order_waiting.adapter = adapterWaiting
+
+        adapterMain = ItemMainAdapter(this,ArrayList(),this)
+        recyclerView_main.adapter = adapterMain
+    }
+
+    override fun onItemClicked(position: Int, item: MainModel) {
+        startActivity(Intent(this, item.action))
+    }
 
 
 }
