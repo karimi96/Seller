@@ -20,6 +20,7 @@
     <color name="background">#F8F9FD</color>
     <color name="shadow">#CDCDCD</color>
     <color name="border">#D1D1D1</color>
+    <color name="back_order">#e5e4fb</color>
 
     <color name="primary">#ce2b52</color>
 
