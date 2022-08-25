@@ -88,7 +88,10 @@ class TagInfoAdapter(
         if (is_selected) {
 //            imageView.setBackgroundColor(ContextCompat.getColor(context,R.color.blue))
 //            imageView.setColorFilter(ContextCompat.getColor(context, R.color.white), android.graphics.PorterDuff.Mode.SRC_IN)
-            background.setBackgroundResource(R.color.purple)
+//            background.setBackgroundResource(R.color.purple)
+            val colorId: Int = R.color.purple
+            val color: Int = background.context.resources.getColor(colorId)
+           background.setCardBackgroundColor(color)
             textView.setTextColor(ContextCompat.getColor(context, R.color.white))
 
         } else {
