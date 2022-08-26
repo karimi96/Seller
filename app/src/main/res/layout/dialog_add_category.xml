@@ -91,7 +91,7 @@
 
 
         <com.karimi.seller.widget.loader_button.LoaderButton
-            android:id="@+id/submit"
+            android:id="@+id/submit_category"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_below="@id/cb_add_c"

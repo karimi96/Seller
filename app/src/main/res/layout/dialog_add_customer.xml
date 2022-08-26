@@ -20,7 +20,7 @@
             app:startIconDrawable="@drawable/ic_account">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt_name"
+                android:id="@+id/edt_name_customer"
                 style="@style/CustomTextInputEditText"
                 android:focusableInTouchMode="true"
                 android:fontFamily="@font/iran_sans"
@@ -39,10 +39,10 @@
             android:hint="@string/number_phone"
             android:layout_marginTop="10dp"
             android:paddingStart="-15dp"
-            app:startIconDrawable="@drawable/ic_phone_gray"
-            >
+            app:startIconDrawable="@drawable/ic_phone_gray">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_phone"
                 style="@style/CustomTextInputEditText"
                 android:focusableInTouchMode="true"
                 android:fontFamily="@font/iran_sans"
@@ -56,6 +56,7 @@
 
 
         <CheckBox
+            android:id="@+id/cb_add_customer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="-5dp"
@@ -72,7 +73,7 @@
 
 
 
-        <TextView
+        <!--<TextView
             android:layout_below="@id/cb_add_c"
             android:text="ثبت"
             android:gravity="center"
@@ -84,6 +85,23 @@
             android:background="@drawable/item_border_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+-->
+
+        <com.karimi.seller.widget.loader_button.LoaderButton
+            android:layout_below="@id/cb_add_c"
+            android:id="@+id/submit_customer"
+            android:fontFamily="@font/iran_sans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingVertical="10dp"
+            android:background="@drawable/item_border_btn"
+            android:clickable="true"
+            android:focusable="true"
+            app:btnText="@string/submit"
+            app:btnTextSize="14dp"
+            app:loaderIndicator="BallPulseIndicator"
+            app:loaderIndicatorColor="@color/white" />
 
 
     </LinearLayout>
