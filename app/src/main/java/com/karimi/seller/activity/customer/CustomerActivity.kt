@@ -1,6 +1,8 @@
 package com.karimi.seller.activity.customer
 
 import android.annotation.SuppressLint
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -12,7 +14,9 @@ import com.karimi.seller.dialog.InsertCustomerDialog
 import com.karimi.seller.helper.App
 import com.karimi.seller.model.Customers
 import com.karimi.seller.model.TagList
+import kotlinx.android.synthetic.main.activity_customer.*
 import kotlinx.android.synthetic.main.include_toolbar_customer.*
+import java.lang.Exception
 
 class CustomerActivity : AppCompatActivity(), InsertCustomerDialog.Listener {
 
@@ -26,6 +30,8 @@ class CustomerActivity : AppCompatActivity(), InsertCustomerDialog.Listener {
 
         initToolbar(getString(R.string.customers))
         initAdapterTagList()
+        initAdapterCustomer()
+
 
     }
 
@@ -120,10 +126,36 @@ class CustomerActivity : AppCompatActivity(), InsertCustomerDialog.Listener {
     }
 
 
+    private fun initAdapterCustomer(){
+        adapter = CustomerListAdapter(this,
+            ArrayList(selectCustomer("all")),
+            true,
+            object : CustomerListAdapter.Listener {
+                override fun onItemClicked(position: Int, item: Customers, action: String?) {
+                    when(action){
+                        "tel", "sms" -> {
+                            try {
+                                val i = Intent(Intent.ACTION_VIEW)
+                                i.data = Uri.parse("${action}:${item.phone}")
+                                startActivity(i)
+                            }catch (e: Exception) {
+                                App.toast(getString(R.string.your_device_hasnt_this_feathure))
+                            }
+                        }
+                        else -> {
+                            CustomerViewDialog(this@CustomerActivity,item.id!!,position,this@CustomerActivity)
+                                .show(supportFragmentManager, "customer")
+                        }
+                    }
+                }
+            })
+        recycler_customer.adapter = adapter
+    }
 
 
 
-    
+
+
 
 
 }
