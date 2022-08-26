@@ -12,6 +12,7 @@
     <include layout="@layout/include_toolbar_customer"/>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_customer"
         tools:listitem="@layout/list_item_customer"
         android:clipToPadding="false"
         android:paddingVertical="12dp"
