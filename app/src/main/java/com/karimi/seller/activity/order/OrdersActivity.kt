@@ -110,6 +110,9 @@ class OrdersActivity : AppCompatActivity() {
 
     private fun initAdapterTagList() {
         val array_tag = ArrayList<TagList>()
+//        val kkk = ArrayList<String>()
+//        var m = resources.getStringArray(R.array.ttt)
+//        kkk.addAll(m)
         array_tag.add(TagList("آخرین‌سفارشات", "all"))
         array_tag.add(TagList("در انتظار",  "waiting"))
         array_tag.add(TagList("بیشترین سود",  "most_gain"))
