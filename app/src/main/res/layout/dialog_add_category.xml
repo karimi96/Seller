@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:focusableInTouchMode="true"
     android:layout_height="wrap_content"
     app:cardCornerRadius="8dp">
 
@@ -21,9 +22,11 @@
             android:id="@+id/image_add_category"
             android:layout_width="61dp"
             android:layout_height="61dp"
+            android:visibility="gone"
             android:src="@drawable/pic_mobl" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_dialog"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E5E4FB"
@@ -33,7 +36,7 @@
                 app:elevation="0dp"
                 app:fabCustomSize="62dp"
                 app:maxImageSize="30dp"
-                tools:tint="#c6c4f7" />
+                app:tint="#c6c4f7" />
 
         </RelativeLayout>
 
