@@ -1,5 +1,6 @@
 package com.karimi.seller.activity.customer
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -10,6 +11,7 @@ import com.karimi.seller.adapter.TagInfoAdapter
 import com.karimi.seller.dialog.InsertCustomerDialog
 import com.karimi.seller.helper.App
 import com.karimi.seller.model.Customers
+import com.karimi.seller.model.TagList
 import kotlinx.android.synthetic.main.include_toolbar_customer.*
 
 class CustomerActivity : AppCompatActivity(), InsertCustomerDialog.Listener {
@@ -23,47 +25,49 @@ class CustomerActivity : AppCompatActivity(), InsertCustomerDialog.Listener {
         setContentView(R.layout.activity_customer)
 
         initToolbar(getString(R.string.customers))
+        initAdapterTagList()
+
     }
 
 
     private fun initToolbar(title: String) {
-       /* toolbar.title.text = title
-        toolbar.ic_back.visibility = View.VISIBLE
-        toolbar.ic_back.setOnClickListener { onBackPressed() }
-*/
+        /* toolbar.title.text = title
+         toolbar.ic_back.visibility = View.VISIBLE
+         toolbar.ic_back.setOnClickListener { onBackPressed() }
+ */
 
 
-       /* toolbar.ic_search.visibility = View.VISIBLE
-        toolbar.ic_search.setOnClickListener {
-            toolbar.ic_back.visibility = View.GONE
-            toolbar.title.visibility = View.GONE
-            toolbar.ic_add.visibility = View.GONE
-            toolbar.edt_search.visibility = View.VISIBLE
-            toolbar.ic_close.visibility = View.VISIBLE
-            toolbar.edt_search.setSelection(0)
-        }
-        toolbar.ic_close.setOnClickListener {
-            toolbar.edt_search.text.clear()
-            toolbar.ic_back.visibility = View.VISIBLE
-            toolbar.title.visibility = View.VISIBLE
-            toolbar.ic_add.visibility = View.VISIBLE
-            toolbar.edt_search.visibility = View.GONE
-            toolbar.ic_close.visibility = View.GONE
-            App.closeKeyboard(this)
-        }
+        /* toolbar.ic_search.visibility = View.VISIBLE
+         toolbar.ic_search.setOnClickListener {
+             toolbar.ic_back.visibility = View.GONE
+             toolbar.title.visibility = View.GONE
+             toolbar.ic_add.visibility = View.GONE
+             toolbar.edt_search.visibility = View.VISIBLE
+             toolbar.ic_close.visibility = View.VISIBLE
+             toolbar.edt_search.setSelection(0)
+         }
+         toolbar.ic_close.setOnClickListener {
+             toolbar.edt_search.text.clear()
+             toolbar.ic_back.visibility = View.VISIBLE
+             toolbar.title.visibility = View.VISIBLE
+             toolbar.ic_add.visibility = View.VISIBLE
+             toolbar.edt_search.visibility = View.GONE
+             toolbar.ic_close.visibility = View.GONE
+             App.closeKeyboard(this)
+         }
 
-        toolbar.edt_search.setOnEditorActionListener { v, actionId, event ->
-            when(actionId){
-                EditorInfo.IME_ACTION_DONE,
-                EditorInfo.IME_ACTION_GO,
-                EditorInfo.IME_ACTION_SEARCH->{
-                    adapter?.updateList(App.database.getAppDao().searchCustomer(App.branch(), App.getString(toolbar.edt_search)))
-                    adapterTag?.removeSelection()
-                    App.closeKeyboard(this)
-                }
-            }
-            return@setOnEditorActionListener false
-        }*/
+         toolbar.edt_search.setOnEditorActionListener { v, actionId, event ->
+             when(actionId){
+                 EditorInfo.IME_ACTION_DONE,
+                 EditorInfo.IME_ACTION_GO,
+                 EditorInfo.IME_ACTION_SEARCH->{
+                     adapter?.updateList(App.database.getAppDao().searchCustomer(App.branch(), App.getString(toolbar.edt_search)))
+                     adapterTag?.removeSelection()
+                     App.closeKeyboard(this)
+                 }
+             }
+             return@setOnEditorActionListener false
+         }*/
 
 
 
@@ -80,5 +84,46 @@ class CustomerActivity : AppCompatActivity(), InsertCustomerDialog.Listener {
         adapter?.addItem(customer, position)
         dialog.dismiss()
     }
+
+
+    private fun initAdapterTagList() {
+        val array_tag = ArrayList<TagList>()
+        array_tag.add(TagList("همه", "all"))
+        array_tag.add(TagList("فعال", "active"))
+        array_tag.add(TagList("بیشترین سفارش", "most_order"))
+        array_tag.add(TagList("بدهکاران", "debtor"))
+        array_tag.add(TagList("غیرفعال", "inactive"))
+        array_tag.add(TagList("کمترین سفارش", "least_order"))
+
+        adapterTag = TagInfoAdapter(this,
+            array_tag,
+            object : TagInfoAdapter.Listener {
+                @SuppressLint("NotifyDataSetChanged")
+                override fun onItemClicked(position: Int, item: TagList) {
+                    adapter?.updateList(selectCustomer(item.tag!!))
+                }
+            })
+
+        recycler_tag_customer.adapter = adapterTag
+    }
+
+
+    private fun selectCustomer(query: String): List<Customers> {
+        return when (query) {
+            "active" -> App.database.getAppDao().selectCustomerByStatus(App.branch(), 1)
+            "inactive" -> App.database.getAppDao().selectCustomerByStatus(App.branch(), 0)
+            "most_order" -> App.database.getAppDao().selectCustomer(App.branch())
+            "least_order" -> App.database.getAppDao().selectCustomer(App.branch())
+            "debtor" -> App.database.getAppDao().selectCustomer(App.branch())
+            else -> App.database.getAppDao().selectCustomer(App.branch())
+        }
+    }
+
+
+
+
+
+    
+
 
 }
