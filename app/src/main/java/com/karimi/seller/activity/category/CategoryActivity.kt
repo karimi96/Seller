@@ -53,6 +53,7 @@ class CategoryActivity : AppCompatActivity(),InsertCategoryDialog.Listener {
                 this@CategoryActivity,
                 null, -1, _ID_MOTHER, this
             )
+            dialog_category!!.window?.setBackgroundDrawableResource(R.drawable.item_border_btn)
             dialog_category?.show()
         }
 
