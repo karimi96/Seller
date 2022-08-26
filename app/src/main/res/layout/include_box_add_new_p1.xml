@@ -13,17 +13,17 @@
 
 
     <LinearLayout
-        android:paddingHorizontal="16dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp">
 
         <RelativeLayout
             android:id="@+id/rl"
-            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="61dp"
@@ -137,8 +137,8 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_marginTop="10dp"
             style="@style/CustomTextInputLayout"
+            android:layout_marginTop="10dp"
             android:hint="@string/percent_tax">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -156,11 +156,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="-3dp"
+            android:layout_marginTop="-9dp"
             android:checked="true"
             android:fontFamily="@font/iran_sans"
             android:gravity="center"
             android:paddingTop="9dp"
-            android:layout_marginTop="-9dp"
             android:text="دسته بندی فعال باشد"
             android:textColor="@color/text_main"
             android:textFontWeight="500"
@@ -168,23 +168,22 @@
 
 
         <TextView
-            android:text="@string/add_category"
-            android:textSize="14dp"
-            android:textColor="@color/purple"
-            android:textFontWeight="500"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:gravity="center_vertical"
-            android:paddingBottom="5dp"
             android:layout_marginBottom="12dp"
-            android:paddingTop="8dp"
-            android:fontFamily="@font/iran_sans"
             android:drawableStart="@drawable/ic_add"
             android:drawablePadding="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:fontFamily="@font/iran_sans"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="5dp"
+            android:text="@string/add_category"
+            android:textColor="@color/purple"
+            android:textFontWeight="500"
+            android:textSize="14dp" />
 
     </LinearLayout>
-
 
 
 </androidx.cardview.widget.CardView>

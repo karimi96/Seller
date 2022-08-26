@@ -16,40 +16,40 @@
         app:cardCornerRadius="0dp"
         app:cardElevation="3dp">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:paddingStart="18dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:paddingStart="18dp">
 
-                <TextView
-                    android:id="@+id/title_product"
-                    style="@style/TextMain"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_marginStart="10dp"
-                    android:layout_toEndOf="@id/back"
-                    android:paddingTop="5dp"
-                    android:text="@string/category" />
+            <TextView
+                android:id="@+id/title_product"
+                style="@style/TextMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/back"
+                android:paddingTop="5dp"
+                android:text="@string/category" />
 
-                <ImageView
-                    android:id="@+id/back"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/ic_back" />
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_back" />
 
-                <ImageView
-                    android:id="@+id/plus_category"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerInParent="true"
-                    android:layout_marginEnd="16dp"
-                    android:src="@drawable/ic_plus" />
+            <ImageView
+                android:id="@+id/plus_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_plus" />
 
-            </RelativeLayout>
+        </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 
@@ -58,17 +58,16 @@
         android:id="@+id/recycler_category"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/tlb"
         android:clipToPadding="false"
         android:orientation="vertical"
         android:overScrollMode="never"
         android:paddingHorizontal="8dp"
         android:paddingVertical="8dp"
-        android:layout_below="@id/tlb"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="3"
         tools:itemCount="12"
         tools:listitem="@layout/list_item_category_category" />
-
 
 
 </LinearLayout>

@@ -3,27 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:focusableInTouchMode="true"
     android:layout_height="wrap_content"
+    android:focusableInTouchMode="true"
     app:cardCornerRadius="8dp">
 
 
     <RelativeLayout
-        android:layout_margin="16dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="16dp">
 
         <RelativeLayout
             android:id="@+id/rl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/image_add_category"
-            android:layout_width="61dp"
-            android:layout_height="61dp"
-            android:visibility="gone"
-            android:src="@drawable/pic_mobl" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_add_category"
+                android:layout_width="61dp"
+                android:layout_height="61dp"
+                android:src="@drawable/pic_mobl"
+                android:visibility="gone" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab_dialog"
@@ -77,32 +77,32 @@
             android:textSize="12dp" />
 
 
-<!--        <TextView-->
-<!--            android:layout_below="@id/cb"-->
-<!--            android:text="ثبت"-->
-<!--            android:gravity="center"-->
-<!--            android:fontFamily="@font/iran_sans"-->
-<!--            android:layout_marginTop="20dp"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:textSize="14dp"-->
-<!--            android:background="@drawable/item_border_btn"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="40dp"/>-->
+        <!--        <TextView-->
+        <!--            android:layout_below="@id/cb"-->
+        <!--            android:text="ثبت"-->
+        <!--            android:gravity="center"-->
+        <!--            android:fontFamily="@font/iran_sans"-->
+        <!--            android:layout_marginTop="20dp"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textSize="14dp"-->
+        <!--            android:background="@drawable/item_border_btn"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="40dp"/>-->
 
 
         <com.karimi.seller.widget.loader_button.LoaderButton
             android:id="@+id/submit"
-            android:layout_below="@id/cb_add_c"
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:layout_below="@id/cb_add_c"
             android:layout_marginTop="20dp"
             android:background="@drawable/item_border_btn"
             android:clickable="true"
-            android:fontFamily="@font/iran_sans"
             android:focusable="true"
+            android:fontFamily="@font/iran_sans"
             android:gravity="center"
-            app:btnText="@string/submit"
             android:textColor="@color/white"
+            app:btnText="@string/submit"
             app:btnTextSize="14dp"
             app:loaderIndicator="BallPulseIndicator"
             app:loaderIndicatorColor="@color/white" />
