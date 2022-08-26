@@ -19,4 +19,9 @@ object Config {
     const val ORDER_STATUS_WAITING = 0
     const val ORDER_STATUS_SUCCESS = 1
 
+
+    const val JPG = ".jpg"
+    const val PATH = "/Sealer"
+    const val PATH_IMAGES = "$PATH/image"
+
 }
