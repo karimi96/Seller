@@ -57,7 +57,8 @@ class CategoryListManagerAdapter(
             Glide.with(context).load(model.image).into(item.image_category)
 //            item.image_category.visibility = View.VISIBLE
         }else{
-            item.image_category.setBackgroundColor(R.color.back_order)
+//            item.image_category.setBackgroundColor(R.color.back_order)
+            item.image_category.backgroundTintList = context.resources.getColorStateList(R.color.back_order)
             Glide.with(context).load(context.getDrawable(R.drawable.pic_picture)).into(item.image_category)
         }
 
