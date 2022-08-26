@@ -73,7 +73,7 @@
 
 
         <TextView
-            android:layout_below="@id/cb"
+            android:layout_below="@id/cb_add_c"
             android:text="ثبت"
             android:gravity="center"
             android:fontFamily="@font/iran_sans"

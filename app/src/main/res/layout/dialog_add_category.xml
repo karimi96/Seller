@@ -18,21 +18,22 @@
             android:layout_height="wrap_content">
 
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_add_category"
             android:layout_width="61dp"
             android:layout_height="61dp"
             android:src="@drawable/pic_mobl" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:fabCustomSize="62dp"
-            android:backgroundTint="#E5E4FB"
-            android:src="@drawable/pic_camera"
-            app:borderWidth="0dp"
-            app:maxImageSize="30dp"
-            android:visibility="visible"
-            app:elevation="0dp"
-            tools:tint="#c6c4f7" />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E5E4FB"
+                android:src="@drawable/pic_camera"
+                android:visibility="visible"
+                app:borderWidth="0dp"
+                app:elevation="0dp"
+                app:fabCustomSize="62dp"
+                app:maxImageSize="30dp"
+                tools:tint="#c6c4f7" />
 
         </RelativeLayout>
 
@@ -45,7 +46,7 @@
             android:hint="@string/name">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt_name"
+                android:id="@+id/edt_name_add_c"
                 style="@style/CustomTextInputEditText"
                 android:focusableInTouchMode="true"
                 android:fontFamily="@font/iran_sans"
@@ -57,33 +58,51 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <CheckBox
-            android:id="@+id/cb"
+            android:id="@+id/cb_add_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@id/tnl"
-            android:layout_toEndOf="@id/rl"
             android:layout_marginStart="18dp"
-            android:textSize="12dp"
-            android:gravity="center"
-            android:paddingTop="9dp"
+            android:layout_toEndOf="@id/rl"
             android:checked="true"
             android:fontFamily="@font/iran_sans"
-            android:textFontWeight="500"
-            android:textColor="@color/text_main"
-            android:text="دسته بندی فعال باشد"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-
-        <TextView
-            android:layout_below="@id/cb"
-            android:text="ثبت"
             android:gravity="center"
-            android:fontFamily="@font/iran_sans"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/white"
-            android:textSize="14dp"
-            android:background="@drawable/item_border_btn"
+            android:paddingTop="9dp"
+            android:text="دسته بندی فعال باشد"
+            android:textColor="@color/text_main"
+            android:textFontWeight="500"
+            android:textSize="12dp" />
+
+
+<!--        <TextView-->
+<!--            android:layout_below="@id/cb"-->
+<!--            android:text="ثبت"-->
+<!--            android:gravity="center"-->
+<!--            android:fontFamily="@font/iran_sans"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="14dp"-->
+<!--            android:background="@drawable/item_border_btn"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="40dp"/>-->
+
+
+        <com.karimi.seller.widget.loader_button.LoaderButton
+            android:id="@+id/submit"
+            android:layout_below="@id/cb_add_c"
             android:layout_width="match_parent"
-            android:layout_height="40dp"/>
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/item_border_btn"
+            android:clickable="true"
+            android:fontFamily="@font/iran_sans"
+            android:focusable="true"
+            android:gravity="center"
+            app:btnText="@string/submit"
+            android:textColor="@color/white"
+            app:btnTextSize="14dp"
+            app:loaderIndicator="BallPulseIndicator"
+            app:loaderIndicatorColor="@color/white" />
 
     </RelativeLayout>
 
