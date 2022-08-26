@@ -14,16 +14,17 @@
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_category"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_margin="5dp"
+            android:backgroundTint="@color/back_order"
             app:cardCornerRadius="8dp"
             app:cardElevation="0dp">
 
             <ImageView
                 android:id="@+id/image_category"
                 android:layout_width="match_parent"
-                android:background="@color/back_order"
                 android:layout_height="match_parent"
                 android:src="@drawable/pic_picture" />
 
@@ -60,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:text="بدون زیر گروه"
-                android:textColor="@color/purple"
+                android:textColor="@color/text_hint"
                 android:textSize="10dp" />
 
         </RelativeLayout>
