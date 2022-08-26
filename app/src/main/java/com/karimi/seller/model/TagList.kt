@@ -5,6 +5,10 @@ class TagList {
     var icon:Int? = null
     var tag:String? = null
 
+    /* test */
+    var titleArray:ArrayList<String>? = null
+    var tagArray:ArrayList<String>? = null
+
 
     constructor()
     constructor(title: String?, icon: Int?, tag: String?) {
@@ -20,4 +24,12 @@ class TagList {
     constructor(title: String?) {
         this.title = title
     }
+
+    constructor(titleArray: ArrayList<String>?, tagArray: ArrayList<String>?) {
+        this.titleArray = titleArray
+        this.tagArray = tagArray
+    }
+
+
+
 }

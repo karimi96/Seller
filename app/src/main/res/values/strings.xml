@@ -168,4 +168,19 @@
     </string-array>
 
 
+ <string-array name="ttt">
+        <item>آخرین‌سفارشات</item>
+        <item>در انتظار</item>
+        <item>بیشترین سود</item>
+        <item>کمترین سود</item>
+        <item>تسویه‌شده</item>
+        <item>تسویه‌نشده</item>
+        <item>نقدی</item>
+        <item>کارتخوان</item>
+        <item>ترکیبی</item>
+        <item>بیشترین اقلام</item>
+        <item>کمترین اقلام</item>
+    </string-array>
+
+
 </resources>
