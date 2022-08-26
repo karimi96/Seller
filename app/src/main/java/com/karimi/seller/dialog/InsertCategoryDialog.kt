@@ -4,6 +4,7 @@ import android.content.Context
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.view.WindowManager
 import androidx.appcompat.app.AlertDialog
 import com.bumptech.glide.Glide
@@ -26,6 +27,7 @@ class InsertCategoryDialog(
 
     init {
         setCancelable(true)
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,6 +43,8 @@ class InsertCategoryDialog(
     }
 
     fun initImage(resultUri: Uri) {
+        fab_dialog.visibility = View.GONE
+        image_add_category.visibility = View.VISIBLE
         Glide.with(context).load(resultUri).into(image_add_category)
         _IMAGE_PATH = App.saveFile(App.getByte(resultUri))
 //        ic_delete.visibility = View.VISIBLE
@@ -55,9 +59,15 @@ class InsertCategoryDialog(
         submit.btn.setOnClickListener {
             if (formIsValid()) listener.insert(this, getValue(), _POS)
         }
-        image_add_category.setOnClickListener {
+
+
+        fab_dialog.setOnClickListener {
             listener.chooseImage(this)
         }
+
+//        image_add_category.setOnClickListener {
+//            listener.chooseImage(this)
+//        }
 
 //        ic_delete.setOnClickListener {
 //            _IMAGE_PATH = null
@@ -83,6 +93,8 @@ class InsertCategoryDialog(
         cb_add_c.isChecked = category.status != null && category.status == 1
 
         if (!category.image.isNullOrEmpty()) {
+            fab_dialog.visibility = View.GONE
+            image_add_category.visibility = View.VISIBLE
             Glide.with(context).load(category.image).into(image_add_category)
             _IMAGE_PATH = category.image
 //            ic_delete.visibility = View.VISIBLE
