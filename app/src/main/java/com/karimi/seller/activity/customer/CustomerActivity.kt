@@ -143,8 +143,12 @@ class CustomerActivity : AppCompatActivity(), InsertCustomerDialog.Listener {
                             }
                         }
                         else -> {
-                            CustomerViewDialog(this@CustomerActivity,item.id!!,position,this@CustomerActivity)
-                                .show(supportFragmentManager, "customer")
+                            var i = Intent(this@CustomerActivity , CustomerViewActivity::class.java)
+                            i.putExtra("pos" ,position)
+                            i.putExtra("customer_id" ,item.id)
+                            startActivity(i)
+//                            CustomerViewDialog(this@CustomerActivity,item.id!!,position,this@CustomerActivity)
+//                                .show(supportFragmentManager, "customer")
                         }
                     }
                 }
