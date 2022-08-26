@@ -22,7 +22,7 @@
             android:paddingStart="18dp">
 
             <TextView
-                android:id="@+id/tv_product_name"
+                android:id="@+id/tv_customer_name"
                 style="@style/TextMain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
         </RelativeLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView_category"
+            android:id="@+id/recycler_tag_customer_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"
