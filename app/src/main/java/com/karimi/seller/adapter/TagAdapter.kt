@@ -12,6 +12,8 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.karimi.seller.R
 import com.karimi.seller.model.TagList
+import kotlinx.android.synthetic.main.include_toolbar_customer_view.view.*
+import kotlinx.android.synthetic.main.list_item_state_financial_customer.view.*
 import kotlinx.android.synthetic.main.list_item_tag.view.*
 
 class TagAdapter(val context: Context,
@@ -41,6 +43,7 @@ class TagAdapter(val context: Context,
         val model = list[position]
 
         item.title_category_p_view.text = model.title
+        item.card_customer_view.backgroundTintList = context.resources.getColorStateList(R.color.back_hint)
 
         if (listener != null){
             setItemSelected(position_selected != -1 && position_selected == position,item.title_category_p_view)
