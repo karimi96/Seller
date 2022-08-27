@@ -10,6 +10,7 @@
 
 
     <TextView
+        android:id="@+id/tv_order_count"
         style="@style/TextMain"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -24,6 +25,7 @@
         android:textSize="12dp" />
 
     <TextView
+        android:id="@+id/tv_amount_all_order"
         style="@style/TextMain"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -38,6 +40,7 @@
         android:textSize="12dp" />
 
     <TextView
+        android:id="@+id/tv_order_last_date"
         style="@style/TextMain"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
