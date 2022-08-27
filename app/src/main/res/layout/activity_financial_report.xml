@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <include layout="@layout/include_chart_product_view" />
+            <include layout="@layout/widget_chart_price" />
 
             <View style="@style/CustomLine" android:layout_marginVertical="10dp" />
 
