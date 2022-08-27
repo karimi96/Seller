@@ -44,6 +44,7 @@ class CustomerViewActivity : AppCompatActivity() {
         initAdapterTagList()
         initRecyclerViewOrder()
         initRecyclerViewProduct()
+        chart_bar_price.barChartAdapter()
 
 
 
