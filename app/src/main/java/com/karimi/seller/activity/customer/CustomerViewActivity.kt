@@ -3,13 +3,16 @@ package com.karimi.seller.activity.customer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.karimi.seller.R
+import com.karimi.seller.adapter.OrderListHorizontalAdapter
 import com.karimi.seller.adapter.TagAdapter
 import com.karimi.seller.dialog.InsertCustomerDialog
 import com.karimi.seller.helper.App
 import com.karimi.seller.model.Customers
+import com.karimi.seller.model.Orders
 import com.karimi.seller.model.TagList
 import kotlinx.android.synthetic.main.activity_customer_view.*
 import kotlinx.android.synthetic.main.include_box_customer_view.*
+import kotlinx.android.synthetic.main.include_last_order_customer_view.*
 import kotlinx.android.synthetic.main.include_toolbar_customer_view.*
 import java.util.*
 
@@ -36,6 +39,8 @@ class CustomerViewActivity : AppCompatActivity() {
         initData()
         initOnClick()
         initAdapterTagList()
+        initRecyclerViewOrder()
+
 
 
     }
@@ -74,7 +79,6 @@ class CustomerViewActivity : AppCompatActivity() {
     }
 
 
-
     private fun initAdapterTagList(){
         val array_tag = ArrayList<TagList>()
         array_tag.add(TagList("۸۵۰,۰۰۰ تومان بدهکار"))
@@ -91,7 +95,14 @@ class CustomerViewActivity : AppCompatActivity() {
     }
 
 
+    private fun initRecyclerViewOrder(){
+        recyclerView_last_order.adapter = OrderListHorizontalAdapter(this, ArrayList(App.database.getAppDao().selectOrders(App.branch())),
+            object : OrderListHorizontalAdapter.Listener{
+                override fun onItemClicked(position: Int, item: Orders) {
 
+                }
+            })
+    }
 
 
 }
