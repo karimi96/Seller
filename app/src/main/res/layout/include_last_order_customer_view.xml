@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView_customer"
+        android:id="@+id/recyclerView_last_order"
         android:orientation="horizontal"
         tools:itemCount="12"
         android:clipToPadding="false"
