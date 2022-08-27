@@ -38,7 +38,10 @@
 
             <include layout="@layout/include_box_customer_view" />
 
-            <include layout="@layout/include_chart_product_view" />
+            <com.karimi.seller.widget.chart.ChartPrice
+                android:id="@+id/chart_bar_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
             <View
                 style="@style/CustomLine"
