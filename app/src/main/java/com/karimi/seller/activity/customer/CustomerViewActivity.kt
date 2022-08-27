@@ -3,8 +3,10 @@ package com.karimi.seller.activity.customer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.karimi.seller.R
+import com.karimi.seller.dialog.InsertCustomerDialog
 import com.karimi.seller.helper.App
 import com.karimi.seller.model.Customers
+import kotlinx.android.synthetic.main.activity_customer_view.*
 import kotlinx.android.synthetic.main.include_box_customer_view.*
 import kotlinx.android.synthetic.main.include_toolbar_customer_view.*
 import java.util.*
@@ -30,6 +32,7 @@ class CustomerViewActivity : AppCompatActivity() {
         this_customer = App.database.getAppDao().selectCustomerById(customer_id!!)!!
 
         initData()
+        initOnClick()
 
 
     }
@@ -46,9 +49,28 @@ class CustomerViewActivity : AppCompatActivity() {
         try {
 //            tv_date.setText("در تاریخ ${App.getFormattedDate(this_customer?.updated_at)}ویرایش شده \n در تاریخ${App.getFormattedDate(this_customer?.created_at)} ثبت شده")
         }catch (e:Exception){
-
         }
     }
+
+
+    private fun initOnClick(){
+//        ic_close.setOnClickListener {
+//            dismiss()
+//        }
+
+        edit_customer_view.setOnClickListener {
+//            first way
+//            listener?.onEditCustomer(this,this_customer, position)
+
+//            InsertCustomerDialog().setValue(this_customer,-1)
+
+//            third way
+            InsertCustomerDialog(this, this_customer, -1, null)
+                .show(supportFragmentManager, "customer")
+        }
+    }
+
+
 
 
 
