@@ -3,9 +3,11 @@ package com.karimi.seller.activity.customer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.karimi.seller.R
+import com.karimi.seller.adapter.TagAdapter
 import com.karimi.seller.dialog.InsertCustomerDialog
 import com.karimi.seller.helper.App
 import com.karimi.seller.model.Customers
+import com.karimi.seller.model.TagList
 import kotlinx.android.synthetic.main.activity_customer_view.*
 import kotlinx.android.synthetic.main.include_box_customer_view.*
 import kotlinx.android.synthetic.main.include_toolbar_customer_view.*
@@ -33,6 +35,7 @@ class CustomerViewActivity : AppCompatActivity() {
 
         initData()
         initOnClick()
+        initAdapterTagList()
 
 
     }
@@ -70,6 +73,22 @@ class CustomerViewActivity : AppCompatActivity() {
         }
     }
 
+
+
+    private fun initAdapterTagList(){
+        val array_tag = ArrayList<TagList>()
+        array_tag.add(TagList("۸۵۰,۰۰۰ تومان بدهکار"))
+        array_tag.add(TagList("۲۰,۰۰۰ تومان سود سفارشات"))
+        array_tag.add(TagList("۱۰,۰۰۰ تومان تخفیف گرفته"))
+        array_tag.add(TagList("میانگین سفارش ۲۸۰,۰۰۰ تومان"))
+        array_tag.add(TagList("۸۵۰,۰۰۰ تومان خرید نقدی"))
+        array_tag.add(TagList("۸۵۰,۰۰۰ تومان خرید کارتخوان"))
+        array_tag.add(TagList(" بانک سامان ۱۹۰,۰۰۰ تومان"))
+        array_tag.add(TagList("بانک کشاورزی ۸۵,۰۰۰ تومان"))
+        array_tag.add(TagList("بانک ملت ۸۲,۰۰۰ تومان"))
+
+        recycler_tag_customer_view.adapter = TagAdapter(this, array_tag, null)
+    }
 
 
 
