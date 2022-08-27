@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
     android:layout_marginHorizontal="16dp"
-    app:cardElevation="3dp"
-    android:outlineSpotShadowColor="@color/shadow"
     android:layout_marginVertical="10dp"
     android:background="@color/white"
-    android:layout_height="300dp">
+    android:outlineSpotShadowColor="@color/shadow"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="3dp">
 
     <com.github.mikephil.charting.charts.BarChart
         android:id="@+id/barChart"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
-
+        android:layout_height="300dp" />
 
 
 </androidx.cardview.widget.CardView>
