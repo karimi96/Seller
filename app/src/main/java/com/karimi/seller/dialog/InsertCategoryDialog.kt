@@ -27,7 +27,6 @@ class InsertCategoryDialog(
 
     init {
         setCancelable(true)
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,7 +55,7 @@ class InsertCategoryDialog(
     }
 
     private fun initOnClick() {
-        submit.btn.setOnClickListener {
+        submit_category.btn.setOnClickListener {
             if (formIsValid()) listener.insert(this, getValue(), _POS)
         }
 

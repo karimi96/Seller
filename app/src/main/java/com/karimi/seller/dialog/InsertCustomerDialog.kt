@@ -23,6 +23,7 @@ class InsertCustomerDialog(val _context: Context, val _customer: Customers?, val
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.dialog_add_customer, container, false)
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
