@@ -32,7 +32,7 @@ class CustomerViewActivity : AppCompatActivity() {
         setContentView(R.layout.activity_customer_view)
 
         if (intent.extras != null){
-            customer_id = intent.getIntExtra("product_id",-1)
+            customer_id = intent.getIntExtra("customer_id",-1)
             position = intent.getIntExtra("pos",-1)
         }
 
