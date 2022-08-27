@@ -4,14 +4,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.karimi.seller.R
 import com.karimi.seller.adapter.OrderListHorizontalAdapter
+import com.karimi.seller.adapter.ProductListHorizontalAdapter_3
 import com.karimi.seller.adapter.TagAdapter
 import com.karimi.seller.dialog.InsertCustomerDialog
 import com.karimi.seller.helper.App
 import com.karimi.seller.model.Customers
 import com.karimi.seller.model.Orders
+import com.karimi.seller.model.Product
 import com.karimi.seller.model.TagList
 import kotlinx.android.synthetic.main.activity_customer_view.*
 import kotlinx.android.synthetic.main.include_box_customer_view.*
+import kotlinx.android.synthetic.main.include_favorid_p.*
 import kotlinx.android.synthetic.main.include_last_order_customer_view.*
 import kotlinx.android.synthetic.main.include_toolbar_customer_view.*
 import java.util.*
@@ -40,6 +43,7 @@ class CustomerViewActivity : AppCompatActivity() {
         initOnClick()
         initAdapterTagList()
         initRecyclerViewOrder()
+        initRecyclerViewProduct()
 
 
 
@@ -99,6 +103,17 @@ class CustomerViewActivity : AppCompatActivity() {
         recyclerView_last_order.adapter = OrderListHorizontalAdapter(this, ArrayList(App.database.getAppDao().selectOrders(App.branch())),
             object : OrderListHorizontalAdapter.Listener{
                 override fun onItemClicked(position: Int, item: Orders) {
+
+                }
+            })
+    }
+
+
+    private fun initRecyclerViewProduct(){
+        recycler_favorite_product.adapter = ProductListHorizontalAdapter_3(this,
+            ArrayList(App.database.getAppDao().selectProduct(App.branch())),
+            object : ProductListHorizontalAdapter_3.Listener {
+                override fun onItemClicked(position: Int, product: Product) {
 
                 }
             })
