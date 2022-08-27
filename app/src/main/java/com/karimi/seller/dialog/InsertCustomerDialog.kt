@@ -15,7 +15,7 @@ import java.util.*
 
 
 class InsertCustomerDialog(val _context: Context, val _customer: Customers?, val _position: Int,
-                           val listener: Listener) : DialogFragment() {
+                           val listener: Listener?) : DialogFragment() {
 
     private var _ID = -1
     private var _POS = -1
@@ -44,7 +44,7 @@ class InsertCustomerDialog(val _context: Context, val _customer: Customers?, val
 
     private fun initOnClick(){
         submit_customer.btn.setOnClickListener {
-            if (formIsValid()) listener.insert(this, getValue(), _POS)
+            if (formIsValid()) listener?.insert(this, getValue(), _POS)
         }
     }
 
@@ -56,7 +56,7 @@ class InsertCustomerDialog(val _context: Context, val _customer: Customers?, val
         return true
     }
 
-    private fun setValue(category: Customers, position: Int){
+     fun setValue(category: Customers, position: Int){
         _POS = position
         if (category.id != null) _ID = category.id!!
         if (!category.name.isNullOrEmpty()) edt_name_customer.setText(category.name)
