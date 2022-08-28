@@ -29,7 +29,9 @@
 
             <include layout="@layout/widget_chart_price" />
 
-            <View style="@style/CustomLine" android:layout_marginVertical="10dp" />
+            <View
+                style="@style/CustomLine"
+                android:layout_marginVertical="10dp" />
 
             <include layout="@layout/include_financial_1" />
 
