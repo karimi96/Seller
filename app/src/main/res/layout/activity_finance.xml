@@ -31,9 +31,9 @@
 
             <View style="@style/CustomLine" android:layout_marginVertical="10dp" />
 
-            <include layout="@layout/include_financial_report1" />
+            <include layout="@layout/include_financial_1" />
 
-            <include layout="@layout/include_financial_report2" />
+            <include layout="@layout/include_financial_2" />
 
         </LinearLayout>
 
