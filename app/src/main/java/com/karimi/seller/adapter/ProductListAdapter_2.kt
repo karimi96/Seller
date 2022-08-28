@@ -29,7 +29,7 @@ class ProductListAdapter_2(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        return ListViewHolder(LayoutInflater.from(context).inflate(R.layout.list_item_anbar3, parent, false))
+        return ListViewHolder(LayoutInflater.from(context).inflate(R.layout.list_item_stock3, parent, false))
     }
 
     override fun getItemCount(): Int {
