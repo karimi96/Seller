@@ -48,11 +48,12 @@ class App : MultiDexApplication() {
         }
 
 
-        fun priceFormat(double: Double):String{
+        fun priceFormat(double: Double): String {
             val decimalFormat = DecimalFormat("###,###,###")
             return decimalFormat.format(double)
         }
-        fun priceFormat(double: Double, showMoneyType: Boolean):String{
+
+        fun priceFormat(double: Double, showMoneyType: Boolean): String {
             return if (showMoneyType) "${priceFormat(double)} ${Session.getInstance().moneyType}"
             else priceFormat(double)
         }
@@ -67,8 +68,7 @@ class App : MultiDexApplication() {
         }
 
 
-
-        fun getByte(uri: Uri): ByteArray{
+        fun getByte(uri: Uri): ByteArray {
             val baos = ByteArrayOutputStream()
             val fis: FileInputStream
             try {
@@ -82,14 +82,14 @@ class App : MultiDexApplication() {
             return baos.toByteArray()
         }
 
-        fun saveFile(byteArray: ByteArray) : String{
+        fun saveFile(byteArray: ByteArray): String {
             val outStream: FileOutputStream
             try {
                 val path = File(Environment.getExternalStorageDirectory(), PATH_IMAGES)
                 path.mkdirs()
                 val fileName = "image_${System.currentTimeMillis()}$JPG"
-                val file = File(path,fileName)
-                Log.e("qqqq", "saveFile: ${file.path}" )
+                val file = File(path, fileName)
+                Log.e("qqqq", "saveFile: ${file.path}")
                 outStream = FileOutputStream(file)
                 outStream.write(byteArray)
                 outStream.close()
@@ -103,29 +103,24 @@ class App : MultiDexApplication() {
         }
 
 
-
-        fun convertToDouble(editText: EditText): Double{
+        fun convertToDouble(editText: EditText): Double {
             return if (replaceForPrice(getString(editText)).isNullOrEmpty()) 0.0
             else replaceForPrice(getString(editText)).toDouble()
         }
 
-        fun convertToInt(editText: EditText): Int{
+        fun convertToInt(editText: EditText): Int {
             return if (replaceForPrice(getString(editText)).isNullOrEmpty()) 0
             else replaceForPrice(getString(editText)).toInt()
         }
 
-        fun replaceForPrice(string: String) : String {
+        fun replaceForPrice(string: String): String {
             return string
-                .replace(" ","")
-                .replace(",","")
-                .replace("،","")
+                .replace(" ", "")
+                .replace(",", "")
+                .replace("،", "")
         }
 
     }
-
-
-
-
 
 
 }
