@@ -69,9 +69,59 @@ public class Session {
 
 
 
+    public void setMoneyType(String moneyType) {
+        extraEditor.putString(Config.MONEY_TYPE, moneyType);
+        extraEditor.commit();
+    }
     public String getMoneyType() {
         return ExtrasPref.getString(Config.MONEY_TYPE, Config.MONEY_TYPE_DEFAULT);
     }
 
+
+
+    public void setMinOrder(Double price) {
+        extraEditor.putString(Config.MIN_ORDER, String.valueOf(price));
+        extraEditor.commit();
+    }
+    public Double getMinOrder() {
+        return Double.parseDouble(ExtrasPref.getString(Config.MIN_ORDER, "0.0"));
+    }
+
+    public void setTaxPercent(int taxPercent) {
+        extraEditor.putInt(Config.TAX_PERCENT, taxPercent);
+        extraEditor.commit();
+    }
+    public int getTaxPercent() {
+        return ExtrasPref.getInt(Config.TAX_PERCENT, 0);
+    }
+
+
+
+    public void setShippingPrice(Double shippingPrice) {
+        extraEditor.putString(Config.SHIPPING_PRICE, String.valueOf(shippingPrice));
+        extraEditor.commit();
+    }
+    public Double getShippingPrice() {
+        return Double.parseDouble(ExtrasPref.getString(Config.SHIPPING_PRICE, "0.0"));
+    }
+
+    public void setFreeShippingPrice(Double price) {
+        extraEditor.putString(Config.SHIPPING_FREE_PRICE, String.valueOf(price));
+        extraEditor.commit();
+    }
+    public Double getFreeShippingPrice() {
+        return Double.parseDouble(ExtrasPref.getString(Config.SHIPPING_FREE_PRICE, "0.0"));
+    }
+
+
+
+    public void setCheckBox(boolean sound_scanner, boolean money, boolean card, boolean debit, boolean discount){
+        extraEditor.putBoolean(Config.CHECK_BOX_SOUND_SCANNER,sound_scanner);
+        extraEditor.putBoolean(Config.CHECK_BOX_MONEY,money);
+        extraEditor.putBoolean(Config.CHECK_BOX_CARD,card);
+        extraEditor.putBoolean(Config.CHECK_BOX_DEBIT,debit);
+        extraEditor.putBoolean(Config.CHECK_BOX_DISCOUNT,discount);
+        extraEditor.commit();
+    }
 
 }
