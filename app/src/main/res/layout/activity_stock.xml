@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     android:orientation="vertical"
-    tools:context=".activity.gozareshAnbar.AnbarActivity">
+    tools:context=".activity.stock.StockActivity">
 
     <include layout="@layout/include_toolbar_list_anbar" />
 
