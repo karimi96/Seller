@@ -1,14 +1,19 @@
 package com.karimi.seller.activity.finance
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.karimi.seller.R
+import com.karimi.seller.activity.product.ProductViewActivity
 import com.karimi.seller.adapter.OrderWaitingAdapter
+import com.karimi.seller.adapter.ProductListHorizontalAdapter_2
 import com.karimi.seller.adapter.TagAdapter
 import com.karimi.seller.helper.App
 import com.karimi.seller.model.Orders
+import com.karimi.seller.model.Product
 import com.karimi.seller.model.TagList
 import kotlinx.android.synthetic.main.activity_customer_view.*
+import kotlinx.android.synthetic.main.include_financial_1.*
 import kotlinx.android.synthetic.main.include_financial_2.*
 import kotlinx.android.synthetic.main.include_toolbar_finance.*
 
@@ -22,9 +27,7 @@ class FinanceActivity : AppCompatActivity() {
         chart_bar_price.barChartAdapter()
         initTagInfo()
         initAdapterOrders()
-
-
-
+        initAdapterProduct()
 
     }
 
@@ -48,5 +51,23 @@ class FinanceActivity : AppCompatActivity() {
                 }
             })
     }
+
+
+    private fun initAdapterProduct(){
+        recyclerView_product_stock.adapter = ProductListHorizontalAdapter_2(this,
+            ArrayList(App.database.getAppDao().selectProduct(App.branch())),
+            object : ProductListHorizontalAdapter_2.Listener {
+                override fun onItemClicked(position: Int, product: Product) {
+                    var i = Intent(this@FinanceActivity, ProductViewActivity::class.java)
+                    i.putExtra("product_id",product.id)
+                    i.putExtra("pos",position)
+                    startActivity(i)
+
+//                    ProductViewDialog(this@FinanceActivity,product.id!!,position,null)
+//                        .show(supportFragmentManager,"order_view")
+                }
+            })
+    }
+
 
 }
