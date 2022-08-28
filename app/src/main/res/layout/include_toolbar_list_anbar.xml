@@ -51,7 +51,7 @@
             android:paddingHorizontal="12dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:itemCount="12"
-            tools:listitem="@layout/list_item_anbar1" />
+            tools:listitem="@layout/list_item_stock1" />
 
 
     </LinearLayout>
