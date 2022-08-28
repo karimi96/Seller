@@ -5,6 +5,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.github.mikephil.charting.components.Description
+import com.github.mikephil.charting.components.XAxis
+import com.github.mikephil.charting.data.BarData
+import com.github.mikephil.charting.data.BarDataSet
+import com.github.mikephil.charting.data.BarEntry
+import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.karimi.seller.R
 import com.karimi.seller.activity.product.ProductViewActivity
 import com.karimi.seller.adapter.ProductListAdapter_2
@@ -14,6 +20,7 @@ import com.karimi.seller.helper.App
 import com.karimi.seller.model.Product
 import com.karimi.seller.model.TagList
 import kotlinx.android.synthetic.main.activity_stock.*
+import kotlinx.android.synthetic.main.chart.*
 import kotlinx.android.synthetic.main.include_toolbar_list_anbar.*
 
 class StockActivity : AppCompatActivity() {
@@ -30,6 +37,7 @@ class StockActivity : AppCompatActivity() {
         initAdapterTagList()
         initTagInfo()
         initAdapterOrders()
+        barChartAdapter()
 
 
     }
@@ -107,4 +115,34 @@ class StockActivity : AppCompatActivity() {
     }
 
 
+
+   // Test
+
+    private var barEntryArrayList: ArrayList<BarEntry> = ArrayList()
+    private var labelNames: ArrayList<String> = ArrayList()
+    private fun barChartAdapter() {
+        for (i in 0 until array_tag.size) {
+            val sales: Int = i + 100 * i
+            barEntryArrayList.add(BarEntry(i.toFloat(), sales.toFloat()))
+            labelNames.add(array_tag[i].title!!)
+        }
+        val barDataSet = BarDataSet(barEntryArrayList, "فروش ماهانه")
+        barDataSet.color = resources.getColor(R.color.primary)
+        val description = Description()
+        description.setText("فروش ۱۵ روز اخیر")
+        barChart?.setDescription(description)
+        val barData = BarData(barDataSet)
+        barChart?.setData(barData)
+        val xAxis: XAxis = barChart?.xAxis!!
+        xAxis.valueFormatter = IndexAxisValueFormatter(labelNames)
+        xAxis.position = XAxis.XAxisPosition.TOP
+        xAxis.setDrawGridLines(false)
+        xAxis.setDrawAxisLine(false)
+        xAxis.granularity = 1f
+        xAxis.labelCount = labelNames.size
+        xAxis.labelRotationAngle = 270f
+        barChart.animateY(1000)
+        barChart.invalidate()
+
+    }
 }
