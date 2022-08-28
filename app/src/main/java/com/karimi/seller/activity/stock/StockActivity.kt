@@ -6,9 +6,11 @@ import android.os.Bundle
 import android.view.View
 import com.karimi.seller.R
 import com.karimi.seller.adapter.ProductListAdapter_2
+import com.karimi.seller.adapter.TagAdapter
 import com.karimi.seller.adapter.TagInfoAdapter
 import com.karimi.seller.model.TagList
 import kotlinx.android.synthetic.main.activity_stock.*
+import kotlinx.android.synthetic.main.include_toolbar_list_anbar.*
 
 class StockActivity : AppCompatActivity() {
 
@@ -22,6 +24,8 @@ class StockActivity : AppCompatActivity() {
 
         initToolbar(getString(R.string.stock_toolbar))
         initAdapterTagList()
+        initTagInfo()
+
 
     }
 
@@ -58,6 +62,14 @@ class StockActivity : AppCompatActivity() {
         recycler_tag_stock.adapter = adapterTag
     }
 
+
+    private fun initTagInfo(){
+        val array_tag_info = ArrayList<TagList>()
+        array_tag_info.add(TagList("۳۰۰ قلم کالا"))
+        array_tag_info.add(TagList("۱۲۰ محصول فعال"))
+        array_tag_info.add(TagList("۲۹۰,۰۰۰,۰۰۰ تومان سرمایه انبار"))
+        recyclerView_info.adapter = TagAdapter(this,array_tag_info,null)
+    }
 
 
 }
