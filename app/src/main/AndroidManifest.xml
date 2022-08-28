@@ -29,7 +29,7 @@
             android:name=".activity.setting.SettingActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.financialReport.FinancialReportActivity"
+            android:name=".activity.finance.FinanceActivity"
             android:exported="false" />
         <activity
             android:name=".activity.stock.StockActivity"
