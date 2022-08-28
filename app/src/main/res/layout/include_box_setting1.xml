@@ -24,6 +24,7 @@
             app:startIconDrawable="@drawable/ic_store">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_min_order"
                 style="@style/CustomTextInputEditText"
                 android:fontFamily="@font/iran_sans"
                 android:gravity="right"
@@ -49,6 +50,7 @@
             app:startIconDrawable="@drawable/ic_percent">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_tax"
                 style="@style/CustomTextInputEditText"
                 android:fontFamily="@font/iran_sans"
                 android:gravity="right"
@@ -74,6 +76,7 @@
             app:startIconDrawable="@drawable/ic_currency">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_money_type"
                 style="@style/CustomTextInputEditText"
                 android:fontFamily="@font/iran_sans"
                 android:gravity="right"
@@ -99,6 +102,7 @@
             app:startIconDrawable="@drawable/ic_truck_fast">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_price_shipping"
                 style="@style/CustomTextInputEditText"
                 android:fontFamily="@font/iran_sans"
                 android:gravity="right"
@@ -124,6 +128,7 @@
             app:startIconDrawable="@drawable/ic_cart">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_free_shipping"
                 style="@style/CustomTextInputEditText"
                 android:fontFamily="@font/iran_sans"
                 android:gravity="right"

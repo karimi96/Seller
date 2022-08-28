@@ -19,27 +19,32 @@
 
 
         <CheckBox
+            android:id="@+id/checkbox_sound_scanner"
             style="@style/CheckBox"
             android:layout_marginTop="0dp"
             android:drawableEnd="@drawable/ic_music"
             android:text="@string/play_sound_scanner" />
 
         <CheckBox
+            android:id="@+id/checkbox_discount"
             style="@style/CheckBox"
             android:drawableEnd="@drawable/ic_percent"
             android:text="@string/cash_discount" />
 
         <CheckBox
+            android:id="@+id/checkbox_money"
             style="@style/CheckBox"
             android:drawableEnd="@drawable/ic_cash"
             android:text="@string/cash_by_money" />
 
         <CheckBox
+            android:id="@+id/checkbox_card"
             style="@style/CheckBox"
             android:drawableEnd="@drawable/ic_credit_card_"
             android:text="@string/cash_by_card" />
 
         <CheckBox
+            android:id="@+id/checkbox_debit"
             style="@style/CheckBox"
             android:drawableEnd="@drawable/ic_clipboard_text_clock"
             android:text="@string/cash_by_debit" />

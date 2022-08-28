@@ -3,33 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:background="@color/background"
     android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
     tools:context=".activity.setting.SettingActivity">
 
-    <include layout="@layout/include_toolbar_setting"/>
+    <include layout="@layout/include_toolbar_setting" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <include layout="@layout/include_box_setting1"/>
+            <include layout="@layout/include_box_setting1" />
 
-            <include layout="@layout/include_box_setting2"/>
+            <include layout="@layout/include_box_setting2" />
 
 
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
-
-
-
 
 
 </LinearLayout>
