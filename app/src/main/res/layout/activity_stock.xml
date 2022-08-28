@@ -52,7 +52,7 @@
                 android:overScrollMode="never"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:itemCount="12"
-                tools:listitem="@layout/list_item_anbar3" />
+                tools:listitem="@layout/list_item_stock3" />
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

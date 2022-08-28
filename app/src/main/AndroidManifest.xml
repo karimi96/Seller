@@ -32,7 +32,7 @@
             android:name=".activity.financialReport.FinancialReportActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.gozareshAnbar.AnbarActivity"
+            android:name=".activity.stock.StockActivity"
             android:exported="false" />
         <activity
             android:name=".activity.customer.CustomerViewActivity"
