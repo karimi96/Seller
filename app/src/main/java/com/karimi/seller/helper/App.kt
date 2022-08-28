@@ -102,5 +102,30 @@ class App : MultiDexApplication() {
             return ""
         }
 
+
+
+        fun convertToDouble(editText: EditText): Double{
+            return if (replaceForPrice(getString(editText)).isNullOrEmpty()) 0.0
+            else replaceForPrice(getString(editText)).toDouble()
+        }
+
+        fun convertToInt(editText: EditText): Int{
+            return if (replaceForPrice(getString(editText)).isNullOrEmpty()) 0
+            else replaceForPrice(getString(editText)).toInt()
+        }
+
+        fun replaceForPrice(string: String) : String {
+            return string
+                .replace(" ","")
+                .replace(",","")
+                .replace("،","")
+        }
+
     }
+
+
+
+
+
+
 }
