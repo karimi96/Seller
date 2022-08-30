@@ -41,10 +41,10 @@ class ChartPrice (context: Context?, attrs: AttributeSet?) : RelativeLayout(cont
         val barDataSet = BarDataSet(barEntryArrayList, "فروش ماهانه")
         barDataSet.color = resources.getColor(R.color.primary)
         val description = Description()
-        description.setText("فروش ۱۵ روز اخیر")
-        barChart?.setDescription(description)
+        description.text = "فروش ۱۵ روز اخیر"
+        barChart?.description = description
         val barData = BarData(barDataSet)
-        barChart?.setData(barData)
+        barChart?.data = barData
         val xAxis: XAxis = barChart?.xAxis!!
         xAxis.valueFormatter = IndexAxisValueFormatter(labelNames)
         xAxis.position = XAxis.XAxisPosition.TOP
