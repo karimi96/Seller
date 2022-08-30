@@ -26,12 +26,12 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_marginStart="10dp"
-                android:layout_toEndOf="@id/back"
+                android:layout_toEndOf="@id/back_product"
                 android:paddingTop="5dp"
                 android:text="محصولات" />
 
             <ImageView
-                android:id="@+id/back"
+                android:id="@+id/back_product"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -39,20 +39,22 @@
                 android:src="@drawable/ic_back" />
 
             <ImageView
-                android:id="@+id/plus"
+                android:id="@+id/plus_product"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="16dp"
                 android:layout_centerInParent="true"
+                android:layout_marginEnd="16dp"
+                android:background="?attr/actionBarItemBackground"
                 android:src="@drawable/ic_plus" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toStartOf="@id/plus"
-                android:layout_marginEnd="20dp"
                 android:layout_centerInParent="true"
+                android:layout_marginEnd="20dp"
+                android:background="?attr/actionBarItemBackground"
+                android:layout_toStartOf="@id/plus_product"
                 android:src="@drawable/ic_magnify" />
 
         </RelativeLayout>
