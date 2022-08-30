@@ -4,31 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/background"
+    android:orientation="vertical"
     tools:context=".activity.product.AddNewProductActivity">
 
-    <include layout="@layout/include_toolbar_new_p"/>
+    <include layout="@layout/include_toolbar_new_p" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <include layout="@layout/include_box_add_new_p1"/>
+            <include layout="@layout/include_box_add_new_p1" />
 
-            <include layout="@layout/include_box_add_new_p2"/>
+            <include layout="@layout/include_box_add_new_p2" />
 
-            <include layout="@layout/include_box_add_new_p3"/>
+            <include layout="@layout/include_box_add_new_p3" />
 
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
-
 
 
 </LinearLayout>
