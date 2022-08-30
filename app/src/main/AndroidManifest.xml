@@ -47,7 +47,7 @@
             android:name=".activity.order.OrdersActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.product.ListProductActivity"
+            android:name=".activity.product.ProductActivity"
             android:exported="false" />
         <activity
             android:name=".activity.product.ProductViewActivity"

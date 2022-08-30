@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     android:orientation="vertical"
-    tools:context=".activity.product.ListProductActivity">
+    tools:context=".activity.product.ProductActivity">
 
     <include android:id="@+id/tlb" layout="@layout/include_toolbar_product" />
 

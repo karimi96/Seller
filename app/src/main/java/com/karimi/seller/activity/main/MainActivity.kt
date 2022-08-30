@@ -2,21 +2,15 @@ package com.karimi.seller.activity.main
 
 import android.content.Intent
 import android.os.Bundle
-import android.transition.Visibility.MODE_IN
-import android.view.Gravity
 import android.view.View
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
-import androidx.transition.Fade
-import androidx.transition.Slide
-import androidx.transition.Transition
-import androidx.transition.TransitionManager
 import com.karimi.seller.R
 import com.karimi.seller.activity.category.CategoryActivity
 import com.karimi.seller.activity.customer.CustomerActivity
 import com.karimi.seller.activity.finance.FinanceActivity
 import com.karimi.seller.activity.order.OrdersActivity
-import com.karimi.seller.activity.product.ListProductActivity
+import com.karimi.seller.activity.product.ProductActivity
 import com.karimi.seller.activity.setting.SettingActivity
 import com.karimi.seller.activity.stock.StockActivity
 import com.karimi.seller.activity.support.SupportActivity
@@ -131,7 +125,7 @@ class MainActivity : AppCompatActivity() ,ItemMainAdapter.Listener{
         val arrayList = ArrayList<MainModel>()
         arrayList.add(MainModel(R.drawable.ic_extension,"محصولات","محصولات ثبت شده",
             "$product_count محصول",
-            ListProductActivity::class.java))
+            ProductActivity::class.java))
 
         arrayList.add(MainModel(R.drawable.ic_shopping,"سفارشات","سفارشات انجام شده",
             "${App.database.getAppDao().orderCount(branch)} سفارش",

@@ -17,7 +17,7 @@ import com.karimi.seller.model.TagList
 import kotlinx.android.synthetic.main.activity_list_product.*
 import kotlinx.android.synthetic.main.include_toolbar_product.*
 
-class ListProductActivity : AppCompatActivity() , ProductViewActivity.Listener{
+class ProductActivity : AppCompatActivity() , ProductViewActivity.Listener{
 
     private var listCategoryForBack = ArrayList<TagList>()
     private var adapterProduct : ProductListManagerAdapter? = null
@@ -52,7 +52,7 @@ class ListProductActivity : AppCompatActivity() , ProductViewActivity.Listener{
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_list_product)
+        setContentView(R.layout.activity_product)
 
         initToolbar()
         initAdapter()
@@ -141,7 +141,7 @@ class ListProductActivity : AppCompatActivity() , ProductViewActivity.Listener{
                     else statuser.onFinish()
                 }
                 override fun onItemClicked(position: Int, product: Product) {
-                    var i = Intent(this@ListProductActivity,ProductViewActivity::class.java)
+                    var i = Intent(this@ProductActivity,ProductViewActivity::class.java)
                     i.putExtra("product_id",product.id)
                     i.putExtra("pos",position)
                     startActivity(i)
