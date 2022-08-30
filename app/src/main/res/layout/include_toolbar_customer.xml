@@ -66,7 +66,7 @@
             android:paddingHorizontal="12dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:itemCount="12"
-            tools:listitem="@layout/list_item_state_customer" />
+            tools:listitem="@layout/list_item_state_order_" />
 
     </LinearLayout>
 

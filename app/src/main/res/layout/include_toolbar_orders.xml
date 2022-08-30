@@ -55,6 +55,11 @@
                 android:layout_toStartOf="@id/plus_order"
                 android:src="@drawable/ic_magnify" />
 
+            <SearchView
+                android:id="@+id/search_order2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
         </RelativeLayout>
 
 
