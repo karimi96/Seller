@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
+    android:layout_height="match_parent"
     android:background="@color/background"
-    android:layout_height="match_parent">
+    android:orientation="vertical">
 
     <include
-        android:id="@+id/toolbar" layout="@layout/toolbar_main_activity" />
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_main_activity" />
+
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollMain"
+        android:layout_below="@id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -31,4 +35,43 @@
 
     </androidx.core.widget.NestedScrollView>
 
-</LinearLayout>
+
+
+    <!--test animation -->
+
+    <RelativeLayout
+        android:layout_below="@id/toolbar"
+        android:visibility="gone"
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:id="@+id/anim_grouping"
+        android:paddingBottom="5dp"
+        android:paddingRight="15dp"
+        android:elevation="2dp"
+        android:outlineSpotShadowColor="@color/shadow"
+        android:paddingLeft="15dp"
+        android:background="@drawable/item_border_menu_business">
+
+        <LinearLayout
+            android:id="@+id/box_one"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/box_main"
+                layout="@layout/item_menu_dialog_business_main"/>
+
+            <include
+                android:id="@+id/box_edit"
+                android:alpha="0"
+                tools:alpha="1"
+                android:visibility="gone"
+                tools:visibility="visible"
+                layout="@layout/item_menu_dialog_business_edit"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

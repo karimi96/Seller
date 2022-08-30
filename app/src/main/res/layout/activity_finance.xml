@@ -27,7 +27,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <include layout="@layout/widget_chart_price" />
+<!--            <include layout="@layout/widget_chart_price" />-->
+
+            <com.karimi.seller.widget.chart.ChartPrice
+                android:id="@+id/chart_bar_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
             <View
                 style="@style/CustomLine"
