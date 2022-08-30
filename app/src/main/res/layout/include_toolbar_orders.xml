@@ -19,18 +19,18 @@
             android:paddingStart="18dp">
 
             <TextView
-                android:id="@+id/title_product"
+                android:id="@+id/title_order"
                 style="@style/TextMain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_marginStart="10dp"
-                android:layout_toEndOf="@id/back"
+                android:layout_toEndOf="@id/back_order"
                 android:paddingTop="5dp"
                 android:text="سفارشات" />
 
             <ImageView
-                android:id="@+id/back"
+                android:id="@+id/back_order"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -38,20 +38,21 @@
                 android:src="@drawable/ic_back" />
 
             <ImageView
-                android:id="@+id/plus"
+                android:id="@+id/plus_order"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="16dp"
                 android:layout_centerInParent="true"
+                android:layout_marginEnd="16dp"
                 android:src="@drawable/ic_plus" />
 
             <ImageView
+                android:id="@+id/search_order"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toStartOf="@id/plus"
-                android:layout_marginEnd="20dp"
                 android:layout_centerInParent="true"
+                android:layout_marginEnd="20dp"
+                android:layout_toStartOf="@id/plus_order"
                 android:src="@drawable/ic_magnify" />
 
         </RelativeLayout>
