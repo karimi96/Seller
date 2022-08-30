@@ -1,12 +1,19 @@
 package com.karimi.seller.activity.main
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.animation.AnimationUtils
+import androidx.appcompat.app.AppCompatActivity
 import com.karimi.seller.R
+import com.karimi.seller.activity.category.CategoryActivity
+import com.karimi.seller.activity.customer.CustomerActivity
+import com.karimi.seller.activity.finance.FinanceActivity
 import com.karimi.seller.activity.order.OrdersActivity
 import com.karimi.seller.activity.product.ListProductActivity
+import com.karimi.seller.activity.setting.SettingActivity
+import com.karimi.seller.activity.stock.StockActivity
+import com.karimi.seller.activity.support.SupportActivity
 import com.karimi.seller.adapter.ItemMainAdapter
 import com.karimi.seller.adapter.OrderWaitingAdapter
 import com.karimi.seller.dialog.BusinessMenuDialog
@@ -18,7 +25,6 @@ import com.karimi.seller.model.MainModel
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.box_detail_main_activity.*
 import kotlinx.android.synthetic.main.box_order_waiting_.*
-import kotlinx.android.synthetic.main.toolbar_main_activity.*
 import kotlinx.android.synthetic.main.toolbar_main_activity.view.*
 
 class MainActivity : AppCompatActivity() ,ItemMainAdapter.Listener{
@@ -33,6 +39,10 @@ class MainActivity : AppCompatActivity() ,ItemMainAdapter.Listener{
         initToolbar()
         initRecyclerView()
 
+        scrollMain.post {
+            scrollMain.fullScroll(View.FOCUS_UP)
+        }
+
     }
 
 
@@ -42,8 +52,23 @@ class MainActivity : AppCompatActivity() ,ItemMainAdapter.Listener{
     }
 
 
+    private fun pageAnimation() {
+//        anim_grouping.translationY = 0f
+//        anim_grouping.animate().translationYBy(-10f).duration = 1500
+////        anim_grouping.resources.getAnimation(R.anim.up_to_down)
+
+
+        val slideAnimation = AnimationUtils.loadAnimation(this, R.anim.up_to_down)
+        slideAnimation.duration = 1500
+        anim_grouping.startAnimation(slideAnimation)
+        anim_grouping.visibility = View.VISIBLE
+
+    }
+
+
     private fun initToolbar(){
         toolbar.content.setOnClickListener {
+//            pageAnimation()
             BusinessMenuDialog(this,object : BusinessMenuDialog.Listener{
                 override fun onEditBusiness(dialog: BusinessMenuDialog, business: Business?) {
                     businessSetText()
@@ -97,20 +122,20 @@ class MainActivity : AppCompatActivity() ,ItemMainAdapter.Listener{
         arrayList.add(MainModel(R.drawable.ic_shopping,"سفارشات","سفارشات انجام شده",
             "${App.database.getAppDao().orderCount(branch)} سفارش",
             OrdersActivity::class.java))
-//        arrayList.add(MainModel(R.drawable.ic_category,"دسته‌بندی","دسته‌بندی های ثبت شده",
-//            "${App.database.getAppDao().categoryCount(branch)} دسته‌بندی",
-//            CategoryActivity::class.java))
-//        arrayList.add(MainModel(R.drawable.ic_account,"مشتریان","خریداران شما",
-//            "${App.database.getAppDao().customerCount(branch)} مشتری",
-//            CustomerActivity::class.java))
-//        arrayList.add(MainModel(R.drawable.ic_storefront,"گزارش انبار","کالاهای موجود",
-//            "${App.priceFormat(qalamkala)} قلم‌",
-//            StockActivity::class.java))
-//        arrayList.add(MainModel(R.drawable.ic_monetization,"گزارش مالی","سرمایه موجود",
-//            "${App.priceFormat(sarmayeh,true)}",
-//            FinanceActivity::class.java))
-//        arrayList.add(MainModel(R.drawable.ic_setting,"تنظیمات", "مالیات، واحدپول و..", "", SettingActivity::class.java))
-//        arrayList.add(MainModel(R.drawable.ic_import,"پشتیبانی","راه های ارتباطی","", SupportActivity::class.java))
+        arrayList.add(MainModel(R.drawable.ic_category,"دسته‌بندی","دسته‌بندی های ثبت شده",
+            "${App.database.getAppDao().categoryCount(branch)} دسته‌بندی",
+            CategoryActivity::class.java))
+        arrayList.add(MainModel(R.drawable.ic_account1,"مشتریان","خریداران شما",
+            "${App.database.getAppDao().customerCount(branch)} مشتری",
+            CustomerActivity::class.java))
+        arrayList.add(MainModel(R.drawable.ic_storefront,"گزارش انبار","کالاهای موجود",
+            "${App.priceFormat(qalamkala)} قلم‌",
+            StockActivity::class.java))
+        arrayList.add(MainModel(R.drawable.ic_monetization,"گزارش مالی","سرمایه موجود",
+            "${App.priceFormat(sarmayeh,true)}",
+            FinanceActivity::class.java))
+        arrayList.add(MainModel(R.drawable.ic_setting,"تنظیمات", "مالیات، واحدپول و..", "", SettingActivity::class.java))
+        arrayList.add(MainModel(R.drawable.ic_import,"پشتیبانی","راه های ارتباطی","", SupportActivity::class.java))
 
         adapterMain?.updateList(arrayList)
     }
