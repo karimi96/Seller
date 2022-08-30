@@ -96,4 +96,12 @@
 
 
 
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/up_to_down</item>
+        <item name="android:windowExitAnimation">@anim/down_to_up</item>
+    </style>
+
+
+
+
 </resources>
