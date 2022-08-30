@@ -2,9 +2,15 @@ package com.karimi.seller.activity.main
 
 import android.content.Intent
 import android.os.Bundle
+import android.transition.Visibility.MODE_IN
+import android.view.Gravity
 import android.view.View
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
+import androidx.transition.Fade
+import androidx.transition.Slide
+import androidx.transition.Transition
+import androidx.transition.TransitionManager
 import com.karimi.seller.R
 import com.karimi.seller.activity.category.CategoryActivity
 import com.karimi.seller.activity.customer.CustomerActivity
@@ -36,12 +42,20 @@ class MainActivity : AppCompatActivity() ,ItemMainAdapter.Listener{
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+//        var transition: Transition
+//        transition = Slide(Gravity.TOP)
+//        transition.duration = 1000
+//        TransitionManager.beginDelayedTransition(relative_main, transition)
+//        relative_main.visibility = View.VISIBLE
+
+        scrollMain.post { scrollMain.fullScroll(View.FOCUS_UP) }
+
+
         initToolbar()
         initRecyclerView()
 
-        scrollMain.post {
-            scrollMain.fullScroll(View.FOCUS_UP)
-        }
+
+
 
     }
 
