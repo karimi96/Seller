@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardElevation="3dp"
-    app:cardCornerRadius="8dp"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="8dp"
     android:foreground="@drawable/item_ripple"
     android:outlineSpotShadowColor="@color/shadow"
-    android:layout_marginHorizontal="8dp"
-    android:layout_marginVertical="8dp">
+    app:cardCornerRadius="8dp"
+    app:cardElevation="3dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
             android:id="@+id/image"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:src="@drawable/ic_bascket" />
 
         <TextView
@@ -30,10 +30,11 @@
             style="@style/TextMain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:singleLine="true"
-            android:textColor="@color/text_main"
+            android:layout_marginTop="5dp"
             android:fontFamily="@font/iran_sans"
+            android:singleLine="true"
             android:textAlignment="center"
+            android:textColor="@color/text_main"
             android:textStyle="bold"
             tools:text="محصولات" />
 
@@ -45,26 +46,25 @@
             android:singleLine="true"
             android:textAlignment="center"
             android:textColor="@color/text_hint"
-            android:textStyle="bold"
+            android:textSize="12dp"
             tools:text="همه محصولات ثبت شده" />
 
         <View
-            android:background="@color/back_hint"
-            android:layout_marginVertical="10dp"
             android:layout_width="match_parent"
-            android:layout_height="2dp"/>
+            android:layout_height="2dp"
+            android:layout_marginVertical="10dp"
+            android:background="@color/back_hint" />
 
         <TextView
             android:id="@+id/content"
             style="@style/TextMain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
             android:singleLine="true"
             android:textAlignment="center"
             android:textColor="@color/text_hint"
-            android:textStyle="bold"
+            android:textSize="13dp"
             tools:text="1,900 محصول" />
 
     </LinearLayout>
