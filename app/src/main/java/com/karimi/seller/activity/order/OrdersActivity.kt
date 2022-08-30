@@ -3,6 +3,7 @@ package com.karimi.seller.activity.order
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.karimi.seller.R
@@ -62,6 +63,10 @@ class OrdersActivity : AppCompatActivity() {
     }
 
     private fun initToolbar(title: String) {
+
+//        search_order.setOnClickListener { search_order2.visibility = View.VISIBLE }
+
+
 //        toolbar.title.text = title
 //        toolbar.ic_back.visibility = View.VISIBLE
 //        toolbar.ic_back.setOnClickListener { onBackPressed() }
@@ -130,6 +135,8 @@ class OrdersActivity : AppCompatActivity() {
                 @SuppressLint("NotifyDataSetChanged")
                 override fun onItemClicked(position: Int, item: TagList) {
                     adapter?.updateList(selectOrder(item.tag!!))
+                    App.toast(item.title.toString())
+
                 }
             })
 

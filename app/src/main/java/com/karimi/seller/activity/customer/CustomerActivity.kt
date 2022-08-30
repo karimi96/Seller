@@ -107,6 +107,7 @@ class CustomerActivity : AppCompatActivity(), InsertCustomerDialog.Listener {
                 @SuppressLint("NotifyDataSetChanged")
                 override fun onItemClicked(position: Int, item: TagList) {
                     adapter?.updateList(selectCustomer(item.tag!!))
+                    App.toast(item.title.toString())
                 }
             })
 
