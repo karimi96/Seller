@@ -6,6 +6,7 @@
     android:layout_marginHorizontal="16dp"
     android:layout_marginVertical="8dp"
     android:id="@+id/card_customer"
+    android:foreground="@drawable/item_ripple"
     android:outlineSpotShadowColor="@color/shadow"
     app:cardCornerRadius="8dp"
     app:cardElevation="3dp">
