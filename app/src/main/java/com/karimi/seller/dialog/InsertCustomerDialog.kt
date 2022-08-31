@@ -37,6 +37,12 @@ class InsertCustomerDialog(val _context: Context, val _customer: Customers?, val
         super.onActivityCreated(savedInstanceState)
         dialog!!.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog!!.window!!.setGravity(Gravity.CENTER)
+
+        val metrics = resources.displayMetrics
+        val width = metrics.widthPixels
+        dialog!!.window!!.setLayout(((6.7 * width) / 7).toInt(),ViewGroup.LayoutParams.WRAP_CONTENT)
+
+
     }
 
     interface Listener {
