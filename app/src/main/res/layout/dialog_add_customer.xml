@@ -88,7 +88,7 @@
 -->
 
         <com.karimi.seller.widget.loader_button.LoaderButton
-            android:layout_below="@id/cb_add_c"
+            android:layout_below="@id/cb_add_customer"
             android:id="@+id/submit_customer"
             android:fontFamily="@font/iran_sans"
             android:layout_width="match_parent"
