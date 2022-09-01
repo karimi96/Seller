@@ -24,9 +24,9 @@
 
             <ImageView
                 android:id="@+id/image_category"
-                android:scaleType="centerCrop"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:scaleType="centerCrop"
                 android:src="@drawable/pic_picture" />
 
         </androidx.cardview.widget.CardView>
