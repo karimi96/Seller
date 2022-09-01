@@ -33,6 +33,9 @@ class InsertCategoryDialog(
         super.onCreate(savedInstanceState)
         setContentView(R.layout.dialog_add_category)
         this.window?.clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM)
+        this.window?.setBackgroundDrawableResource(R.drawable.item_border_btn)//test
+
+
         Log.e(
             "qqq",
             "InsertCategoryDialog onCreate: id: $_ID - id_mother: $_id_mother - image: $_IMAGE_PATH - pos: $_POS "
