@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.karimi.seller.R
@@ -57,9 +58,8 @@ class CategoryListManagerAdapter(
             Glide.with(context).load(model.image).into(item.image_category)
 //            item.image_category.visibility = View.VISIBLE
         }else{
-//            item.image_category.setBackgroundColor(R.color.back_order)
             item.image_category.backgroundTintList = context.resources.getColorStateList(R.color.back_order)
-            item.image_category.scaleType = null
+            item.image_category.scaleType = ImageView.ScaleType.FIT_CENTER
             Glide.with(context).load(context.getDrawable(R.drawable.pic_picture)).into(item.image_category)
         }
 
