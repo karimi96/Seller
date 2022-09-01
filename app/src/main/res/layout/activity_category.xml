@@ -19,7 +19,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:paddingStart="18dp">
+            android:paddingStart="10dp">
 
             <TextView
                 android:id="@+id/tv_category"
@@ -27,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:layout_marginStart="7dp"
+                android:layout_marginStart="5dp"
                 android:layout_toEndOf="@id/back_category"
                 android:paddingTop="5dp"
                 android:text="@string/category" />
@@ -42,12 +42,12 @@
 
             <ImageView
                 android:id="@+id/plus_category"
-                android:background="?attr/actionBarItemBackground"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_centerInParent="true"
                 android:layout_marginEnd="16dp"
+                android:background="?attr/actionBarItemBackground"
                 android:src="@drawable/ic_plus" />
 
         </RelativeLayout>
