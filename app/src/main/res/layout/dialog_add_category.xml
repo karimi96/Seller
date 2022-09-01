@@ -15,15 +15,15 @@
 
         <RelativeLayout
             android:id="@+id/rl"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="61dp"
+            android:layout_height="61dp">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/image_add_category"
                 android:layout_width="61dp"
                 android:layout_height="61dp"
-                android:src="@drawable/pic_mobl"
-                android:visibility="gone" />
+                app:civ_circle_background_color="#E5E4FB"
+                android:visibility="visible" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab_dialog"
@@ -34,6 +34,8 @@
                 android:visibility="visible"
                 app:borderWidth="0dp"
                 app:elevation="0dp"
+                app:rippleColor="#cccccc"
+                android:elevation="0dp"
                 app:fabCustomSize="62dp"
                 app:maxImageSize="30dp"
                 app:tint="#c6c4f7" />
@@ -77,23 +79,10 @@
             android:textSize="12dp" />
 
 
-        <!--        <TextView-->
-        <!--            android:layout_below="@id/cb"-->
-        <!--            android:text="ثبت"-->
-        <!--            android:gravity="center"-->
-        <!--            android:fontFamily="@font/iran_sans"-->
-        <!--            android:layout_marginTop="20dp"-->
-        <!--            android:textColor="@color/white"-->
-        <!--            android:textSize="14dp"-->
-        <!--            android:background="@drawable/item_border_btn"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="40dp"/>-->
-
-
         <com.karimi.seller.widget.loader_button.LoaderButton
             android:id="@+id/submit_category"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:layout_below="@id/cb_add_c"
             android:layout_marginTop="20dp"
             android:background="@drawable/item_border_btn"
