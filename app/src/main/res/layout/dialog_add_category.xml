@@ -16,15 +16,15 @@
 
         <RelativeLayout
             android:id="@+id/rl"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_marginTop="11dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/image_add_category"
                 android:layout_width="61dp"
                 android:layout_height="61dp"
                 android:layout_centerInParent="true"
-                android:layout_margin="16dp"
                 android:visibility="gone" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -33,7 +33,6 @@
                 android:layout_height="62dp"
                 android:backgroundTint="#E5E4FB"
                 android:src="@drawable/pic_camera"
-                android:layout_margin="16dp"
                 android:visibility="visible"
                 android:layout_centerInParent="true"
                 app:borderWidth="0dp"

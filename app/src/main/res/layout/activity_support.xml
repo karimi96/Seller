@@ -15,9 +15,9 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
 
             <androidx.cardview.widget.CardView
@@ -29,9 +29,9 @@
                 app:cardElevation="3dp">
 
                 <LinearLayout
-                    android:background="?attr/selectableItemBackgroundBorderless"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackgroundBorderless"
                     android:orientation="vertical"
                     android:paddingHorizontal="16dp"
                     android:paddingVertical="25dp">
@@ -113,7 +113,6 @@
                     android:src="@drawable/ic_instagram" />
 
             </LinearLayout>
-
 
 
         </LinearLayout>
