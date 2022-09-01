@@ -63,13 +63,12 @@ class InsertCategoryDialog(
         }
 
 
-        fab_dialog.setOnClickListener {
-            listener.chooseImage(this)
-        }
-
 //        image_add_category.setOnClickListener {
 //            listener.chooseImage(this)
 //        }
+        fab_dialog.setOnClickListener {
+            listener.chooseImage(this)
+        }
 
 //        ic_delete.setOnClickListener {
 //            _IMAGE_PATH = null
@@ -100,6 +99,10 @@ class InsertCategoryDialog(
             Glide.with(context).load(category.image).into(image_add_category)
             _IMAGE_PATH = category.image
 //            ic_delete.visibility = View.VISIBLE
+        }
+
+        image_add_category.setOnClickListener {
+            listener.chooseImage(this)
         }
     }
 
