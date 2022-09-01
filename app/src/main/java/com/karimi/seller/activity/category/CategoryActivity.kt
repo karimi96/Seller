@@ -48,6 +48,8 @@ class CategoryActivity : AppCompatActivity(),InsertCategoryDialog.Listener {
 
     private fun initToolbar(title: String) {
 
+        arrayOf(tv_category,back_category).forEach { it.setOnClickListener { onBackPressed() } }
+
         plus_category.setOnClickListener {
             dialog_category = InsertCategoryDialog(
                 this@CategoryActivity,
