@@ -19,7 +19,7 @@
             android:id="@+id/r1"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:paddingStart="18dp">
+            android:paddingStart="11dp">
 
             <TextView
                 android:id="@+id/tv_stock"
@@ -27,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="5dp"
                 android:layout_toEndOf="@id/back_stock"
                 android:paddingTop="5dp"
                 android:text="@string/stock_toolbar" />
