@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import com.github.mikephil.charting.components.Description
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.BarData
@@ -21,7 +20,7 @@ import com.karimi.seller.model.Product
 import com.karimi.seller.model.TagList
 import kotlinx.android.synthetic.main.activity_stock.*
 import kotlinx.android.synthetic.main.chart.*
-import kotlinx.android.synthetic.main.include_toolbar_list_anbar.*
+import kotlinx.android.synthetic.main.include_toolbar_stock.*
 
 class StockActivity : AppCompatActivity() {
 
