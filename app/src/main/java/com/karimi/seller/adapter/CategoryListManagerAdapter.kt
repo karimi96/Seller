@@ -46,9 +46,12 @@ class CategoryListManagerAdapter(
         else item.alpha = 1f
 
         item.title_category.text = model.name
+        item.title_category.isSelected = true
+
+
+
         if (!model.content.isNullOrEmpty()){
             item.content_category.text = model.content
-
 //            item.box_content.visibility = View.VISIBLE
         }
 //        else item.box_content.visibility = View.GONE

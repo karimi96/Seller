@@ -36,9 +36,13 @@
         <TextView
             android:id="@+id/title_category"
             style="@style/TextMain"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
             android:layout_gravity="center"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
             android:gravity="center"
             android:layout_marginVertical="5dp"
             android:text="پوشاک" />
@@ -53,7 +57,8 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="2dp"
             android:gravity="center"
             android:orientation="horizontal">
 
