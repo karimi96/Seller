@@ -13,6 +13,8 @@ import com.karimi.seller.model.Orders
 import com.karimi.seller.model.Product
 import com.karimi.seller.model.TagList
 import kotlinx.android.synthetic.main.activity_customer_view.*
+import kotlinx.android.synthetic.main.activity_customer_view.cubicChart
+import kotlinx.android.synthetic.main.activity_finance.*
 import kotlinx.android.synthetic.main.include_financial_1.*
 import kotlinx.android.synthetic.main.include_financial_2.*
 import kotlinx.android.synthetic.main.include_toolbar_finance.*
@@ -24,10 +26,11 @@ class FinanceActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_finance)
 
-        chart_bar_price.barChartAdapter()
+//        chart_bar_price.barChartAdapter()
         initTagInfo()
         initAdapterOrders()
         initAdapterProduct()
+        cubicChart.setTitle("نمودار")
 
     }
 
