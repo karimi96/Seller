@@ -84,4 +84,8 @@
 
     </declare-styleable>
 
+    <declare-styleable name="CubicChart">
+        <attr name="android:text" format="string"/>
+    </declare-styleable>
+
 </resources>
