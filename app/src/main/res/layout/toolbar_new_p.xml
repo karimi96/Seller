@@ -51,9 +51,8 @@
 
 
         <com.karimi.seller.widget.loader_button.LoaderButton
-            android:id="@+id/submit_setting"
+            android:id="@+id/submit_new_product"
             style="@style/TextMain"
-
             android:layout_width="95dp"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
