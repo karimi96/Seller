@@ -10,6 +10,7 @@
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable-v24/ic_import.xml" value="0.174" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable-v24/ic_more_up.xml" value="0.1915" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable-v24/ic_storefront.xml" value="0.174" />
+        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable-v24/item_fade_red.xml" value="0.1265" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable-v24/item_select_more_spinner.xml" value="0.187" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable/ic_account.xml" value="0.1465" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/drawable/ic_account_circle_.xml" value="0.112" />
@@ -57,7 +58,7 @@
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_financial_report.xml" value="0.25" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_first_open.xml" value="0.28321318228630277" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_list_product.xml" value="0.25" />
-        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_main2.xml" value="0.20416666666666666" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_orders.xml" value="0.33" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_product.xml" value="0.25" />
@@ -65,13 +66,14 @@
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_product_view.xml" value="0.15736040609137056" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_setting.xml" value="0.33" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_splash.xml" value="0.5" />
-        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_stock.xml" value="0.25" />
+        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_stock.xml" value="0.1450381679389313" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_support.xml" value="0.33" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/box_detail_main_activity.xml" value="0.33" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/box_first_activity.xml" value="0.33" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/box_order_waiting_.xml" value="0.67" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/box_waiting_order.xml" value="0.18342391304347827" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/chart.xml" value="0.20416666666666666" />
+        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/cubicline_chart.xml" value="0.33" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/dialog_add_category.xml" value="0.33" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/dialog_add_customer.xml" value="0.33" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/dialog_menu_business.xml" value="0.1852355072463768" />
