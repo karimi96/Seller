@@ -26,11 +26,13 @@
             android:layout_marginTop="20dp">
 
             <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_new_product"
                 android:layout_width="61dp"
                 android:layout_height="61dp"
                 android:src="@drawable/pic_mobl" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_new_product"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E5E4FB"
@@ -49,10 +51,11 @@
             style="@style/CustomTextInputLayout"
             android:layout_marginTop="20dp"
             android:hint="@string/barcode"
-            app:endIconDrawable="@drawable/ic_store"
+            app:endIconDrawable="@drawable/ic_qrcode"
             app:hintAnimationEnabled="false">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_barcode"
                 style="@style/CustomTextInputEditText"
                 android:fontFamily="@font/iran_sans"
                 android:gravity="start"
@@ -78,7 +81,7 @@
             app:hintEnabled="false">
 
             <AutoCompleteTextView
-                android:id="@+id/auto_complete_txt"
+                android:id="@+id/atc_unit"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/white"
@@ -110,6 +113,7 @@
             android:hint="@string/product_name">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_name"
                 style="@style/CustomTextInputEditText"
                 android:fontFamily="@font/iran_sans"
                 android:gravity="right"
@@ -126,6 +130,7 @@
             android:hint="@string/max_in_check_out">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_max_selection"
                 style="@style/CustomTextInputEditText"
                 android:fontFamily="@font/iran_sans"
                 android:gravity="right"
@@ -142,6 +147,7 @@
             android:hint="@string/percent_tax">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_tax_percent"
                 style="@style/CustomTextInputEditText"
                 android:fontFamily="@font/iran_sans"
                 android:gravity="right"
@@ -152,7 +158,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <CheckBox
-            android:id="@+id/cb"
+            android:id="@+id/checkbox_tax"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="-3dp"
