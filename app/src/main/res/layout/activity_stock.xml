@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context=".activity.stock.StockActivity">
 
-    <include layout="@layout/include_toolbar_stock" />
+    <include layout="@layout/toolbar_stock" />
 
 
     <androidx.core.widget.NestedScrollView

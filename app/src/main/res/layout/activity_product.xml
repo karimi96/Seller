@@ -10,7 +10,7 @@
 
     <include
         android:id="@+id/tlb"
-        layout="@layout/include_toolbar_product" />
+        layout="@layout/toolbar_product" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView_product"

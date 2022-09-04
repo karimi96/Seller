@@ -9,7 +9,7 @@
     android:background="@color/background"
     tools:context=".activity.customer.CustomerActivity">
 
-    <include layout="@layout/include_toolbar_customer"/>
+    <include layout="@layout/toolbar_customer"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_customer"

@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context=".activity.support.SupportActivity">
 
-    <include layout="@layout/include_toolbar_support" />
+    <include layout="@layout/toolbar_support" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"

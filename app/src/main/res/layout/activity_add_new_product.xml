@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context=".activity.product.AddNewProductActivity">
 
-    <include layout="@layout/include_toolbar_new_p" />
+    <include layout="@layout/toolbar_new_p" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"

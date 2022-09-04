@@ -9,7 +9,7 @@
     tools:context=".activity.finance.FinanceActivity">
 
 
-    <include layout="@layout/include_toolbar_finance" />
+    <include layout="@layout/toolbar_finance" />
 
     <View
         android:layout_width="match_parent"

@@ -9,7 +9,7 @@
     tools:context=".activity.customer.CustomerViewActivity">
 
 
-    <include layout="@layout/include_toolbar_customer_view" />
+    <include layout="@layout/toolbar_customer_view" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
