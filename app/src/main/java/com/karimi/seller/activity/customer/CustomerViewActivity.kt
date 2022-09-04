@@ -44,8 +44,8 @@ class CustomerViewActivity : AppCompatActivity() {
         initAdapterTagList()
         initRecyclerViewOrder()
         initRecyclerViewProduct()
-        chart_bar_price.barChartAdapter()
-
+//        chart_bar_price.barChartAdapter()
+        cubicChart.setTitle("نمودار فروش 3 ماهه اخیر")
 
 
     }

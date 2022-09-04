@@ -38,10 +38,15 @@
 
             <include layout="@layout/include_box_customer_view" />
 
-            <com.karimi.seller.widget.chart.ChartPrice
-                android:id="@+id/chart_bar_price"
+            <!--            <com.karimi.seller.widget.chart.ChartPrice-->
+            <!--                android:id="@+id/chart_bar_price"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"/>-->
+
+            <com.karimi.seller.widget.chart.CubicChart
+                android:id="@+id/cubicChart"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
             <View
                 style="@style/CustomLine"
