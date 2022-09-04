@@ -12,19 +12,26 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:overScrollMode="never"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:overScrollMode="never">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <include layout="@layout/include_recycler_product_view" />
 
-            <include layout="@layout/widget_chart_price" />
+            <!--            <include layout="@layout/widget_chart_price" />-->
 
-            <View style="@style/CustomLine" android:layout_marginVertical="10dp" />
+            <com.karimi.seller.widget.chart.CubicChart
+                android:id="@+id/cubicChart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                style="@style/CustomLine"
+                android:layout_marginVertical="10dp" />
 
             <include layout="@layout/include_customer_product_view" />
 

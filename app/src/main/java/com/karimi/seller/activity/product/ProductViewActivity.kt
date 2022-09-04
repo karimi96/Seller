@@ -38,6 +38,7 @@ class ProductViewActivity : AppCompatActivity() {
         initAdapterTagList()
         initRecyclerView()
 //        chart_bar_price.barChartAdapter()
+        cubicChart.setTitle("نمودار فروش 3 ماهه")
 
     }
 
