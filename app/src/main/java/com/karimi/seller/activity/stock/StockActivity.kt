@@ -36,7 +36,8 @@ class StockActivity : AppCompatActivity() {
         initAdapterTagList()
         initTagInfo()
         initAdapterOrders()
-        barChartAdapter()
+//        barChartAdapter()
+        cubicChart.setTitle("نمودار")
 
 
     }
@@ -118,7 +119,7 @@ class StockActivity : AppCompatActivity() {
 
    // Test
 
-    private var barEntryArrayList: ArrayList<BarEntry> = ArrayList()
+   /* private var barEntryArrayList: ArrayList<BarEntry> = ArrayList()
     private var labelNames: ArrayList<String> = ArrayList()
     private fun barChartAdapter() {
         for (i in 0 until array_tag.size) {
@@ -143,6 +144,6 @@ class StockActivity : AppCompatActivity() {
         xAxis.labelRotationAngle = 270f
         barChart.animateY(1000)
         barChart.invalidate()
-
-    }
+*/
+//    }
 }
