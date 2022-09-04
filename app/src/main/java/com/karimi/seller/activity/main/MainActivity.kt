@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() ,ItemMainAdapter.Listener{
 
         initToolbar()
         initRecyclerView()
-
+        cubicChart.setTitle("نمودار فروش این ماه")
 
 
 

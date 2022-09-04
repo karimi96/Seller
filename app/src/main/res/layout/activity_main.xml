@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
-    android:id="@+id/relative_main"
-    android:visibility="visible"
     android:background="@color/background"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:visibility="visible">
 
     <include
         android:id="@+id/toolbar"
@@ -16,9 +17,9 @@
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollMain"
-        android:layout_below="@id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,7 +27,14 @@
             android:background="@color/background"
             android:orientation="vertical">
 
-            <include layout="@layout/chart" />
+            <!--            <include layout="@layout/chart" />-->
+
+            <com.karimi.seller.widget.chart.CubicChart
+                android:id="@+id/cubicChart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="ss" />
 
             <include layout="@layout/save_new_order" />
 
@@ -39,41 +47,40 @@
     </androidx.core.widget.NestedScrollView>
 
 
-
     <!--test animation -->
 
     <RelativeLayout
-        android:layout_below="@id/toolbar"
-        android:visibility="gone"
-        android:layout_marginTop="1dp"
+        android:id="@+id/anim_grouping"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        android:id="@+id/anim_grouping"
-        android:paddingBottom="5dp"
-        android:paddingRight="15dp"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/item_border_menu_business"
         android:elevation="2dp"
         android:outlineSpotShadowColor="@color/shadow"
         android:paddingLeft="15dp"
-        android:background="@drawable/item_border_menu_business">
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="5dp"
+        android:visibility="gone">
 
         <LinearLayout
             android:id="@+id/box_one"
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <include
                 android:id="@+id/box_main"
-                layout="@layout/item_menu_dialog_business_main"/>
+                layout="@layout/item_menu_dialog_business_main" />
 
             <include
                 android:id="@+id/box_edit"
+                layout="@layout/item_menu_dialog_business_edit"
                 android:alpha="0"
-                tools:alpha="1"
                 android:visibility="gone"
-                tools:visibility="visible"
-                layout="@layout/item_menu_dialog_business_edit"/>
+                tools:alpha="1"
+                tools:visibility="visible" />
         </LinearLayout>
     </RelativeLayout>
 
