@@ -36,7 +36,7 @@
                 android:layout_centerInParent="true"
                 android:src="@drawable/ic_back" />
 
-            <TextView
+           <!-- <TextView
                 android:text="ذخیره"
                 style="@style/TextMain"
                 android:background="@drawable/item_border_btn"
@@ -47,7 +47,30 @@
                 android:paddingHorizontal="30dp"
                 android:textColor="@color/white"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"/>-->
+
+
+            <com.karimi.seller.widget.loader_button.LoaderButton
+                android:id="@+id/submit_setting"
+                android:layout_width="95dp"
+
+                style="@style/TextMain"
+                android:background="@drawable/item_border_btn"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:paddingVertical="6dp"
+                android:paddingHorizontal="30dp"
+                android:textColor="@color/white"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:btnText="@string/submit"
+                app:btnTextSize="14dp"
+                app:loaderIndicator="BallPulseIndicator"
+                app:loaderIndicatorColor="@color/white" />
+
 
         </RelativeLayout>
 
