@@ -10,6 +10,12 @@ object Config {
 
 
     const val KEY_EXTRA_BARCODE = "barcode"
+    const val KEY_EXTRA_BITMAP = "bitmap"
+    const val KEY_EXTRA_TYPE_SCAN = "type_scan"
+
+
+    const val SCAN_BARCODE_SINGLE = 100
+    const val SCAN_BARCODE_ARRAY = 200
 
 
     const val MONEY_TYPE_DEFAULT = "تومان"
