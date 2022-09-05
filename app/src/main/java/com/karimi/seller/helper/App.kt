@@ -120,7 +120,16 @@ class App : MultiDexApplication() {
                 .replace("،", "")
         }
 
+
+
+        fun stockFormat(double: Double):String{
+            val decimalFormat = DecimalFormat("###.##")
+            return decimalFormat.format(double)
+        }
+
+
     }
+
 
 
 }
