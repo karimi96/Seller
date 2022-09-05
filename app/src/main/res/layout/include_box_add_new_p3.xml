@@ -28,6 +28,7 @@
             app:hintAnimationEnabled="false">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_stock"
                 style="@style/CustomTextInputEditText"
                 android:fontFamily="@font/iran_sans"
                 android:gravity="start"
@@ -52,9 +53,6 @@
             app:endIconTint="@color/text_hint"
             app:hintAnimationEnabled="false"
             app:hintEnabled="false">
-
-
-
 
             <AutoCompleteTextView
                 android:id="@+id/auto_complete_txt"
@@ -97,38 +95,54 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="1dp"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/text_hint"
                 app:boxStrokeWidth="0dp"
                 app:endIconDrawable="@drawable/item_select_more_spinner"
                 app:endIconTint="@color/text_hint"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:hint="سلام">
+                app:layout_constraintTop_toTopOf="parent">
 
-                <EditText
-                    android:layout_width="wrap_content"
+                <AutoCompleteTextView
+                    android:id="@+id/auto_complete_date"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="سلام" />
+                    android:background="@color/white"
+                    android:backgroundTint="@color/white"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/iran_sans"
+                    android:gravity="right"
+                    android:drawableEnd="@drawable/ic_add"
+                    android:hint="@string/date_expire"
+                    android:inputType="none"
+                    android:paddingStart="2dp"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/text_main"
+                    android:textColorHint="@color/text_hint"
+                    android:textFontWeight="500"
+                    android:textSize="14dp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-<!--            <ImageView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="10dp"-->
-<!--                android:src="@drawable/ic_store"-->
-<!--                android:layout_marginEnd="60dp"-->
-<!--                app:layout_constraintEnd_toEndOf="@id/cn"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent" />-->
+            <ImageView
+                android:id="@+id/btn_open_calender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_calendar_month"
+                android:layout_marginEnd="50dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="@id/cn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-<!--            <View-->
-<!--                app:layout_constraintTop_toBottomOf="@id/tnl"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="1dp"-->
-<!--                android:background="@color/text_hint" />-->
+            <View
+                app:layout_constraintTop_toBottomOf="@id/tnl"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text_hint" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
