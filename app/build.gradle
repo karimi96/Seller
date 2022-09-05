@@ -69,6 +69,8 @@ dependencies {
 
     implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
 
+    implementation 'com.budiyev.android:code-scanner:2.1.0'
+
 
 
 }
