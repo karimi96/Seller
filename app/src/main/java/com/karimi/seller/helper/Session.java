@@ -134,4 +134,9 @@ public class Session {
         return ExtrasPref.getBoolean(Config.CHECK_BOX_SOUND_SCANNER, true);
     }
 
+
+
+    public int getUser() {
+        return ExtrasPref.getInt(Config.USER, -1);
+    }
 }
