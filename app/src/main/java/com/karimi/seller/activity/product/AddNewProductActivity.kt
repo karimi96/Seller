@@ -42,6 +42,7 @@ class AddNewProductActivity : AppCompatActivity() {
 
 
     private fun initToolbar(){
+        title_new_product.text = if (_PRODUCT_OBJECT?.id != null) "ویرایش ${_PRODUCT_OBJECT?.name}" else "ثبت محصول جدید"
         arrayOf(title_new_product,back_new_product).forEach { it.setOnClickListener { onBackPressed() } }
         submit_new_product.setOnClickListener {  }
     }
