@@ -12,8 +12,6 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.karimi.seller.R
 import com.karimi.seller.model.TagList
-import kotlinx.android.synthetic.main.include_toolbar_customer_view.view.*
-import kotlinx.android.synthetic.main.list_item_state_financial_customer.view.*
 import kotlinx.android.synthetic.main.list_item_tag.view.*
 
 class TagAdapter(val context: Context,

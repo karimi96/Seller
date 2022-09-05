@@ -15,7 +15,7 @@ import com.karimi.seller.helper.App
 import com.karimi.seller.model.Customers
 import com.karimi.seller.model.TagList
 import kotlinx.android.synthetic.main.activity_customer.*
-import kotlinx.android.synthetic.main.include_toolbar_customer.*
+import kotlinx.android.synthetic.main.toolbar_customer.*
 import java.lang.Exception
 
 class CustomerActivity : AppCompatActivity(), InsertCustomerDialog.Listener {

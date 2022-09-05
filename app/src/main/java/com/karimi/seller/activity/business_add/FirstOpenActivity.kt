@@ -1,6 +1,5 @@
 package com.karimi.seller.activity.business_add
 
-import android.app.Dialog
 import android.content.Intent
 import android.graphics.Typeface
 import android.os.Bundle
