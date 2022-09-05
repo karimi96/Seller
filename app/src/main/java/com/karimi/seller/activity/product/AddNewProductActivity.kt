@@ -1,31 +1,47 @@
 package com.karimi.seller.activity.product
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.karimi.seller.R
+import com.karimi.seller.activity.barcodeScanner.BarcodeScannerActivity
 import com.karimi.seller.adapter.TagAdapter
+import com.karimi.seller.dialog.SelectCategoryDialog
 import com.karimi.seller.helper.App
+import com.karimi.seller.helper.Config
 import com.karimi.seller.helper.Session
-import com.karimi.seller.model.Category
-import com.karimi.seller.model.CategoryProduct
-import com.karimi.seller.model.Product
-import com.karimi.seller.model.TagList
+import com.karimi.seller.model.*
+import com.theartofdev.edmodo.cropper.CropImage
+import com.theartofdev.edmodo.cropper.CropImageView
 import kotlinx.android.synthetic.main.include_box_add_new_p1.*
 import kotlinx.android.synthetic.main.include_box_add_new_p2.*
 import kotlinx.android.synthetic.main.include_box_add_new_p3.*
 import kotlinx.android.synthetic.main.toolbar_new_p.*
+import java.util.*
+import kotlin.collections.ArrayList
 
-class AddNewProductActivity : AppCompatActivity() {
+
+class AddNewProductActivity : AppCompatActivity() , SelectCategoryDialog.Listener {
 
     private var _PRODUCT_OBJECT : Product? = null
     private var _POSITION: Int? = null
     private var _IMAGE_DEFULT_PATH = ""
     private var _CATEGORY: ArrayList<Category> = ArrayList()
+    private var _DATE_EXPIRED: Date? = null
 
 
+
+    private val resultGetBarcodeCamera =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == RESULT_OK) {
+                edt_barcode.setText(result?.data?.extras?.getString(Config.KEY_EXTRA_BARCODE))
+            }
+        }
 
 
 
@@ -68,6 +84,11 @@ class AddNewProductActivity : AppCompatActivity() {
                 _IMAGE_DEFULT_PATH = _PRODUCT_OBJECT!!.image_defult!!
 //                ic_delete.visibility = View.VISIBLE
             }
+
+            image_new_product.setOnClickListener {
+                CropImage.activity().setGuidelines(CropImageView.Guidelines.ON).start(this)
+            }
+
 
             edt_tax_percent.setText(
                 if (_PRODUCT_OBJECT?.tax_percent == null) "${Session.getInstance().taxPercent}"
@@ -184,5 +205,159 @@ class AddNewProductActivity : AppCompatActivity() {
     }
 
 
+    private fun initActionOnClick() {
+        textInput_barqod.setEndIconOnClickListener {
+            resultGetBarcodeCamera.launch(Intent(this, BarcodeScannerActivity::class.java))
+        }
+
+//        btn_scanBarCodeByCamera.setOnClickListener {
+//            resultGetBarcodeCamera.launch(Intent(this, BarcodeScannerActivity::class.java))
+//        }
+
+        fab_new_product.setOnClickListener {
+            CropImage.activity().setGuidelines(CropImageView.Guidelines.ON).start(this)
+        }
+
+//        ic_delete.setOnClickListener {
+//            _IMAGE_DEFULT_PATH = ""
+//            image.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_add_photo_alternate_black_24dp))
+//            ic_delete.visibility = View.GONE
+//        }
+
+
+        checkbox_tax.setOnCheckedChangeListener { buttonView, isChecked ->
+            run {
+                if (isChecked) {
+                    edt_tax_percent.isEnabled = true
+                    edt_tax_percent.setText(Session.getInstance().taxPercent.toString())
+                } else {
+                    edt_tax_percent.isEnabled = false
+                    edt_tax_percent.setText("0")
+                }
+            }
+        }
+
+        tv_add_category.setOnClickListener {
+            SelectCategoryDialog(this, _CATEGORY,this@AddNewProductActivity).show(supportFragmentManager,"category")
+        }
+
+//        tv_add_date_expire.setOnClickListener {
+//            tv_add_date_expire.visibility = View.GONE
+//            box_date_expire.visibility = View.VISIBLE
+//        }
+
+        submit_new_product.btn.setOnClickListener {
+            if (formIsValid()){
+                submit_new_product.showLoader()
+                val idProduct = App.database.getAppDao().insertProduct(getValue()).toInt()
+                insertUnitList()
+                insertCategoryProductList(idProduct)
+                Handler().postDelayed({submitted(idProduct)},500)
+            }
+        }
+    }
+
+
+    fun formIsValid() : Boolean{
+        getValue()
+        var value_is_true = "true"
+
+        if (_PRODUCT_OBJECT?.name.isNullOrEmpty()){
+            edt_name.setError(resources.getString(R.string.not_valid))
+            value_is_true = "false"
+        }
+
+        if (_PRODUCT_OBJECT?.increase.isNullOrEmpty()){
+            atc_unit.setError(resources.getString(R.string.not_valid))
+            value_is_true = "false"
+        }
+
+        if (_PRODUCT_OBJECT?.branch == null){
+        }
+
+        if (_PRODUCT_OBJECT?.status == null){
+        }
+
+        if (_PRODUCT_OBJECT?.stock == null){
+            edt_stock.setError(resources.getString(R.string.not_valid))
+            value_is_true = "false"
+        }
+
+        if (_PRODUCT_OBJECT?.tax_percent == null){
+        }
+
+        if (_PRODUCT_OBJECT?.user == null){
+        }
+
+        return value_is_true == "true"
+    }
+
+
+    private fun getValue(): Product{
+        _PRODUCT_OBJECT?.id = if (_PRODUCT_OBJECT?.id != null) _PRODUCT_OBJECT?.id!! else null
+        _PRODUCT_OBJECT?.image_defult = _IMAGE_DEFULT_PATH
+        _PRODUCT_OBJECT?.date_expired = _DATE_EXPIRED
+        _PRODUCT_OBJECT?.branch = Session.getInstance().branch
+        _PRODUCT_OBJECT?.user = Session.getInstance().user
+        _PRODUCT_OBJECT?.qrcode = App.getString(edt_barcode)
+        _PRODUCT_OBJECT?.name = App.getString(edt_name)
+        _PRODUCT_OBJECT?.descrption = null
+        _PRODUCT_OBJECT?.increase = App.getString(atc_unit)
+        _PRODUCT_OBJECT?.stock = App.convertToDouble(edt_stock)
+        _PRODUCT_OBJECT?.price_buy = App.convertToDouble(edt_price_buy)
+        _PRODUCT_OBJECT?.price_sale_on_product = App.convertToDouble(edt_price_sela_on_product)
+        _PRODUCT_OBJECT?.price_sale =
+            if (App.convertToDouble(edt_price_sela) == 0.0) _PRODUCT_OBJECT?.price_sale_on_product!!
+            else App.convertToDouble(edt_price_sela)
+        _PRODUCT_OBJECT?.price_discount = calculateDiscount()
+        _PRODUCT_OBJECT?.price_profit = calculateProfit()
+        _PRODUCT_OBJECT?.max_selection = App.convertToDouble(edt_max_selection)
+        _PRODUCT_OBJECT?.min_selection = 1.0
+
+        _PRODUCT_OBJECT?.tax_percent =
+            if (App.convertToInt(edt_tax_percent) == Session.getInstance().taxPercent && checkbox_tax.isChecked){ null }
+            else App.convertToInt(edt_tax_percent)
+
+        _PRODUCT_OBJECT?.status = 1
+        if (_PRODUCT_OBJECT?.id != null){
+            _PRODUCT_OBJECT?.updated_at = Date()
+        } else {
+            _PRODUCT_OBJECT?.created_at = Date()
+            _PRODUCT_OBJECT?.updated_at = Date()
+        }
+        return _PRODUCT_OBJECT!!
+    }
+
+
+
+    private fun insertUnitList(){
+        if (App.database.getAppDao().selectUnit(App.branch(), App.getString(atc_unit)) == null){
+            App.database.getAppDao().insertUnit(UnitModel(App.getString(atc_unit), App.branch()))
+        }
+    }
+
+    private fun insertCategoryProductList(idProduct: Int){
+        App.database.getAppDao().deleteCategoryProduct(idProduct)
+
+        val categoryProductList : ArrayList<CategoryProduct> = ArrayList()
+        for (i in 0 until _CATEGORY.size){
+            categoryProductList.add(CategoryProduct(idProduct, _CATEGORY[i].id))
+        }
+        App.database.getAppDao().insertCategoryProduct(categoryProductList)
+    }
+
+
+    private fun submitted(idProduct: Int){
+        val i = Intent()
+        i.putExtra("product_id",idProduct)
+        if (_POSITION != null) i.putExtra("product_position",_POSITION)
+        setResult(RESULT_OK, i)
+        finish()
+    }
+
+    override fun onSubmit(dialog: SelectCategoryDialog, list: ArrayList<Category>?) {
+        initCategory()
+        dialog.dismiss()
+    }
 
 }
