@@ -48,17 +48,20 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInput_barqod"
             style="@style/CustomTextInputLayout"
             android:layout_marginTop="20dp"
-            android:hint="@string/barcode"
-            app:endIconDrawable="@drawable/ic_qrcode"
-            app:hintAnimationEnabled="false">
+            app:endIconMode="password_toggle"
+            app:endIconCheckable="true"
+            app:endIconTint="@color/purple"
+            app:endIconDrawable="@drawable/ic_qrcode">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edt_barcode"
                 style="@style/CustomTextInputEditText"
                 android:fontFamily="@font/iran_sans"
                 android:gravity="start"
+                android:hint="@string/barcode"
                 android:imeOptions="actionNext"
                 android:inputType="text"
                 android:paddingTop="13dp" />
@@ -193,12 +196,12 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_product_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:visibility="gone"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:layout_width="match_parent"
-            tools:listitem="@layout/list_item_tag"
-            android:layout_height="wrap_content"/>
+            tools:listitem="@layout/list_item_tag" />
 
     </LinearLayout>
 

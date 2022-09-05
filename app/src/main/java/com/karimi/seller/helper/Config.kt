@@ -9,6 +9,9 @@ object Config {
     const val BUSINESS_ID = "BUSINESS_ID"
 
 
+    const val KEY_EXTRA_BARCODE = "barcode"
+
+
     const val MONEY_TYPE_DEFAULT = "تومان"
     const val MONEY_TYPE = "MONEY_TYPE"
 
@@ -36,5 +39,6 @@ object Config {
     const val CHECK_BOX_MONEY = "CHECK_BOX_MONEY"
     const val CHECK_BOX_CARD = "CHECK_BOX_CARD"
     const val CHECK_BOX_DEBIT = "CHECK_BOX_DEBIT"
+
 
 }
