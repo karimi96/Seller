@@ -124,4 +124,14 @@ public class Session {
         extraEditor.commit();
     }
 
+
+
+    public void setCheckBoxSoundScanner(boolean checkBox) {
+        extraEditor.putBoolean(Config.CHECK_BOX_SOUND_SCANNER,checkBox);
+        extraEditor.commit();
+    }
+    public boolean getCheckBoxSoundScanner() {
+        return ExtrasPref.getBoolean(Config.CHECK_BOX_SOUND_SCANNER, true);
+    }
+
 }
