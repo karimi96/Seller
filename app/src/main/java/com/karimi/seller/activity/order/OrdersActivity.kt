@@ -14,7 +14,7 @@ import com.karimi.seller.helper.Config.ORDER_STATUS_WAITING
 import com.karimi.seller.model.Orders
 import com.karimi.seller.model.TagList
 import kotlinx.android.synthetic.main.activity_orders.*
-import kotlinx.android.synthetic.main.include_toolbar_orders.*
+import kotlinx.android.synthetic.main.toolbar_orders.*
 
 class OrdersActivity : AppCompatActivity() {
 

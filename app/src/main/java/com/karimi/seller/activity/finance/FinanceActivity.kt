@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.activity_customer_view.cubicChart
 import kotlinx.android.synthetic.main.activity_finance.*
 import kotlinx.android.synthetic.main.include_financial_1.*
 import kotlinx.android.synthetic.main.include_financial_2.*
-import kotlinx.android.synthetic.main.include_toolbar_finance.*
+import kotlinx.android.synthetic.main.toolbar_finance.*
 
 class FinanceActivity : AppCompatActivity() {
 

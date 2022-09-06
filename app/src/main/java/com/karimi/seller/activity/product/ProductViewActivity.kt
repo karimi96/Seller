@@ -13,7 +13,7 @@ import com.karimi.seller.model.TagList
 import kotlinx.android.synthetic.main.activity_product_view.*
 import kotlinx.android.synthetic.main.include_customer_product_view.*
 import kotlinx.android.synthetic.main.include_recycler_product_view.*
-import kotlinx.android.synthetic.main.include_toolbar_product_view.*
+import kotlinx.android.synthetic.main.toolbar_product_view.*
 
 class ProductViewActivity : AppCompatActivity() {
     private var product_id : Int? = null

@@ -117,6 +117,8 @@ class FirstOpenActivity : AppCompatActivity() , FirstOpenView {
         if (Session.getInstance().sessionKey.isNullOrEmpty()){
             Session.getInstance().sessionKey = Date().toString()
             startActivity(Intent(this, MainActivity::class.java))
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+
         }else{
             App.toast(resources.getString(R.string.add_business_successfully))
         }

@@ -71,6 +71,8 @@
                     android:padding="5dp" />
 
                 <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:id="@+id/edt_category_name"
                     android:layout_centerVertical="true"
                     android:layout_toStartOf="@+id/ic_add"

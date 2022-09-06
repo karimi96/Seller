@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.activity_customer_view.*
 import kotlinx.android.synthetic.main.include_box_customer_view.*
 import kotlinx.android.synthetic.main.include_favorid_p.*
 import kotlinx.android.synthetic.main.include_last_order_customer_view.*
-import kotlinx.android.synthetic.main.include_toolbar_customer_view.*
+import kotlinx.android.synthetic.main.toolbar_customer_view.*
 import java.util.*
 
 class CustomerViewActivity : AppCompatActivity() {

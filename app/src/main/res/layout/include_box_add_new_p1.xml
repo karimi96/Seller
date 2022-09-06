@@ -42,7 +42,7 @@
                 app:elevation="0dp"
                 app:fabCustomSize="62dp"
                 app:maxImageSize="30dp"
-                tools:tint="#c6c4f7" />
+                app:tint="#c6c4f7" />
 
         </RelativeLayout>
 

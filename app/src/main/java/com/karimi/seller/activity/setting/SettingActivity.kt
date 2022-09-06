@@ -10,7 +10,7 @@ import com.karimi.seller.helper.Session
 import com.karimi.seller.widget.text_watcher.PriceTextWatcher
 import kotlinx.android.synthetic.main.include_box_setting1.*
 import kotlinx.android.synthetic.main.include_box_setting2.*
-import kotlinx.android.synthetic.main.include_toolbar_setting.*
+import kotlinx.android.synthetic.main.toolbar_setting.*
 
 class SettingActivity : AppCompatActivity() {
 

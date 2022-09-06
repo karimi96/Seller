@@ -15,7 +15,7 @@ import com.karimi.seller.model.Category
 import com.karimi.seller.model.Product
 import com.karimi.seller.model.TagList
 import kotlinx.android.synthetic.main.activity_product.*
-import kotlinx.android.synthetic.main.include_toolbar_product.*
+import kotlinx.android.synthetic.main.toolbar_product.*
 
 class ProductActivity : AppCompatActivity() , ProductViewActivity.Listener{
 
@@ -62,9 +62,13 @@ class ProductActivity : AppCompatActivity() , ProductViewActivity.Listener{
 
     private fun initToolbar(){
         title_product.text = resources.getString(R.string.toolbar_title_product)
-        plus_product.setOnClickListener { App.toast("product") }
+        plus_product.setOnClickListener { startActivity(Intent(this,AddNewProductActivity::class.java)) }
 
         arrayOf(title_product,back_product).forEach { it.setOnClickListener { onBackPressed() } }
+
+
+
+
 
 //        toolbar.ic_back.visibility = View.VISIBLE
 //        toolbar.ic_back.setOnClickListener { onBackPressed() }

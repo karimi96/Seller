@@ -2,14 +2,8 @@ package com.karimi.seller.activity.stock
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.github.mikephil.charting.components.Description
-import com.github.mikephil.charting.components.XAxis
-import com.github.mikephil.charting.data.BarData
-import com.github.mikephil.charting.data.BarDataSet
-import com.github.mikephil.charting.data.BarEntry
-import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
+import androidx.appcompat.app.AppCompatActivity
 import com.karimi.seller.R
 import com.karimi.seller.activity.product.ProductViewActivity
 import com.karimi.seller.adapter.ProductListAdapter_2
@@ -19,8 +13,7 @@ import com.karimi.seller.helper.App
 import com.karimi.seller.model.Product
 import com.karimi.seller.model.TagList
 import kotlinx.android.synthetic.main.activity_stock.*
-import kotlinx.android.synthetic.main.chart.*
-import kotlinx.android.synthetic.main.include_toolbar_stock.*
+import kotlinx.android.synthetic.main.toolbar_stock.*
 
 class StockActivity : AppCompatActivity() {
 
