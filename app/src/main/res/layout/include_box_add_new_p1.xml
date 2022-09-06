@@ -20,28 +20,32 @@
 
         <RelativeLayout
             android:id="@+id/rl"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp">
+            >
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/image_new_product"
                 android:layout_width="61dp"
+                android:layout_centerInParent="true"
                 android:layout_height="61dp"
+                android:layout_marginVertical="20dp"
                 android:src="@drawable/pic_mobl" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab_new_product"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:backgroundTint="#E5E4FB"
+                android:layout_marginVertical="20dp"
                 android:src="@drawable/pic_camera"
                 android:visibility="visible"
                 app:borderWidth="0dp"
                 app:rippleColor="#ccc"
                 app:elevation="0dp"
-                app:fabCustomSize="63dp"
+                app:fabCustomSize="62dp"
                 app:maxImageSize="30dp"
                 app:tint="#c6c4f7" />
 
@@ -51,7 +55,6 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInput_barqod"
             style="@style/CustomTextInputLayout"
-            android:layout_marginTop="20dp"
             android:layout_marginEnd="-7dp"
             app:endIconCheckable="true"
             app:endIconDrawable="@drawable/ic_qrcode"
