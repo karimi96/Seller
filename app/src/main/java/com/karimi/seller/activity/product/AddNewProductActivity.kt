@@ -52,10 +52,26 @@ class AddNewProductActivity : AppCompatActivity() , SelectCategoryDialog.Listene
         initToolbar()
         initExtraDataIntent()
         setValue()
-
+        initActionOnClick()
 
     }
 
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+            val result = CropImage.getActivityResult(data)
+            if (resultCode == RESULT_OK) {
+                val resultUri = result.uri
+                Glide.with(this).load(resultUri).into(image_new_product)
+                fab_new_product.visibility = View.GONE
+                _IMAGE_DEFULT_PATH = App.saveFile(App.getByte(resultUri))
+//                ic_delete.visibility = View.VISIBLE
+            } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
+                val error = result.error
+            }
+        }
+    }
 
     private fun initToolbar(){
         title_new_product.text = if (_PRODUCT_OBJECT?.id != null) "ویرایش ${_PRODUCT_OBJECT?.name}" else "ثبت محصول جدید"
