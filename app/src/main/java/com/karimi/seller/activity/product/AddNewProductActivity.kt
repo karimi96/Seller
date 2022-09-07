@@ -62,6 +62,7 @@ class AddNewProductActivity : AppCompatActivity(), SelectCategoryDialog.Listener
         initActionOnClick()
         initAutoComplete()
         initTextWatcherPrice()
+        initDateExpire()
     }
 
 
@@ -498,7 +499,7 @@ class AddNewProductActivity : AppCompatActivity(), SelectCategoryDialog.Listener
                 .setTodayButtonVisible(true)
                 .setMinYear(PersianDatePickerDialog.THIS_YEAR)
                 .setActionTextColor(Color.GRAY)
-                .setTypeFace(Typeface.createFromAsset(assets, "fonts/iran_sans_mobile.ttf"))
+                .setTypeFace(Typeface.createFromAsset(assets, "font/iran_sans_fanum.ttf"))
                 .setTitleType(PersianDatePickerDialog.WEEKDAY_DAY_MONTH_YEAR)
                 .setShowInBottomSheet(true)
                 .setListener(object : PersianPickerListener {
