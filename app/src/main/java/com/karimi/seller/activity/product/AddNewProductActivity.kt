@@ -4,12 +4,15 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import android.text.TextUtils
 import android.view.View
+import android.widget.ArrayAdapter
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.karimi.seller.R
 import com.karimi.seller.activity.barcodeScanner.BarcodeScannerActivity
+import com.karimi.seller.adapter.AutoCompleteAdapter
 import com.karimi.seller.adapter.TagAdapter
 import com.karimi.seller.dialog.SelectCategoryDialog
 import com.karimi.seller.helper.App
@@ -53,7 +56,7 @@ class AddNewProductActivity : AppCompatActivity() , SelectCategoryDialog.Listene
         initExtraDataIntent()
         setValue()
         initActionOnClick()
-
+        initAutoComplete()
     }
 
 
@@ -99,10 +102,9 @@ class AddNewProductActivity : AppCompatActivity() , SelectCategoryDialog.Listene
                 Glide.with(this).load(_PRODUCT_OBJECT!!.image_defult!!).into(image_new_product)
                 _IMAGE_DEFULT_PATH = _PRODUCT_OBJECT!!.image_defult!!
 //                ic_delete.visibility = View.VISIBLE
-            }
-
-            image_new_product.setOnClickListener {
-                CropImage.activity().setGuidelines(CropImageView.Guidelines.ON).start(this)
+                image_new_product.setOnClickListener {
+                    CropImage.activity().setGuidelines(CropImageView.Guidelines.ON).start(this)
+                }
             }
 
 
@@ -111,10 +113,14 @@ class AddNewProductActivity : AppCompatActivity() , SelectCategoryDialog.Listene
                 else "${_PRODUCT_OBJECT?.tax_percent!!}"
             )
 
-            if (_PRODUCT_OBJECT?.tax_percent == 0){
+            if (TextUtils.isEmpty(_PRODUCT_OBJECT?.tax_percent.toString())){
                 checkbox_tax.isChecked = false
                 edt_tax_percent.isEnabled = false
             }
+//            if (_PRODUCT_OBJECT?.tax_percent == 0){
+//                checkbox_tax.isChecked = false
+//                edt_tax_percent.isEnabled = false
+//            }
 
             edt_barcode.setText(_PRODUCT_OBJECT?.qrcode?:"")
             atc_unit.setText(_PRODUCT_OBJECT?.increase?:"")
@@ -131,9 +137,38 @@ class AddNewProductActivity : AppCompatActivity() , SelectCategoryDialog.Listene
             }
             initTextProfitAndDiscount()
         }else{
-            edt_tax_percent.setText(Session.getInstance().taxPercent.toString())
+//            edt_tax_percent.setText(Session.getInstance().taxPercent.toString())
+            edt_tax_percent.setText("")
         }
     }
+
+
+
+    private fun initAutoCompleteUnitsList(){
+        val spinner = ArrayList<Spinner>()
+        val list_unit = App.database.getAppDao().selectUnit(App.branch())
+        for (i in list_unit.indices) { spinner.add(Spinner(list_unit[i].id!!, list_unit[i].title )) }
+        val adapter = AutoCompleteAdapter(this, spinner, false)
+        atc_unit.setAdapter(adapter)
+        atc_unit.setOnItemClickListener { parent, view, position, id ->
+            val r: Spinner = parent.getItemAtPosition(position) as Spinner
+        }
+        atc_unit.setOnFocusChangeListener { v, hasFocus ->
+            if (hasFocus) atc_unit.showDropDown()
+        }
+        atc_unit.setOnClickListener { atc_unit.showDropDown() }
+    }
+
+    /* Second Way For AutoComplete*/
+
+     private fun initAutoComplete() {
+         val spinner = ArrayList<Spinner>()
+         val list_unit = App.database.getAppDao().selectUnit(App.branch())
+         for (i in list_unit.indices) { spinner.add(Spinner(list_unit[i].id!!, list_unit[i].title )) }
+         val adapter = ArrayAdapter(this, R.layout.simple_list_item_spinner, spinner)
+         atc_unit.setAdapter(adapter)
+         atc_unit.threshold = 0
+     }
 
 
     private fun initCategoryProductList(){
@@ -222,7 +257,7 @@ class AddNewProductActivity : AppCompatActivity() , SelectCategoryDialog.Listene
 
 
     private fun initActionOnClick() {
-        textInput_barqod.setEndIconOnClickListener {
+        textInput_barcode.setEndIconOnClickListener {
             resultGetBarcodeCamera.launch(Intent(this, BarcodeScannerActivity::class.java))
         }
 
@@ -245,10 +280,11 @@ class AddNewProductActivity : AppCompatActivity() , SelectCategoryDialog.Listene
             run {
                 if (isChecked) {
                     edt_tax_percent.isEnabled = true
-                    edt_tax_percent.setText(Session.getInstance().taxPercent.toString())
+                    edt_tax_percent.setText("")
+//                    edt_tax_percent.setText(Session.getInstance().taxPercent.toString())
                 } else {
                     edt_tax_percent.isEnabled = false
-                    edt_tax_percent.setText("0")
+//                    edt_tax_percent.setText("0")
                 }
             }
         }
@@ -274,17 +310,17 @@ class AddNewProductActivity : AppCompatActivity() , SelectCategoryDialog.Listene
     }
 
 
-    fun formIsValid() : Boolean{
+    private fun formIsValid() : Boolean{
         getValue()
         var value_is_true = "true"
 
         if (_PRODUCT_OBJECT?.name.isNullOrEmpty()){
-            edt_name.setError(resources.getString(R.string.not_valid))
+            edt_name.error = resources.getString(R.string.not_valid)
             value_is_true = "false"
         }
 
         if (_PRODUCT_OBJECT?.increase.isNullOrEmpty()){
-            atc_unit.setError(resources.getString(R.string.not_valid))
+            atc_unit.error = resources.getString(R.string.not_valid)
             value_is_true = "false"
         }
 
