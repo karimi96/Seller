@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/tv_spinner"
-    android:text="عدم حضور مشتری"
-    android:padding="10dp"
-    android:textSize="14dp"
-    android:fontFamily="@font/iran_sans_fanum"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"/>
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/iran_sans_fanum"
+        android:padding="10dp"
+        android:text="عدم حضور مشتری"
+        android:textColor="@color/text_main"
+        android:textSize="14dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/text_hint" />
+
+</LinearLayout>
