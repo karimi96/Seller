@@ -53,7 +53,7 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInput_barqod"
+            android:id="@+id/textInput_barcode"
             style="@style/CustomTextInputLayout"
             android:layout_marginEnd="-7dp"
             app:endIconCheckable="true"
@@ -81,13 +81,13 @@
             android:layout_marginTop="10dp"
             android:background="@color/white"
             android:backgroundTint="@color/white"
-            android:paddingEnd="-7dp"
+            android:layout_marginEnd="-7dp"
             android:textColorHint="@color/text_hint"
             app:boxStrokeWidth="0dp"
             app:endIconDrawable="@drawable/item_select_more_spinner"
             app:endIconTint="@color/text_hint"
-            app:hintAnimationEnabled="false"
-            app:hintEnabled="false">
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true">
 
             <AutoCompleteTextView
                 android:id="@+id/atc_unit"
@@ -101,6 +101,7 @@
                 android:hint="@string/increase_product"
                 android:inputType="number"
                 android:paddingStart="2dp"
+                android:imeOptions="actionNext"
                 android:paddingTop="13dp"
                 android:paddingBottom="2dp"
                 android:textColor="@color/text_main"
@@ -160,7 +161,7 @@
                 style="@style/CustomTextInputEditText"
                 android:fontFamily="@font/iran_sans_fanum"
                 android:gravity="right"
-                android:imeOptions="actionNext"
+                android:imeOptions="actionDone"
                 android:inputType="numberDecimal"
                 android:paddingTop="13dp" />
 
