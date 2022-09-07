@@ -92,7 +92,7 @@ public class Session {
         extraEditor.commit();
     }
     public int getTaxPercent() {
-        return ExtrasPref.getInt(Config.TAX_PERCENT, 0);
+        return ExtrasPref.getInt(Config.TAX_PERCENT,0);
     }
 
 

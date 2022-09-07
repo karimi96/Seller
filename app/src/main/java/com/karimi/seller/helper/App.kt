@@ -72,7 +72,7 @@ class App : MultiDexApplication() {
             val baos = ByteArrayOutputStream()
             val fis: FileInputStream
             try {
-                fis = FileInputStream(File(uri.getPath()))
+                fis = FileInputStream(File(uri.path))
                 val buf = ByteArray(1024)
                 var n: Int
                 while (-1 != fis.read(buf).also { n = it }) baos.write(buf, 0, n)
