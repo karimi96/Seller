@@ -32,7 +32,7 @@
                 android:fontFamily="@font/iran_sans"
                 android:gravity="start"
                 android:imeOptions="actionNext"
-                android:inputType="text"
+                android:inputType="number"
                 android:paddingTop="13dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -49,7 +49,7 @@
                 android:fontFamily="@font/iran_sans"
                 android:gravity="right"
                 android:imeOptions="actionNext"
-                android:inputType="text"
+                android:inputType="number"
                 android:paddingTop="13dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -66,7 +66,7 @@
                 android:fontFamily="@font/iran_sans"
                 android:gravity="right"
                 android:imeOptions="actionNext"
-                android:inputType="text"
+                android:inputType="number"
                 android:paddingTop="13dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -88,7 +88,6 @@
             tools:visibility="visible"
             android:textColor="@color/text_hint"
             android:layout_marginTop="10dp"
-            android:textStyle="bold"
             tools:text="سود خالص این کالا ۲۷,۰۰۰ تومان"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
