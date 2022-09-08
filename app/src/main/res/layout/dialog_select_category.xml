@@ -36,8 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:background="@drawable/background_radius"
-            android:backgroundTint="@color/text_hint"
+            android:background="@color/purple"
             android:gravity="center"
             android:paddingHorizontal="20dp"
             android:paddingVertical="3dp"
@@ -69,12 +68,13 @@
                     android:layout_height="30dp"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:padding="5dp" />
+                    android:padding="5dp"
+                    android:src="@drawable/ic_add" />
 
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:id="@+id/edt_category_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toStartOf="@+id/ic_add"
                     android:hint="@string/add_category"

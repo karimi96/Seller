@@ -214,8 +214,7 @@ class AddNewProductActivity : AppCompatActivity(), SelectCategoryDialog.Listener
 
     private fun initCategory() {
         if (!_CATEGORY.isNullOrEmpty()) {
-            tv_add_category.text =
-                resources.getString(R.string.this_product_has_n_category, _CATEGORY.size)
+            tv_add_category.text = resources.getString(R.string.this_product_has_n_category, _CATEGORY.size)
             recycler_product_view.visibility = View.VISIBLE
             val array_tag = ArrayList<TagList>()
             for (i in 0 until _CATEGORY.size) {
@@ -225,9 +224,28 @@ class AddNewProductActivity : AppCompatActivity(), SelectCategoryDialog.Listener
             recycler_product_view.adapter = adapterCategory
         } else {
             tv_add_category.text = resources.getString(R.string.submit_category)
-            recycler_product_view.visibility = View.GONE
+//            recycler_product_view.visibility = View.GONE
         }
     }
+
+
+
+//    private fun initCategory(){
+//        if (!_CATEGORY.isNullOrEmpty()){
+//            tv_add_category.text = resources.getString(R.string.this_product_has_n_category,_CATEGORY.size)
+//            box_category_list.visibility = View.VISIBLE
+//            val array_tag = ArrayList<TagList>()
+//            for (i in 0 until _CATEGORY.size){
+//                array_tag.add(i,TagList(_CATEGORY[i].name,_CATEGORY[i].id.toString()))
+//            }
+//            val adapterCategory = TagAdapter(this@ProductActivity, array_tag,null)
+//            recyclerView_category.adapter = adapterCategory
+//        }else {
+//            tv_add_category.text = resources.getString(R.string.submit_category)
+//            box_category_list.visibility = View.GONE
+//        }
+//    }
+
 
 
     @SuppressLint("SetTextI18n")

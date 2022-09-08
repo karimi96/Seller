@@ -20,10 +20,10 @@
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="35dp"
+        android:layout_width="45dp"
         android:layout_height="35dp"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:padding="8dp"
-        android:rotation="180" />
+        android:rotation="90"
+        android:src="@drawable/ic_more_down" />
 </RelativeLayout>
