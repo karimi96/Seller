@@ -305,9 +305,24 @@ class AddNewProductActivity : AppCompatActivity(), SelectCategoryDialog.Listener
 //            resultGetBarcodeCamera.launch(Intent(this, BarcodeScannerActivity::class.java))
 //        }
 
-        fab_new_product.setOnClickListener {
-            CropImage.activity().setGuidelines(CropImageView.Guidelines.ON).start(this)
-        }
+
+//        var click : View = View(this)
+//        click.setOnClickListener { if (fab_new_product.visibility == View.VISIBLE){ click = fab_new_product}
+//        else if (fab_new_product.visibility == View.GONE) {click = image_new_product}
+//            CropImage.activity().setGuidelines(CropImageView.Guidelines.ON).start(this)
+//
+//        }
+
+            fab_new_product.setOnClickListener {
+                CropImage.activity().setGuidelines(CropImageView.Guidelines.ON).start(this)
+            }
+
+            image_new_product.setOnClickListener {
+                CropImage.activity().setGuidelines(CropImageView.Guidelines.ON).start(this)
+            }
+
+
+
 
 //        ic_delete.setOnClickListener {
 //            _IMAGE_DEFULT_PATH = ""
