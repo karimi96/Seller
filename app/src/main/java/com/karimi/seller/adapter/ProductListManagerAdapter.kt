@@ -5,6 +5,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.karimi.seller.R
@@ -42,15 +43,16 @@ class ProductListManagerAdapter(
         val model = list[position]
 
         item.title.text = model.name
+        item.title.isSelected = true
         item.price_sela.text = App.priceFormat(model.price_sale!!, true)
 
         if (!model.image_defult.isNullOrEmpty()){
-            item.image.visibility = View.VISIBLE
-            Glide.with(context).load(model.image_defult).into(item.image)
+            Glide.with(context).load(model.image_defult).into(item.image_product)
+            item.image_product.scaleType = ImageView.ScaleType.CENTER_CROP
+
         }else{
-            item.image.visibility = View.VISIBLE
-            Glide.with(context).load(context.getDrawable(R.drawable.pic_defult)).into(item.image)
-//            item.image.visibility = View.GONE
+            item.image_product.scaleType = ImageView.ScaleType.FIT_CENTER
+            Glide.with(context).load(context.getDrawable(R.drawable.pic_picture)).into(item.image_product)
         }
 
         item.setOnClickListener {
