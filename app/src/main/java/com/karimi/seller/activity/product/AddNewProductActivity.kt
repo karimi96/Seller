@@ -60,7 +60,7 @@ class AddNewProductActivity : AppCompatActivity(), SelectCategoryDialog.Listener
         initExtraDataIntent()
         setValue()
         initActionOnClick()
-        initAutoComplete()
+        initAutoCompleteUnitsList()
         initTextWatcherPrice()
         initDateExpire()
     }
@@ -176,16 +176,26 @@ class AddNewProductActivity : AppCompatActivity(), SelectCategoryDialog.Listener
 
     /* Second Way For AutoComplete*/
 
-    private fun initAutoComplete() {
-        val spinner = ArrayList<Spinner>()
+   /* private fun initAutoComplete() {
+//        val spinner = ArrayList<Spinner>()
+        val spinner = ArrayList<String>()
         val list_unit = App.database.getAppDao().selectUnit(App.branch())
         for (i in list_unit.indices) {
-            spinner.add(Spinner(list_unit[i].id!!, list_unit[i].title))
+            spinner.add(list_unit[i].title.toString())
+//            spinner.add(Spinner(list_unit[i].id!!, list_unit[i].title))
         }
+
         val adapter = ArrayAdapter(this, R.layout.simple_list_item_spinner, spinner)
         atc_unit.setAdapter(adapter)
         atc_unit.threshold = 0
-    }
+        atc_unit.setOnItemClickListener { parent, view, position, id ->
+            val r: Spinner = parent.getItemAtPosition(position) as Spinner
+        }
+        atc_unit.setOnFocusChangeListener { v, hasFocus ->
+            if (hasFocus) atc_unit.showDropDown()
+        }
+        atc_unit.setOnClickListener { atc_unit.showDropDown() }
+    }*/
 
 
     private fun initCategoryProductList() {
@@ -467,6 +477,13 @@ class AddNewProductActivity : AppCompatActivity(), SelectCategoryDialog.Listener
         var adapter = ArrayAdapter(this,  R.layout.simple_list_item_spinner, array_tag)
         auto_complete_date.setAdapter(adapter)
         auto_complete_date.threshold = 0
+        auto_complete_date.setOnItemClickListener { adapterView, view, i, l ->
+            val calendar = Calendar.getInstance()
+            calendar.time = Date()
+//            calendar.add(Calendar.DAY_OF_YEAR, +item.tag!!.toInt())
+            _DATE_EXPIRED = calendar.time
+            auto_complete_date.setText(App.getFormattedDate(_DATE_EXPIRED!!))
+        }
 
 
         /* val adapterTagList = TagAdapter(this,
