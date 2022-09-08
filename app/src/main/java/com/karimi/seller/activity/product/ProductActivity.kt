@@ -62,7 +62,9 @@ class ProductActivity : AppCompatActivity() , ProductViewActivity.Listener{
 
     private fun initToolbar(){
         title_product.text = resources.getString(R.string.toolbar_title_product)
-        plus_product.setOnClickListener { startActivity(Intent(this,AddNewProductActivity::class.java)) }
+//        plus_product.setOnClickListener { startActivity(Intent(this,AddNewProductActivity::class.java)) }
+        plus_product.setOnClickListener { resultAdd.launch(Intent(this,AddNewProductActivity::class.java)) }
+
 
         arrayOf(title_product,back_product).forEach { it.setOnClickListener { onBackPressed() } }
 
