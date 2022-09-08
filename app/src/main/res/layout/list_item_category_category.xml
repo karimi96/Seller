@@ -38,13 +38,13 @@
             style="@style/TextMain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
             android:layout_gravity="center"
-            android:singleLine="true"
-            android:ellipsize="marquee"
-            android:marqueeRepeatLimit="marquee_forever"
-            android:gravity="center"
+            android:layout_marginHorizontal="5dp"
             android:layout_marginVertical="5dp"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
             android:text="پوشاک" />
 
 
@@ -57,8 +57,8 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="7dp"
             android:layout_marginTop="2dp"
+            android:layout_marginBottom="7dp"
             android:gravity="center"
             android:orientation="horizontal">
 

@@ -18,13 +18,15 @@
             android:layout_height="55dp"
             android:layout_margin="5dp"
             app:cardCornerRadius="8dp"
-            app:cardElevation="0dp">
+            app:cardElevation="1dp">
 
             <ImageView
-                android:id="@+id/image"
+                android:id="@+id/image_product"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/pic_mobl" />
+                android:background="@color/back_order"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pic_picture" />
 
         </androidx.cardview.widget.CardView>
 
@@ -32,10 +34,15 @@
         <TextView
             android:id="@+id/title"
             style="@style/TextMain"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginHorizontal="5dp"
             android:layout_marginVertical="5dp"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
             android:text=" چینی 24 نفره" />
 
 
@@ -52,16 +59,6 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <TextView
-                style="@style/TextMain"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_gravity="center"
-                android:layout_toStartOf="@id/price_sela"
-                android:paddingEnd="3dp"
-                android:text="تومان"
-                android:textSize="8dp" />
 
             <TextView
                 android:id="@+id/price_sela"
