@@ -103,7 +103,7 @@
                 android:paddingStart="2dp"
                 android:imeOptions="actionNext"
                 android:paddingTop="13dp"
-                android:paddingBottom="2dp"
+                android:paddingBottom="0dp"
                 android:textColor="@color/text_main"
                 android:textColorHint="@color/text_hint"
                 android:textFontWeight="500"
