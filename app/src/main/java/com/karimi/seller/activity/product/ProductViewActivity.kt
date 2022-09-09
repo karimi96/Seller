@@ -18,19 +18,19 @@ import kotlinx.android.synthetic.main.toolbar_product_view.*
 class ProductViewActivity : AppCompatActivity() {
     private var product_id : Int? = null
     private var position : Int? = null
-    private var this_product = App.database.getAppDao().selectProduct(App.branch(), product_id!!)
+    private var this_product : Product? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product_view)
 
-
-
         if (intent.extras != null){
             product_id = intent.getIntExtra("product_id",-1)
             position = intent.getIntExtra("pos",-1)
         }
+
+      this_product = App.database.getAppDao().selectProduct(App.branch(), product_id!!)
 
 
         initData()
@@ -48,17 +48,17 @@ class ProductViewActivity : AppCompatActivity() {
     }
 
     private fun initData(){
-        tv_product_name.text = "#${this_product.id}"
+//        tv_product_name.text = "#${this_product?.id}"
+        title_product_view.text = this_product?.name
+        arrayOf(title_product_view , back_product_view).forEach { it.setOnClickListener { onBackPressed() } }
 
-        if (!this_product.image_defult.isNullOrEmpty()){
+        if (!this_product?.image_defult.isNullOrEmpty()){
             image_product_view.visibility = View.VISIBLE
-            Glide.with(this).load(this_product.image_defult).into(image_product_view)
+            Glide.with(this).load(this_product?.image_defult).into(image_product_view)
 //            Glide.with(this).load(this_product.image_defult).into(image)
         }
 
-        tv_product_name.text = this_product.name
-
-        tv_date.text = "در تاریخ ${App.getFormattedDate(this_product.updated_at)}ویرایش شده \n در تاریخ${App.getFormattedDate(this_product.created_at)} ثبت شده"
+        tv_date.text = "در تاریخ ${App.getFormattedDate(this_product?.updated_at)}ویرایش شده \n در تاریخ${App.getFormattedDate(this_product?.created_at)} ثبت شده"
     }
 
     private fun initOnClick(){

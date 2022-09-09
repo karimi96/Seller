@@ -64,7 +64,7 @@
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_orders.xml" value="0.33" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_product.xml" value="0.25" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_product_detail.xml" value="0.22" />
-        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_product_view.xml" value="0.15736040609137056" />
+        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_product_view.xml" value="0.22" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_setting.xml" value="0.33" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_splash.xml" value="0.5" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/activity_stock.xml" value="0.1450381679389313" />
@@ -148,6 +148,7 @@
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/simple_list_item_spinner.xml" value="0.19882246376811594" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/toolbar_main_activity.xml" value="0.32294617563739375" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/toolbar_new_p.xml" value="0.4578146611341632" />
+        <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/toolbar_product_view.xml" value="0.5129789864029666" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/toolbar_setting.xml" value="0.17391304347826086" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/widget_chart_price.xml" value="0.1766304347826087" />
         <entry key="..\:/new/Root/AndroidStudio/Simin Project/Seller/app/src/main/res/layout/widget_statuser.xml" value="0.18297101449275363" />
