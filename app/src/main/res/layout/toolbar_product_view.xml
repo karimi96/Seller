@@ -45,19 +45,21 @@
             android:layout_below="@id/r1">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="103dp"
+                android:layout_height="61dp"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="3dp"
                 app:cardCornerRadius="4dp"
-                app:cardElevation="0dp">
+                app:cardElevation="2dp">
 
                 <ImageView
                     android:id="@+id/image_product_view"
-                    android:layout_width="103dp"
-                    android:layout_height="61dp"
-                    android:src="@drawable/plate" />
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/back_order"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pic_picture" />
 
             </androidx.cardview.widget.CardView>
 
@@ -75,13 +77,14 @@
                     style="@style/TextSecondary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/iran_sans_fanum"
                     android:text="ویرایش شده : 1401/04/04" />
 
-<!--                <TextView-->
-<!--                    style="@style/TextSecondary"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="ثبت شده : 1401/04/04" />-->
+                <!--                <TextView-->
+                <!--                    style="@style/TextSecondary"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text="ثبت شده : 1401/04/04" />-->
 
             </LinearLayout>
 
