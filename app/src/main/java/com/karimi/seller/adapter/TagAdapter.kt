@@ -16,7 +16,8 @@ import kotlinx.android.synthetic.main.list_item_tag.view.*
 
 class TagAdapter(val context: Context,
                  val list: ArrayList<TagList>,
-                 val listener: Listener?
+                 val listener: Listener?,
+                 val tag : Int
 ) : RecyclerView.Adapter<TagAdapter.ListViewHolder>() {
 
     private var position_selected = -1
@@ -41,7 +42,8 @@ class TagAdapter(val context: Context,
         val model = list[position]
 
         item.title_category_p_view.text = model.title
-        item.card_customer_view.backgroundTintList = context.resources.getColorStateList(R.color.back_hint)
+        if (tag == 1) item.card_customer_view.backgroundTintList = context.resources.getColorStateList(R.color.back_hint)
+        else if (tag == 2)item.card_customer_view.backgroundTintList = context.resources.getColorStateList(R.color.white)
 
         if (listener != null){
             setItemSelected(position_selected != -1 && position_selected == position,item.title_category_p_view)
