@@ -31,7 +31,8 @@
 
             <View
                 style="@style/CustomLine"
-                android:layout_marginVertical="10dp" />
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="16dp"/>
 
             <include layout="@layout/include_customer_product_view" />
 
