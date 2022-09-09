@@ -22,7 +22,7 @@
 
             <include layout="@layout/include_recycler_product_view" />
 
-            <!--            <include layout="@layout/widget_chart_price" />-->
+            <!--  <include layout="@layout/widget_chart_price" />-->
 
             <com.karimi.seller.widget.chart.CubicChart
                 android:id="@+id/cubicChart"

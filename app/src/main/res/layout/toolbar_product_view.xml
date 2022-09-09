@@ -17,21 +17,21 @@
             android:id="@+id/r1"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:paddingStart="18dp">
+            android:paddingStart="10dp">
 
             <TextView
-                android:id="@+id/tv_product_name"
+                android:id="@+id/title_product_view"
                 style="@style/TextMain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:layout_marginStart="10dp"
-                android:layout_toEndOf="@id/back"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/back_product_view"
                 android:paddingTop="5dp"
                 android:text="بشقاب" />
 
             <ImageView
-                android:id="@+id/back"
+                android:id="@+id/back_product_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -77,11 +77,11 @@
                     android:layout_height="wrap_content"
                     android:text="ویرایش شده : 1401/04/04" />
 
-                <TextView
-                    style="@style/TextSecondary"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ثبت شده : 1401/04/04" />
+<!--                <TextView-->
+<!--                    style="@style/TextSecondary"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="ثبت شده : 1401/04/04" />-->
 
             </LinearLayout>
 
