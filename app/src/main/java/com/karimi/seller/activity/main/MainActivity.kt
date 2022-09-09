@@ -44,12 +44,9 @@ class MainActivity : AppCompatActivity() ,ItemMainAdapter.Listener{
 
         scrollMain.post { scrollMain.fullScroll(View.FOCUS_UP) }
 
-
         initToolbar()
         initRecyclerView()
         cubicChart.setTitle("نمودار فروش این ماه")
-
-
 
     }
 
@@ -164,6 +161,7 @@ class MainActivity : AppCompatActivity() ,ItemMainAdapter.Listener{
 
     override fun onItemClicked(position: Int, item: MainModel) {
         startActivity(Intent(this, item.action))
+        overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
     }
 
 

@@ -57,16 +57,19 @@ class ProductActivity : AppCompatActivity() , ProductViewActivity.Listener{
         initToolbar()
         initAdapter()
         initRecyclerCategory()
-        initRecyclerProduct()
+//        initRecyclerProduct()
     }
 
     private fun initToolbar(){
         title_product.text = resources.getString(R.string.toolbar_title_product)
 //        plus_product.setOnClickListener { startActivity(Intent(this,AddNewProductActivity::class.java)) }
-        plus_product.setOnClickListener { resultAdd.launch(Intent(this,AddNewProductActivity::class.java)) }
+        plus_product.setOnClickListener { resultAdd.launch(Intent(this,AddNewProductActivity::class.java))
+            overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out) }
 
 
-        arrayOf(title_product,back_product).forEach { it.setOnClickListener { onBackPressed() } }
+        arrayOf(title_product,back_product).forEach { it.setOnClickListener { onBackPressed()
+            overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
+        } }
 
 
 
@@ -155,6 +158,7 @@ class ProductActivity : AppCompatActivity() , ProductViewActivity.Listener{
                     i.putExtra("product_id",product.id)
                     i.putExtra("pos",position)
                     startActivity(i)
+                    overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
 
 //                    ProductViewDialog(this@ListProductActivity,product.id!!,position,
 //                        this@ListProductActivity).show(supportFragmentManager, "product")
@@ -179,6 +183,13 @@ class ProductActivity : AppCompatActivity() , ProductViewActivity.Listener{
 //        }
     }
 
+
+    override fun onResume() {
+        super.onResume()
+        initAdapter()
+        initRecyclerCategory()
+        initRecyclerProduct()
+    }
     private fun initRecyclerProduct(){
         recyclerView_product.adapter = adapterProduct
     }

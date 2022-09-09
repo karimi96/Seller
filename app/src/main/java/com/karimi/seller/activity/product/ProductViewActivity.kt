@@ -1,5 +1,6 @@
 package com.karimi.seller.activity.product
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -19,6 +20,7 @@ class ProductViewActivity : AppCompatActivity() {
     private var product_id : Int? = null
     private var position : Int? = null
     private var this_product : Product? = null
+//    private var productActivity : ProductActivity? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -76,7 +78,13 @@ class ProductViewActivity : AppCompatActivity() {
 //            listener?.onEditProduct(this,this_product, position)
 //            ListProductActivity().resultUpdate
             App.toast("edit btn clicked")
-
+            var i = Intent(this , AddNewProductActivity::class.java)
+            i.putExtra("product_id", this_product!!.id)
+            i.putExtra("product_position", position)
+            startActivity(i)
+            overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
+            finish()
+//            productActivity?.resultUpdate?.launch(i)
         }
     }
 
