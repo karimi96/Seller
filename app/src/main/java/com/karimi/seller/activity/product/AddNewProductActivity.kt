@@ -220,7 +220,7 @@ class AddNewProductActivity : AppCompatActivity(), SelectCategoryDialog.Listener
             for (i in 0 until _CATEGORY.size) {
                 array_tag.add(i, TagList(_CATEGORY[i].name, _CATEGORY[i].id.toString()))
             }
-            val adapterCategory = TagAdapter(this, array_tag, null)
+            val adapterCategory = TagAdapter(this, array_tag, null, 1)
             recycler_product_view.adapter = adapterCategory
         } else {
             tv_add_category.text = resources.getString(R.string.submit_category)

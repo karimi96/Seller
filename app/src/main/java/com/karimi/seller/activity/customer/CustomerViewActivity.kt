@@ -96,7 +96,7 @@ class CustomerViewActivity : AppCompatActivity() {
         array_tag.add(TagList("بانک کشاورزی ۸۵,۰۰۰ تومان"))
         array_tag.add(TagList("بانک ملت ۸۲,۰۰۰ تومان"))
 
-        recycler_tag_customer_view.adapter = TagAdapter(this, array_tag, null)
+        recycler_tag_customer_view.adapter = TagAdapter(this, array_tag, null, 1)
     }
 
 

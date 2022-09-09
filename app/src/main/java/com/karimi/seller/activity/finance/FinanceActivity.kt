@@ -42,7 +42,7 @@ class FinanceActivity : AppCompatActivity() {
         array_tag_info.add(TagList("نسیه ۲۹۰,۰۰۰ تومان"))
         array_tag_info.add(TagList("تخفیف ۲۹۰,۰۰۰ تومان"))
         array_tag_info.add(TagList("هزینه ارسال ۲۹۰,۰۰۰ تومان"))
-        recyclerView_tag_info.adapter = TagAdapter(this,array_tag_info,null)
+        recyclerView_tag_info.adapter = TagAdapter(this,array_tag_info,null ,1)
     }
 
 

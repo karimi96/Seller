@@ -75,7 +75,7 @@ class StockActivity : AppCompatActivity() {
         array_tag_info.add(TagList("۳۰۰ قلم کالا"))
         array_tag_info.add(TagList("۱۲۰ محصول فعال"))
         array_tag_info.add(TagList("۲۹۰,۰۰۰,۰۰۰ تومان سرمایه انبار"))
-        recyclerView_info.adapter = TagAdapter(this,array_tag_info,null)
+        recyclerView_info.adapter = TagAdapter(this,array_tag_info,null ,1)
     }
 
 
