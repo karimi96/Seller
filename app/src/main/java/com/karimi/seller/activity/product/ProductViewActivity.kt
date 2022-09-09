@@ -2,7 +2,7 @@ package com.karimi.seller.activity.product
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.karimi.seller.R
 import com.karimi.seller.adapter.CustomerListHorizontalAdapter
@@ -47,19 +47,25 @@ class ProductViewActivity : AppCompatActivity() {
         fun onEditProduct(product: Product?, position: Int)
     }
 
+
+
     private fun initData(){
 //        tv_product_name.text = "#${this_product?.id}"
         title_product_view.text = this_product?.name
         arrayOf(title_product_view , back_product_view).forEach { it.setOnClickListener { onBackPressed() } }
 
         if (!this_product?.image_defult.isNullOrEmpty()){
-            image_product_view.visibility = View.VISIBLE
             Glide.with(this).load(this_product?.image_defult).into(image_product_view)
-//            Glide.with(this).load(this_product.image_defult).into(image)
+            image_product_view.scaleType = ImageView.ScaleType.CENTER_CROP
+        }else {
+            image_product_view.scaleType = ImageView.ScaleType.FIT_CENTER
+            Glide.with(this).load(getDrawable(R.drawable.pic_picture)).into(image_product_view)
         }
 
-        tv_date.text = "در تاریخ ${App.getFormattedDate(this_product?.updated_at)}ویرایش شده \n در تاریخ${App.getFormattedDate(this_product?.created_at)} ثبت شده"
+        tv_date.text = "در تاریخ ${ App.getFormattedDate(this_product?.updated_at) }ویرایش شده \n در تاریخ ${ App.getFormattedDate(this_product?.created_at) } ثبت شده"
     }
+
+
 
     private fun initOnClick(){
 //        ic_close.setOnClickListener {
@@ -85,7 +91,7 @@ class ProductViewActivity : AppCompatActivity() {
         array_tag.add(TagList("#3881492193493"))
         array_tag.add(TagList("آخرین بار در ۱۴۰۱/۰۲/۰۶ فروخته شده"))
 
-        recyclerView_tag.adapter = TagAdapter(this, array_tag, null)
+        recyclerView_tag.adapter = TagAdapter(this, array_tag, null, 2)
     }
 
     private fun initRecyclerView(){
