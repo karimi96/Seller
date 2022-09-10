@@ -26,10 +26,10 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edt_min_order"
                 style="@style/CustomTextInputEditText"
-                android:fontFamily="@font/iran_sans"
+                android:fontFamily="@font/iran_sans_fanum"
                 android:gravity="right"
                 android:imeOptions="actionNext"
-                android:inputType="text"
+                android:inputType="number"
                 android:paddingStart="10dp"
                 android:paddingTop="13dp" />
 
@@ -52,10 +52,10 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edt_tax"
                 style="@style/CustomTextInputEditText"
-                android:fontFamily="@font/iran_sans"
+                android:fontFamily="@font/iran_sans_fanum"
                 android:gravity="right"
                 android:imeOptions="actionNext"
-                android:inputType="text"
+                android:inputType="number"
                 android:paddingStart="10dp"
                 android:paddingTop="13dp" />
 
@@ -63,6 +63,7 @@
 
         <com.codesgood.views.JustifiedTextView
             style="@style/TextHelper"
+            android:fontFamily="@font/iran_sans_fanum"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/helper_text_tax" />
@@ -78,7 +79,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edt_money_type"
                 style="@style/CustomTextInputEditText"
-                android:fontFamily="@font/iran_sans"
+                android:fontFamily="@font/iran_sans_fanum"
                 android:gravity="right"
                 android:imeOptions="actionNext"
                 android:inputType="text"
@@ -107,7 +108,7 @@
                 android:fontFamily="@font/iran_sans"
                 android:gravity="right"
                 android:imeOptions="actionNext"
-                android:inputType="text"
+                android:inputType="number"
                 android:paddingStart="10dp"
                 android:paddingTop="13dp" />
 
@@ -130,10 +131,10 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edt_free_shipping"
                 style="@style/CustomTextInputEditText"
-                android:fontFamily="@font/iran_sans"
+                android:fontFamily="@font/iran_sans_fanum"
                 android:gravity="right"
                 android:imeOptions="actionNext"
-                android:inputType="text"
+                android:inputType="number"
                 android:paddingStart="10dp"
                 android:paddingTop="13dp" />
 

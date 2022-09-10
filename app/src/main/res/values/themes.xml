@@ -81,7 +81,7 @@
     <style name="TextHelper">
         <item name="android:textColor">@color/text_helper</item>
         <item name="android:textSize">12dp</item>
-        <item name="android:fontFamily">@font/iran_sans</item>
+        <item name="android:fontFamily">@font/iran_sans_fanum</item>
         <item name="android:textFontWeight" tools:targetApi="p">500</item>
     </style>
 
