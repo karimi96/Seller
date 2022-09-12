@@ -39,7 +39,7 @@ class SettingActivity : AppCompatActivity() {
     private fun initData() {
         initTextWatcherPrice()
 
-        edt_min_order.setText("${setting.min_order ?: 0}")
+        edt_min_order.setText("${setting.min_order}")
         edt_tax.setText("${setting.tax ?: 0}")
         edt_money_type.setText(setting.currency ?: MONEY_TYPE_DEFAULT)
         edt_price_shipping.setText("${setting.shipping_price ?: 0}")
@@ -78,7 +78,7 @@ class SettingActivity : AppCompatActivity() {
     private fun saveData() {
         App.database.getAppDao().insertSetting(setting)
 
-        Session.getInstance().minOrder = setting.min_order ?: 0.0
+        Session.getInstance().minOrder = setting.min_order
         Session.getInstance().taxPercent = setting.tax ?: 0
         Session.getInstance().moneyType = setting.currency
         Session.getInstance().shippingPrice = setting.shipping_price ?: 0.0

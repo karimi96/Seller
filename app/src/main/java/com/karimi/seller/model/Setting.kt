@@ -25,14 +25,28 @@ class Setting {
 
     constructor()
 
-    @Ignore
+//    @Ignore
+//    constructor(branch : Int) {
+//        this.branch = branch
+//        this.currency = MONEY_TYPE_DEFAULT
+//        this.tax = 0
+//        this.min_order = 0.0
+//        this.shipping_price = 0.0
+//        this.shipping_free_on_order = 0.0
+//        this.sound_scanner = true
+//        this.cash_money = true
+//        this.cash_card = true
+//        this.cash_debit = true
+//        this.cash_discount = true
+//    }
+// @Ignore
     constructor(branch : Int) {
         this.branch = branch
         this.currency = MONEY_TYPE_DEFAULT
-        this.tax = 0
-        this.min_order = 0.0
-        this.shipping_price = 0.0
-        this.shipping_free_on_order = 0.0
+        this.tax = null
+        this.min_order = null
+        this.shipping_price = null
+        this.shipping_free_on_order = null
         this.sound_scanner = true
         this.cash_money = true
         this.cash_card = true

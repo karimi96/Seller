@@ -19,21 +19,21 @@
             android:id="@+id/r1"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:paddingStart="18dp">
+            android:paddingStart="10dp">
 
             <TextView
-                android:id="@+id/tv_product_name"
+                android:id="@+id/tv_finance_toolbar"
                 style="@style/TextMain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:layout_marginStart="10dp"
-                android:layout_toEndOf="@id/back"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/back_finance"
                 android:paddingTop="5dp"
                 android:text="گزارش مالی" />
 
             <ImageView
-                android:id="@+id/back"
+                android:id="@+id/back_finance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -49,6 +49,7 @@
             android:orientation="horizontal"
             android:overScrollMode="never"
             android:paddingHorizontal="12dp"
+            android:paddingBottom="10dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:itemCount="12"
             tools:listitem="@layout/list_item_state_financial_customer" />
