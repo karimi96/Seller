@@ -6,6 +6,9 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import androidx.core.view.marginBottom
+import androidx.core.view.marginStart
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.karimi.seller.R
@@ -52,9 +55,16 @@ class ProductListHorizontalAdapter_2(
         }
 
         if (!model.image_defult.isNullOrEmpty()){
-            item.image_finance_p.visibility = View.VISIBLE
             Glide.with(context).load(model.image_defult).into(item.image_finance_p)
-        }else item.image_finance_p.setBackgroundResource(R.color.back_hint)
+            item.image_finance_p.scaleType = ImageView.ScaleType.CENTER_CROP
+        }else{
+            Glide.with(context).load(context.getDrawable(R.drawable.pic_picture)).into(item.image_finance_p)
+            item.image_finance_p.setBackgroundResource(R.color.back_order)
+            item.image_finance_p.scaleType = ImageView.ScaleType.FIT_CENTER
+            val param =  item.image_finance_p.layoutParams as ViewGroup.MarginLayoutParams
+            param.setMargins(6,4,6,4)
+            item.image_finance_p.layoutParams = param
+        }
 
         item.setOnClickListener {
             listener.onItemClicked(position,model)
