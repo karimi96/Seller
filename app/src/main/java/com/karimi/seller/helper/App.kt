@@ -108,10 +108,16 @@ class App : MultiDexApplication() {
             else replaceForPrice(getString(editText)).toDouble()
         }
 
+//        way of mohandes
+          fun convertToInt(editText: EditText): Int {
+              return if (replaceForPrice(getString(editText)).isNullOrEmpty()) 0
+              else replaceForPrice(getString(editText)).toInt()
+          }
+
+       /* //        way of me
         fun convertToInt(editText: EditText): Int {
-            return if (replaceForPrice(getString(editText)).isNullOrEmpty()) 0
-            else replaceForPrice(getString(editText)).toInt()
-        }
+            return replaceForPrice(getString(editText)).toInt()
+        }*/
 
         fun replaceForPrice(string: String): String {
             return string
@@ -121,15 +127,13 @@ class App : MultiDexApplication() {
         }
 
 
-
-        fun stockFormat(double: Double):String{
+        fun stockFormat(double: Double): String {
             val decimalFormat = DecimalFormat("###.##")
             return decimalFormat.format(double)
         }
 
 
     }
-
 
 
 }
