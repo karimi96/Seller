@@ -3,6 +3,7 @@ package com.karimi.seller.activity.finance
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.karimi.seller.R
 import com.karimi.seller.activity.product.ProductViewActivity
 import com.karimi.seller.adapter.OrderWaitingAdapter
@@ -27,6 +28,7 @@ class FinanceActivity : AppCompatActivity() {
         setContentView(R.layout.activity_finance)
 
 //        chart_bar_price.barChartAdapter()
+        initToolbar()
         initTagInfo()
         initAdapterOrders()
         initAdapterProduct()
@@ -34,6 +36,10 @@ class FinanceActivity : AppCompatActivity() {
 
     }
 
+
+    fun initToolbar(){
+        arrayOf(back_finance,tv_finance_toolbar).forEach { it.setOnClickListener { onBackPressed() } }
+    }
 
     private fun initTagInfo(){
         val array_tag_info = ArrayList<TagList>()
@@ -47,29 +53,39 @@ class FinanceActivity : AppCompatActivity() {
 
 
     private fun initAdapterOrders(){
-        recyclerView_order_financial.adapter = OrderWaitingAdapter(this, ArrayList(App.database.getAppDao().selectOrders(App.branch())),
-            object : OrderWaitingAdapter.Listener{
-                override fun onItemClicked(position: Int, item: Orders) {
+        var list = ArrayList(App.database.getAppDao().selectOrders(App.branch()))
+        if (list.size > 0 || list.isNotEmpty()){
+            box_orders.visibility = View.VISIBLE
+            recyclerView_order_financial.adapter = OrderWaitingAdapter(this, ArrayList(App.database.getAppDao().selectOrders(App.branch())),
+                object : OrderWaitingAdapter.Listener{
+                    override fun onItemClicked(position: Int, item: Orders) {
 
-                }
-            })
+                    }
+                })
+        }
+
     }
 
 
     private fun initAdapterProduct(){
-        recyclerView_product_stock.adapter = ProductListHorizontalAdapter_2(this,
-            ArrayList(App.database.getAppDao().selectProduct(App.branch())),
-            object : ProductListHorizontalAdapter_2.Listener {
-                override fun onItemClicked(position: Int, product: Product) {
-                    var i = Intent(this@FinanceActivity, ProductViewActivity::class.java)
-                    i.putExtra("product_id",product.id)
-                    i.putExtra("pos",position)
-                    startActivity(i)
+        var list = ArrayList(App.database.getAppDao().selectProduct(App.branch()))
+        if (list.size > 0){
+            box_product.visibility = View.VISIBLE
+            recyclerView_product_stock.adapter = ProductListHorizontalAdapter_2(this,
+                ArrayList(App.database.getAppDao().selectProduct(App.branch())),
+                object : ProductListHorizontalAdapter_2.Listener {
+                    override fun onItemClicked(position: Int, product: Product) {
+                        var i = Intent(this@FinanceActivity, ProductViewActivity::class.java)
+                        i.putExtra("product_id",product.id)
+                        i.putExtra("pos",position)
+                        startActivity(i)
 
 //                    ProductViewDialog(this@FinanceActivity,product.id!!,position,null)
 //                        .show(supportFragmentManager,"order_view")
-                }
-            })
+                    }
+                })
+        }
+
     }
 
 
