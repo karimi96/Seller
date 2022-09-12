@@ -11,19 +11,14 @@
 
     <include layout="@layout/toolbar_finance" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginBottom="10dp" />
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
         android:overScrollMode="never">
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_marginBottom="60dp"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
@@ -36,16 +31,25 @@
 
             <com.karimi.seller.widget.chart.CubicChart
                 android:id="@+id/cubicChart"
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <View
                 style="@style/CustomLine"
+                android:layout_marginHorizontal="16dp"
                 android:layout_marginVertical="10dp" />
 
-            <include layout="@layout/include_financial_1" />
+            <include android:id="@+id/box_product"
+                android:visibility="gone"
+                tools:visibility="visible"
+                layout="@layout/include_financial_1" />
 
-            <include layout="@layout/include_financial_2" />
+            <include
+                android:id="@+id/box_orders"
+                android:visibility="gone"
+                tools:visibility="visible"
+                layout="@layout/include_financial_2" />
 
         </LinearLayout>
 
