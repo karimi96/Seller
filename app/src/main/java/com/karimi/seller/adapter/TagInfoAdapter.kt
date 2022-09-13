@@ -19,7 +19,8 @@ import kotlinx.android.synthetic.main.list_item_state_order_.view.*
 class TagInfoAdapter(
     val context: Context,
     val list: ArrayList<TagList>,
-    val listener: Listener?
+    val listener: Listener?,
+    var tag : Int
 ) : RecyclerView.Adapter<TagInfoAdapter.ListViewHolder>() {
 
     var position_selected = 0
@@ -93,8 +94,14 @@ class TagInfoAdapter(
             textView.setTextColor(ContextCompat.getColor(context, R.color.white))
 
         } else {
-            textView.setTextColor(ContextCompat.getColor(context, R.color.text_main))
-            background.backgroundTintList = context.resources.getColorStateList(R.color.back_hint)
+            if (tag == 0){
+                textView.setTextColor(ContextCompat.getColor(context, R.color.text_main))
+                background.backgroundTintList = context.resources.getColorStateList(R.color.back_hint)
+            }else if (tag == 1){
+                textView.setTextColor(ContextCompat.getColor(context, R.color.text_main))
+                background.backgroundTintList = context.resources.getColorStateList(R.color.white)
+
+            }
 
         }
     }
