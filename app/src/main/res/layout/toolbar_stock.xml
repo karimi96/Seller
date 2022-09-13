@@ -48,6 +48,7 @@
             android:clipToPadding="false"
             android:orientation="horizontal"
             android:overScrollMode="never"
+            android:paddingBottom="10dp"
             android:paddingHorizontal="12dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/list_item_state_order_" />
