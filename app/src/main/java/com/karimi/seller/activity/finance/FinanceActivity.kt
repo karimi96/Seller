@@ -37,7 +37,7 @@ class FinanceActivity : AppCompatActivity() {
     }
 
 
-    fun initToolbar(){
+    private fun initToolbar(){
         arrayOf(back_finance,tv_finance_toolbar).forEach { it.setOnClickListener { onBackPressed() } }
     }
 

@@ -138,7 +138,7 @@ class OrdersActivity : AppCompatActivity() {
                     App.toast(item.title.toString())
 
                 }
-            })
+            } ,0)
 
         recyclerView_order1.adapter = adapterTag
     }

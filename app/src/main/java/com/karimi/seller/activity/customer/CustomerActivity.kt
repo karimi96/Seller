@@ -109,7 +109,7 @@ class CustomerActivity : AppCompatActivity(), InsertCustomerDialog.Listener {
                     adapter?.updateList(selectCustomer(item.tag!!))
                     App.toast(item.title.toString())
                 }
-            })
+            }, 0)
 
         recycler_tag_customer.adapter = adapterTag
     }
@@ -127,26 +127,26 @@ class CustomerActivity : AppCompatActivity(), InsertCustomerDialog.Listener {
     }
 
 
-    private fun initAdapterCustomer(){
+    private fun initAdapterCustomer() {
         adapter = CustomerListAdapter(this,
             ArrayList(selectCustomer("all")),
             true,
             object : CustomerListAdapter.Listener {
                 override fun onItemClicked(position: Int, item: Customers, action: String?) {
-                    when(action){
+                    when (action) {
                         "tel", "sms" -> {
                             try {
                                 val i = Intent(Intent.ACTION_VIEW)
                                 i.data = Uri.parse("${action}:${item.phone}")
                                 startActivity(i)
-                            }catch (e: Exception) {
+                            } catch (e: Exception) {
                                 App.toast(getString(R.string.your_device_hasnt_this_feathure))
                             }
                         }
                         else -> {
-                            var i = Intent(this@CustomerActivity , CustomerViewActivity::class.java)
-                            i.putExtra("pos" ,position)
-                            i.putExtra("customer_id" ,item.id)
+                            var i = Intent(this@CustomerActivity, CustomerViewActivity::class.java)
+                            i.putExtra("pos", position)
+                            i.putExtra("customer_id", item.id)
                             startActivity(i)
 //                            CustomerViewDialog(this@CustomerActivity,item.id!!,position,this@CustomerActivity)
 //                                .show(supportFragmentManager, "customer")
@@ -156,11 +156,6 @@ class CustomerActivity : AppCompatActivity(), InsertCustomerDialog.Listener {
             })
         recycler_customer.adapter = adapter
     }
-
-
-
-
-
 
 
 }
