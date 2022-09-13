@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.karimi.seller.R
 import com.karimi.seller.helper.App
 import com.karimi.seller.model.Orders
-import kotlinx.android.synthetic.main.item_order_waiting.view.*
+import kotlinx.android.synthetic.main.list_item_last_order.view.*
 
 
 class OrderWaitingAdapter(
@@ -26,7 +26,7 @@ class OrderWaitingAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.item_order_waiting, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.list_item_last_order, parent, false)
         return ListViewHolder(view)
     }
 
@@ -38,8 +38,8 @@ class OrderWaitingAdapter(
         val item = holder.itemView
         val model = list[position]
 
-        item.title.text = if (model.customer_name.isNullOrEmpty()) "سفارش #${model.id}" else model.customer_name
-        item.desc.text = App.priceFormat(model.totla_all)
+        item.title_last_order.text = if (model.customer_name.isNullOrEmpty()) "سفارش #${model.id}" else model.customer_name
+        item.content_last_order.text = App.priceFormat(model.totla_all)
 
         if (listener != null) item.setOnClickListener { listener.onItemClicked(position, model) }
     }
