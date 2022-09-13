@@ -18,8 +18,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_marginBottom="60dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
             android:orientation="vertical">
 
             <!--            <include layout="@layout/widget_chart_price" />-->
@@ -31,25 +31,26 @@
 
             <com.karimi.seller.widget.chart.CubicChart
                 android:id="@+id/cubicChart"
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
 
             <View
                 style="@style/CustomLine"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginVertical="10dp" />
 
-            <include android:id="@+id/box_product"
+            <include
+                android:id="@+id/box_product"
+                layout="@layout/include_financial_1"
                 android:visibility="gone"
-                tools:visibility="visible"
-                layout="@layout/include_financial_1" />
+                tools:visibility="visible" />
 
             <include
                 android:id="@+id/box_orders"
+                layout="@layout/include_financial_2"
                 android:visibility="gone"
-                tools:visibility="visible"
-                layout="@layout/include_financial_2" />
+                tools:visibility="visible" />
 
         </LinearLayout>
 
