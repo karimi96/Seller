@@ -37,6 +37,7 @@ class StockActivity : AppCompatActivity() {
 
 
     private fun initToolbar(title: String) {
+        arrayOf(tv_stock,back_stock).forEach { it.setOnClickListener { onBackPressed() } }
 //        toolbar.title.text = title
 //        toolbar.ic_back.visibility = View.VISIBLE
 //        toolbar.ic_back.setOnClickListener { onBackPressed() }
@@ -46,7 +47,7 @@ class StockActivity : AppCompatActivity() {
     val array_tag = ArrayList<TagList>()
     private fun initAdapterTagList(){
         array_tag.add(TagList("درحال فروش","all"))
-        array_tag.add(TagList("درحال انتقضا", "all"))
+        array_tag.add(TagList("درحال انقضا", "all"))
         array_tag.add(TagList("درحال اتمام", "all"))
         array_tag.add(TagList("منقضی شده", "all"))
         array_tag.add(TagList("تمام شده", "all"))
@@ -64,7 +65,7 @@ class StockActivity : AppCompatActivity() {
 //                    adapter?.updateList(selectOrder(item.tag!!))
                     App.toast(item.title.toString())
                 }
-            })
+            }, 1)
 
         recycler_tag_stock.adapter = adapterTag
     }
